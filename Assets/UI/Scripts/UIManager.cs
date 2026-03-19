@@ -3,6 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public enum UIManagerMode
+    {
+        MainMenuScene,
+        GameplayScene
+    }
+
+    [Header("Mode")]
+    public UIManagerMode mode = UIManagerMode.MainMenuScene;
+
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject settingsPanel;
@@ -15,7 +24,18 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        ShowMainMenu();
+        HideAllPanels();
+
+        switch (mode)
+        {
+            case UIManagerMode.MainMenuScene:
+                ShowMainMenu();
+                break;
+
+            case UIManagerMode.GameplayScene:
+                // 游戏场景默认不显示任何面板
+                break;
+        }
     }
 
     public void HideAllPanels()

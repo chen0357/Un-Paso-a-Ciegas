@@ -7,14 +7,14 @@ public class SettingsManager : MonoBehaviour
     public static SettingsManager Instance;
 
     [Header("UI References")]
-    public Dropdown visualModeDropdown;
+    public TMP_Dropdown visualModeDropdown;
     public Toggle voiceHintToggle;
     public Slider uiVolumeSlider;
     public Toggle hapticToggle;
     public Slider hapticStrengthSlider;
 
     [Header("Current Settings")]
-    public int visualMode; // 0=正常, 1=低视力, 2=无视觉
+    public int visualMode;
     public bool voiceHintsEnabled;
     public float uiVolume;
     public bool hapticsEnabled;
@@ -27,6 +27,7 @@ public class SettingsManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LoadSettings();
+            ApplySettings();
         }
         else
         {
@@ -34,10 +35,20 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void BindUI(
+        TMP_Dropdown visualDropdown,
+        Toggle voiceToggle,
+        Slider volumeSlider,
+        Toggle hapticToggleUI,
+        Slider hapticSlider)
     {
+        visualModeDropdown = visualDropdown;
+        voiceHintToggle = voiceToggle;
+        uiVolumeSlider = volumeSlider;
+        hapticToggle = hapticToggleUI;
+        hapticStrengthSlider = hapticSlider;
+
         RefreshUI();
-        ApplySettings();
     }
 
     public void RefreshUI()
@@ -74,8 +85,8 @@ public class SettingsManager : MonoBehaviour
     public void OnUIVolumeChanged(float value)
     {
         uiVolume = value;
-        AudioListener.volume = uiVolume;
         SaveSettings();
+        ApplySettings();
     }
 
     public void OnHapticChanged(bool value)
@@ -113,24 +124,6 @@ public class SettingsManager : MonoBehaviour
     {
         AudioListener.volume = uiVolume;
 
-        Debug.Log("Apply Settings:");
-        Debug.Log("Visual Mode: " + visualMode);
-        Debug.Log("Voice Hints: " + voiceHintsEnabled);
-        Debug.Log("UI Volume: " + uiVolume);
-        Debug.Log("Haptics: " + hapticsEnabled);
-        Debug.Log("Haptic Strength: " + hapticStrength);
-
-        switch (visualMode)
-        {
-            case 0:
-                Debug.Log("正常模式");
-                break;
-            case 1:
-                Debug.Log("低视力模式");
-                break;
-            case 2:
-                Debug.Log("无视觉模式");
-                break;
-        }
+        Debug.Log($"Apply Settings | VisualMode={visualMode}, Volume={uiVolume}, Haptics={hapticsEnabled}, HapticStrength={hapticStrength}");
     }
 }

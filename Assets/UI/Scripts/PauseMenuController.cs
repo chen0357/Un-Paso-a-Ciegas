@@ -3,27 +3,62 @@ using UnityEngine.InputSystem;
 
 public class PauseMenuController : MonoBehaviour
 {
+    [Header("References")]
     public UIManager uiManager;
     public InputActionReference pauseAction;
 
+    [Header("Options")]
+    public bool pauseOnEnable = false;
+
     private bool isPaused = false;
+    private bool isActionBound = false;
+
+    private void Start()
+    {
+        if (pauseOnEnable)
+        {
+            isPaused = true;
+            Time.timeScale = 0f;
+            if (uiManager != null)
+                uiManager.ShowPauseMenu();
+        }
+        else
+        {
+            isPaused = false;
+            Time.timeScale = 1f;
+            if (uiManager != null)
+                uiManager.HideAllPanels();
+        }
+    }
 
     private void OnEnable()
     {
-        if (pauseAction != null)
-        {
-            pauseAction.action.Enable();
-            pauseAction.action.performed += OnPausePressed;
-        }
+        BindPauseAction();
     }
 
     private void OnDisable()
     {
-        if (pauseAction != null)
-        {
-            pauseAction.action.performed -= OnPausePressed;
-            pauseAction.action.Disable();
-        }
+        UnbindPauseAction();
+    }
+
+    private void BindPauseAction()
+    {
+        if (pauseAction == null || pauseAction.action == null || isActionBound)
+            return;
+
+        pauseAction.action.Enable();
+        pauseAction.action.performed += OnPausePressed;
+        isActionBound = true;
+    }
+
+    private void UnbindPauseAction()
+    {
+        if (pauseAction == null || pauseAction.action == null || !isActionBound)
+            return;
+
+        pauseAction.action.performed -= OnPausePressed;
+        pauseAction.action.Disable();
+        isActionBound = false;
     }
 
     private void OnPausePressed(InputAction.CallbackContext context)
@@ -38,14 +73,20 @@ public class PauseMenuController : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0f;
+
             if (uiManager != null)
                 uiManager.ShowPauseMenu();
+
+            Debug.Log("Game Paused");
         }
         else
         {
             Time.timeScale = 1f;
+
             if (uiManager != null)
                 uiManager.HideAllPanels();
+
+            Debug.Log("Game Resumed");
         }
     }
 
@@ -53,7 +94,15 @@ public class PauseMenuController : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1f;
+
         if (uiManager != null)
             uiManager.HideAllPanels();
+
+        Debug.Log("ResumeGame called");
+    }
+
+    public bool IsPaused()
+    {
+        return isPaused;
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CaneDetector : MonoBehaviour
@@ -9,52 +10,112 @@ public class CaneDetector : MonoBehaviour
     [Header("Debug")]
     public bool showDebugLog = true;
 
-    private SurfaceType lastSurfaceType = SurfaceType.Default;
-    private float lastHitTime = 0f;
+    [Header("Continuous Surface Cooldown")]
+    public float continuousHitCooldown = 0.2f;
 
-    [Header("Hit Cooldown")]
-    public float hitCooldown = 0.15f;
+    [Header("Hit Intensity")]
+    public float minHitSpeed = 0.1f;
+    public float maxHitSpeed = 2.0f;
+
+    private Dictionary<Collider, float> lastContinuousHitTime = new Dictionary<Collider, float>();
+    private HashSet<Collider> triggeredColliders = new HashSet<Collider>();
+
+    private Vector3 lastPosition;
+    private float currentHitIntensity = 0f;
+
+    private void Start()
+    {
+        lastPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        float speed = Vector3.Distance(transform.position, lastPosition) / Time.deltaTime;
+        currentHitIntensity = Mathf.InverseLerp(minHitSpeed, maxHitSpeed, speed);
+        currentHitIntensity = Mathf.Clamp01(currentHitIntensity);
+
+        lastPosition = transform.position;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        DetectSurface(other);
+        SurfaceType surfaceType = GetSurfaceType(other);
+
+        if (IsContinuousSurface(surfaceType))
+        {
+            DetectSurface(other, surfaceType, currentHitIntensity);
+            lastContinuousHitTime[other] = Time.time;
+        }
+        else
+        {
+            if (triggeredColliders.Contains(other))
+                return;
+
+            triggeredColliders.Add(other);
+            DetectSurface(other, surfaceType, currentHitIntensity);
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Time.time - lastHitTime > hitCooldown)
+        SurfaceType surfaceType = GetSurfaceType(other);
+
+        if (!IsContinuousSurface(surfaceType))
+            return;
+
+        if (!lastContinuousHitTime.ContainsKey(other))
         {
-            DetectSurface(other);
+            lastContinuousHitTime[other] = Time.time;
+            DetectSurface(other, surfaceType, currentHitIntensity);
+            return;
+        }
+
+        if (Time.time - lastContinuousHitTime[other] >= continuousHitCooldown)
+        {
+            DetectSurface(other, surfaceType, currentHitIntensity);
+            lastContinuousHitTime[other] = Time.time;
         }
     }
 
-    private void DetectSurface(Collider other)
+    private void OnTriggerExit(Collider other)
+    {
+        triggeredColliders.Remove(other);
+        lastContinuousHitTime.Remove(other);
+    }
+
+    private SurfaceType GetSurfaceType(Collider other)
     {
         SurfaceTag surfaceTag = other.GetComponent<SurfaceTag>();
+        return surfaceTag != null ? surfaceTag.surfaceType : SurfaceType.Default;
+    }
 
-        SurfaceType currentSurface = SurfaceType.Default;
-
-        if (surfaceTag != null)
+    private bool IsContinuousSurface(SurfaceType surfaceType)
+    {
+        switch (surfaceType)
         {
-            currentSurface = surfaceTag.surfaceType;
+            case SurfaceType.Ground:
+            case SurfaceType.TactilePaving:
+                return true;
+            default:
+                return false;
         }
+    }
 
-        lastSurfaceType = currentSurface;
-        lastHitTime = Time.time;
-
+    private void DetectSurface(Collider other, SurfaceType currentSurface, float intensity)
+    {
         if (showDebugLog)
         {
-            Debug.Log("Cane hit: " + other.gameObject.name + " | SurfaceType: " + currentSurface);
+            Debug.Log($"Cane hit: {other.gameObject.name} | SurfaceType: {currentSurface} | Intensity: {intensity:F2}");
         }
 
         if (caneAudioSystem != null)
         {
-            caneAudioSystem.PlaySurfaceSound(currentSurface);
+            caneAudioSystem.PlaySurfaceSound(currentSurface, intensity);
         }
 
         if (caneHapticSystem != null)
         {
-            caneHapticSystem.PlayHapticBySurface(currentSurface);
+            caneHapticSystem.PlayHapticBySurface(currentSurface, intensity);
         }
     }
 }
