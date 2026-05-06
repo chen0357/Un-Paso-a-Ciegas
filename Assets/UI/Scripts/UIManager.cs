@@ -8,7 +8,17 @@ public class UIManager : MonoBehaviour
         MainMenuScene,
         GameplayScene
     }
+    public enum UIState
+    {
+        None,
+        MainMenu,
+        Settings,
+        Pause,
+        LevelSelect,
+        Result
+    }
 
+    public UIState currentState = UIState.None;
     [Header("Mode")]
     public UIManagerMode mode = UIManagerMode.MainMenuScene;
 
@@ -21,7 +31,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Optional")]
     public string firstLevelSceneName = "Level_Street";
-
+    private UIState previousState;
     private void Start()
     {
         HideAllPanels();
@@ -51,30 +61,42 @@ public class UIManager : MonoBehaviour
     {
         HideAllPanels();
         if (mainMenuPanel != null) mainMenuPanel.SetActive(true);
+
+        currentState = UIState.MainMenu;
     }
 
     public void ShowSettings()
     {
+        previousState = currentState; // ¼ÇÂ¼À´Ô´
+
         HideAllPanels();
         if (settingsPanel != null) settingsPanel.SetActive(true);
+
+        currentState = UIState.Settings;
     }
 
     public void ShowPauseMenu()
     {
         HideAllPanels();
         if (pausePanel != null) pausePanel.SetActive(true);
+
+        currentState = UIState.Pause;
     }
 
     public void ShowLevelSelect()
     {
         HideAllPanels();
         if (levelSelectPanel != null) levelSelectPanel.SetActive(true);
+
+        currentState = UIState.LevelSelect;
     }
 
     public void ShowResult()
     {
         HideAllPanels();
         if (resultPanel != null) resultPanel.SetActive(true);
+
+        currentState = UIState.Result;
     }
 
     public void StartGame()
@@ -99,12 +121,38 @@ public class UIManager : MonoBehaviour
     public void ReturnToMainMenuScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("Main");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit Game");
         Application.Quit();
+    }
+    
+    public void BackFromSettings()
+    {
+        if (settingsPanel != null)
+            settingsPanel.SetActive(false);
+
+        switch (previousState)
+        {
+            case UIState.MainMenu:
+                ShowMainMenu();
+                break;
+
+            case UIState.Pause:
+                ShowPauseMenu();
+                break;
+
+            case UIState.LevelSelect:
+                ShowLevelSelect();
+                break;
+
+            default:
+                HideAllPanels();
+                currentState = UIState.None;
+                break;
+        }
     }
 }

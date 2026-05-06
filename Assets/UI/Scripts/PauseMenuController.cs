@@ -68,24 +68,29 @@ public class PauseMenuController : MonoBehaviour
 
     public void TogglePause()
     {
+        if (uiManager == null) return;
+
+        //  如果在其他UI界面，禁止触发
+        if (uiManager.currentState != UIManager.UIState.None &&
+            uiManager.currentState != UIManager.UIState.Pause)
+        {
+            Debug.Log("Pause ignored: 当前在其他UI界面");
+            return;
+        }
+
         isPaused = !isPaused;
 
         if (isPaused)
         {
             Time.timeScale = 0f;
-
-            if (uiManager != null)
-                uiManager.ShowPauseMenu();
-
+            uiManager.ShowPauseMenu();
             Debug.Log("Game Paused");
         }
         else
         {
             Time.timeScale = 1f;
-
-            if (uiManager != null)
-                uiManager.HideAllPanels();
-
+            uiManager.HideAllPanels();
+            uiManager.currentState = UIManager.UIState.None;
             Debug.Log("Game Resumed");
         }
     }

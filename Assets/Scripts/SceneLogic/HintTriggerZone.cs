@@ -12,7 +12,7 @@ public class HintTriggerZone : MonoBehaviour
         {
             triggered = true;
             Debug.Log("¥•∑¢Ã· æ");
-            GameManager.Instance.RegisterHint();
+            
         }
     }
 }
