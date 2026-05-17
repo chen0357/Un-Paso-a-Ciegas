@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class GoalTrigger : MonoBehaviour
 {
-    public UIManager uiManager;
+    private bool triggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (triggered) return;
+
         if (other.CompareTag("Player"))
         {
-            if (uiManager != null)
-            {
-                uiManager.ShowResult();
-            }
+            triggered = true;
 
-            Time.timeScale = 0f;
-            Debug.Log("µΩ¥Ô÷’µ„");
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.CompleteGame();
+            }
         }
     }
 }

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +17,15 @@ public class GameManager : MonoBehaviour
     public int collisionCount = 0;
     public int hintCount = 0;
 
-    [Header("UI")]
+    [Header("HUD UI")]
+    public GameObject hudPanel;
+
+    [Header("Simple UI")]
+    public TMP_Text healthText;
+    public TMP_Text timeText;
+    public TMP_Text stateText;
+
+    [Header("Result UI")]
     public ResultUIController resultUIController;
 
     private void Awake()
@@ -33,7 +42,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         StartGame();
+    }
+
+    private void Update()
+    {
+        if (!gameStarted || gameFinished || gameFailed) return;
+
+        float currentTime = Time.time - startTime;
+
+        if (timeText != null)
+        {
+            timeText.text = "Time: " + currentTime.ToString("F1") + "s";
+        }
     }
 
     public void StartGame()
@@ -41,46 +63,82 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
         gameFinished = false;
         gameFailed = false;
+
         startTime = Time.time;
+        finishTime = 0f;
         collisionCount = 0;
         hintCount = 0;
+
+        UpdateStateUI("Playing");
+    }
+
+    public bool IsGameOver()
+    {
+        return gameFinished || gameFailed;
+    }
+
+    public void UpdateHealthUI(int currentHealth, int maxHealth)
+    {
+        if (healthText != null)
+        {
+            healthText.text = "Health: " + currentHealth + " / " + maxHealth;
+        }
+    }
+
+    public void UpdateStateUI(string state)
+    {
+        if (stateText != null)
+        {
+            stateText.text = "State: " + state;
+        }
     }
 
     public void RegisterCollision()
     {
-        if (gameFinished || gameFailed) return;
+        if (IsGameOver()) return;
+
         collisionCount++;
         Debug.Log("Collision Count: " + collisionCount);
     }
 
     public void RegisterHint()
     {
-        if (gameFinished || gameFailed) return;
+        if (IsGameOver()) return;
+
         hintCount++;
         Debug.Log("Hint Count: " + hintCount);
     }
 
     public void CompleteGame()
     {
-        if (gameFinished || gameFailed) return;
+        if (IsGameOver()) return;
 
         gameFinished = true;
         finishTime = Time.time - startTime;
 
         Debug.Log("Game Completed! Time: " + finishTime);
-
+        if (hudPanel != null)
+        {
+            hudPanel.SetActive(false);
+        }
         if (resultUIController != null)
         {
             resultUIController.ShowResult(true, finishTime, collisionCount, hintCount);
+        }
+        else
+        {
+            Debug.LogError("ResultUIController is not assigned in GameManager!");
         }
     }
 
     public void FailGame(string reason)
     {
-        if (gameFinished || gameFailed) return;
+        if (IsGameOver()) return;
 
         gameFailed = true;
         finishTime = Time.time - startTime;
+
+        UpdateStateUI("Failed");
 
         Debug.Log("Game Failed: " + reason);
 

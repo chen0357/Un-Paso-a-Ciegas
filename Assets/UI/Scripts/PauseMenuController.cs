@@ -84,6 +84,12 @@ public class PauseMenuController : MonoBehaviour
         {
             Time.timeScale = 0f;
             uiManager.ShowPauseMenu();
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.UpdateStateUI("Paused");
+            }
+
             Debug.Log("Game Paused");
         }
         else
@@ -91,6 +97,12 @@ public class PauseMenuController : MonoBehaviour
             Time.timeScale = 1f;
             uiManager.HideAllPanels();
             uiManager.currentState = UIManager.UIState.None;
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.UpdateStateUI("Playing");
+            }
+
             Debug.Log("Game Resumed");
         }
     }
@@ -101,7 +113,15 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
 
         if (uiManager != null)
+        {
             uiManager.HideAllPanels();
+            uiManager.currentState = UIManager.UIState.None;
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.UpdateStateUI("Playing");
+        }
 
         Debug.Log("ResumeGame called");
     }

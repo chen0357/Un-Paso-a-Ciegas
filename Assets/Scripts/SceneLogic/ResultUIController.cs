@@ -11,8 +11,12 @@ public class ResultUIController : MonoBehaviour
     public TMP_Text hintText;
     public TMP_Text reasonText;
 
+    private bool resultShown = false;
+
     private void Start()
     {
+        resultShown = false;
+
         if (resultPanel != null)
         {
             resultPanel.SetActive(false);
@@ -21,6 +25,9 @@ public class ResultUIController : MonoBehaviour
 
     public void ShowResult(bool success, float finishTime, int collisionCount, int hintCount, string reason = "")
     {
+        if (resultShown) return;
+        resultShown = true;
+
         if (resultPanel != null)
         {
             resultPanel.SetActive(true);
@@ -28,27 +35,29 @@ public class ResultUIController : MonoBehaviour
 
         if (titleText != null)
         {
-            titleText.text = success ? "体验完成" : "体验失败";
+            titleText.text = success ? "Experiencia completada" : "Experiencia fallida";
         }
 
         if (timeText != null)
         {
-            timeText.text = "完成时间: " + finishTime.ToString("F1") + " 秒";
+            timeText.text = "Tiempo completado: " + finishTime.ToString("F1") + " s";
         }
 
         if (collisionText != null)
         {
-            collisionText.text = "碰撞次数: " + collisionCount;
+            collisionText.text = "Número de colisiones: " + collisionCount;
         }
 
         if (hintText != null)
         {
-            hintText.text = "提示触发次数: " + hintCount;
+            hintText.text = "Número de pistas activadas: " + hintCount;
         }
 
         if (reasonText != null)
         {
-            reasonText.text = success ? "你已成功到达目标区域" : "失败原因: " + reason;
+            reasonText.text = success
+                ? "Has llegado exitosamente al área objetivo"
+                : "Razón del fallo: " + reason;
         }
 
         Time.timeScale = 0f;

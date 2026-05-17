@@ -78,9 +78,15 @@ public class UIManager : MonoBehaviour
     public void ShowPauseMenu()
     {
         HideAllPanels();
-        if (pausePanel != null) pausePanel.SetActive(true);
 
+        if (pausePanel != null)
+            pausePanel.SetActive(true);
+
+        Time.timeScale = 0f;
         currentState = UIState.Pause;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.UpdateStateUI("Paused");
     }
 
     public void ShowLevelSelect()
@@ -129,7 +135,9 @@ public class UIManager : MonoBehaviour
         Debug.Log("Quit Game");
         Application.Quit();
     }
+
     
+
     public void BackFromSettings()
     {
         if (settingsPanel != null)
