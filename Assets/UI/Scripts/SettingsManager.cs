@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using TMPro;
 
 public class SettingsManager : MonoBehaviour
@@ -12,6 +13,12 @@ public class SettingsManager : MonoBehaviour
     public Slider uiVolumeSlider;
     public Toggle hapticToggle;
     public Slider hapticStrengthSlider;
+
+    [Header("Audio Mixer")]
+    public AudioMixer mainAudioMixer;
+
+    [Header("Audio Mixer Parameter Names")]
+    public string masterVolumeParameter = "Master";
 
     [Header("Current Settings")]
     public int visualMode;
@@ -122,8 +129,27 @@ public class SettingsManager : MonoBehaviour
 
     public void ApplySettings()
     {
-        AudioListener.volume = uiVolume;
+        SetMixerVolume(masterVolumeParameter, uiVolume);
 
-        Debug.Log($"Apply Settings | VisualMode={visualMode}, Volume={uiVolume}, Haptics={hapticsEnabled}, HapticStrength={hapticStrength}");
+        Debug.Log($"Apply Settings | VisualMode={visualMode}, MasterVolume={uiVolume}, Haptics={hapticsEnabled}, HapticStrength={hapticStrength}");
+    }
+
+    private void SetMixerVolume(string parameterName, float sliderValue)
+    {
+        if (mainAudioMixer == null)
+        {
+            Debug.LogWarning("MainAudioMixer is not assigned in SettingsManager.");
+            return;
+        }
+
+        float clampedValue = Mathf.Clamp(sliderValue, 0.0001f, 1f);
+        float decibelValue = Mathf.Log10(clampedValue) * 20f;
+
+        bool success = mainAudioMixer.SetFloat(parameterName, decibelValue);
+
+        if (!success)
+        {
+            Debug.LogWarning($"AudioMixer parameter not found: {parameterName}");
+        }
     }
 }
