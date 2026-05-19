@@ -16,7 +16,7 @@ public class DamageObject : MonoBehaviour
 
         currentReceiver = receiver;
 
-        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && GameManager.Instance.CanProcessGameplay())
             GameManager.Instance.RegisterCollision();
 
         TryApplyDamage();
@@ -48,7 +48,7 @@ public class DamageObject : MonoBehaviour
     {
         if (currentReceiver == null) return;
 
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
 
         if (Time.time - lastDamageTime < damageCooldown)

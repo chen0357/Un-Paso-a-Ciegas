@@ -496,6 +496,28 @@
                 },
                 {
                     "name": "",
+                    "id": "b8e2c4f1-9a3d-4e5f-8b1c-2d6e7f9a0b1c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9f3d5a2-0b4e-5f6a-9c2d-3e7f8a0b1c2d",
+                    "path": "<XRController>{RightHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "fe806dd4-a2e5-46c2-a658-f72640600081",
                     "path": "<XRController>{LeftHand}/{MenuButton}",
                     "interactions": "",

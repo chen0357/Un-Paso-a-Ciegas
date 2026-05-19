@@ -30,11 +30,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (isDead) return;
 
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
-        {
-            Debug.Log("El juego ya termino. TakeDamage detenido.");
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
-        }
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);

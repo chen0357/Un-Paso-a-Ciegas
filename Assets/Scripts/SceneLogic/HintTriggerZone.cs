@@ -8,6 +8,9 @@ public class HintTriggerZone : MonoBehaviour
     {
         if (triggered) return;
 
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
+            return;
+
         if (other.CompareTag("Player"))
         {
             triggered = true;

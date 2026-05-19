@@ -10,6 +10,9 @@ public class DangerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
+            return;
+
         PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
         if (receiver == null) return;
 
@@ -30,7 +33,7 @@ public class DangerZone : MonoBehaviour
     {
         if (receiverInZone == null) return;
 
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
 
         timer += Time.deltaTime;

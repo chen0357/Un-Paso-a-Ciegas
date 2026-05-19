@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public ResultUIController resultUIController;
 
     private string lastFailReason = "";
+    private bool isGameplayPaused;
 
     private void Awake()
     {
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (GetComponent<GameplayFreezeController>() == null)
+            gameObject.AddComponent<GameplayFreezeController>();
     }
 
     private void Start()
@@ -61,11 +65,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsPaused()
+    {
+        return isGameplayPaused;
+    }
+
+    public bool IsGameplayFrozen()
+    {
+        return IsGameOver() || isGameplayPaused;
+    }
+
+    public bool CanProcessGameplay()
+    {
+        return gameStarted && !IsGameplayFrozen();
+    }
+
+    public void SetGameplayPaused(bool paused)
+    {
+        isGameplayPaused = paused;
+    }
+
     public void StartGame()
     {
         gameStarted = true;
         gameFinished = false;
         gameFailed = false;
+        isGameplayPaused = false;
 
         startTime = Time.time;
         finishTime = 0f;
@@ -99,17 +124,16 @@ public class GameManager : MonoBehaviour
     /// <summary>Call from physical obstacles (DamageObject) only — not from DangerZone.</summary>
     public void RegisterCollision()
     {
-        if (IsGameOver()) return;
+        if (!CanProcessGameplay()) return;
 
         collisionCount++;
     }
 
     public void RegisterHint()
     {
-        if (IsGameOver()) return;
+        if (!CanProcessGameplay()) return;
 
         hintCount++;
-        Debug.Log("Hint Count: " + hintCount);
     }
 
     public void CompleteGame()
@@ -137,6 +161,8 @@ public class GameManager : MonoBehaviour
     {
         if (!success)
             lastFailReason = failReason;
+
+        isGameplayPaused = false;
 
         UIManager uiManager = FindFirstObjectByType<UIManager>();
         if (uiManager != null)

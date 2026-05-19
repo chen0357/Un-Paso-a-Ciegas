@@ -22,11 +22,8 @@ public class PlayerDamageReceiver : MonoBehaviour
     {
         Debug.Log("ReceiveDamage 被调用，伤害值: " + damage + " 来源: " + damageSource);
 
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
-        {
-            Debug.Log("游戏已经结束，不再扣血");
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
-        }
 
         if (playerHealth == null)
         {

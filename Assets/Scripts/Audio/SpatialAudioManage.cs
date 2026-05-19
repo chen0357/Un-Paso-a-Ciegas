@@ -42,8 +42,25 @@ public class SpatialAudioManager : MonoBehaviour
         if (playerHead == null)
             return;
 
+        if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
+        {
+            StopAllSpatialAudio();
+            return;
+        }
+
         UpdateGoalAudio();
         UpdateDangerAudio();
+    }
+
+    private void StopAllSpatialAudio()
+    {
+        if (goalAudio != null && goalAudio.isPlaying)
+            goalAudio.Stop();
+
+        if (dangerAudio != null && dangerAudio.isPlaying)
+            dangerAudio.Stop();
+
+        dangerTimer = 0f;
     }
 
     private void UpdateGoalAudio()
@@ -86,7 +103,7 @@ public class SpatialAudioManager : MonoBehaviour
 
         float interval = Mathf.Lerp(dangerSlowInterval, dangerFastInterval, closeness);
 
-        dangerTimer += Time.unscaledDeltaTime;
+        dangerTimer += Time.deltaTime;
 
         if (dangerTimer >= interval)
         {

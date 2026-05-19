@@ -18,6 +18,9 @@ public class PauseMenuController : MonoBehaviour
         if (pauseOnEnable)
         {
             isPaused = true;
+            if (GameManager.Instance != null)
+                GameManager.Instance.SetGameplayPaused(true);
+
             Time.timeScale = 0f;
             if (uiManager != null)
                 uiManager.ShowPauseMenu();
@@ -81,6 +84,9 @@ public class PauseMenuController : MonoBehaviour
 
         if (isPaused)
         {
+            if (GameManager.Instance != null)
+                GameManager.Instance.SetGameplayPaused(true);
+
             Time.timeScale = 0f;
             uiManager.ShowPauseMenu();
 
@@ -103,6 +109,10 @@ public class PauseMenuController : MonoBehaviour
         }
 
         isPaused = false;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.SetGameplayPaused(false);
+
         Time.timeScale = 1f;
 
         if (uiManager != null)
