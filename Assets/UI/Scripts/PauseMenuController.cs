@@ -27,7 +27,7 @@ public class PauseMenuController : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1f;
             if (uiManager != null)
-                uiManager.HideAllPanels();
+                uiManager.HideGameplayPanels();
         }
     }
 
@@ -70,13 +70,12 @@ public class PauseMenuController : MonoBehaviour
     {
         if (uiManager == null) return;
 
-        //  如果在其他UI界面，禁止触发
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+            return;
+
         if (uiManager.currentState != UIManager.UIState.None &&
             uiManager.currentState != UIManager.UIState.Pause)
-        {
-            Debug.Log("Pause ignored: 当前在其他UI界面");
             return;
-        }
 
         isPaused = !isPaused;
 
@@ -86,44 +85,34 @@ public class PauseMenuController : MonoBehaviour
             uiManager.ShowPauseMenu();
 
             if (GameManager.Instance != null)
-            {
                 GameManager.Instance.UpdateStateUI("Paused");
-            }
-
-            Debug.Log("Game Paused");
         }
         else
         {
-            Time.timeScale = 1f;
-            uiManager.HideAllPanels();
-            uiManager.currentState = UIManager.UIState.None;
-
-            if (GameManager.Instance != null)
-            {
-                GameManager.Instance.UpdateStateUI("Playing");
-            }
-
-            Debug.Log("Game Resumed");
+            ResumeGame();
         }
     }
 
     public void ResumeGame()
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+        {
+            isPaused = false;
+            GameManager.Instance.RestoreResultScreen();
+            return;
+        }
+
         isPaused = false;
         Time.timeScale = 1f;
 
         if (uiManager != null)
         {
-            uiManager.HideAllPanels();
+            uiManager.HideGameplayPanels();
             uiManager.currentState = UIManager.UIState.None;
         }
 
         if (GameManager.Instance != null)
-        {
             GameManager.Instance.UpdateStateUI("Playing");
-        }
-
-        Debug.Log("ResumeGame called");
     }
 
     public bool IsPaused()

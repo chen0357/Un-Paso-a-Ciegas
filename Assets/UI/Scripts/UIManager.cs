@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public const string MainMenuSceneName = "Main";
+
     public enum UIManagerMode
     {
         MainMenuScene,
@@ -43,7 +45,7 @@ public class UIManager : MonoBehaviour
                 break;
 
             case UIManagerMode.GameplayScene:
-                // 游戏场景默认不显示任何面板
+                // ?????????????????????
                 break;
         }
     }
@@ -57,6 +59,13 @@ public class UIManager : MonoBehaviour
         if (resultPanel != null) resultPanel.SetActive(false);
     }
 
+    public void HideGameplayPanels()
+    {
+        if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
+        if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
+    }
+
     public void ShowMainMenu()
     {
         HideAllPanels();
@@ -67,7 +76,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowSettings()
     {
-        previousState = currentState; // 记录来源
+        previousState = currentState; // ??????
 
         HideAllPanels();
         if (settingsPanel != null) settingsPanel.SetActive(true);
@@ -77,7 +86,10 @@ public class UIManager : MonoBehaviour
 
     public void ShowPauseMenu()
     {
-        HideAllPanels();
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+            return;
+
+        HideGameplayPanels();
 
         if (pausePanel != null)
             pausePanel.SetActive(true);
@@ -127,7 +139,7 @@ public class UIManager : MonoBehaviour
     public void ReturnToMainMenuScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(MainMenuSceneName);
     }
 
     public void QuitGame()

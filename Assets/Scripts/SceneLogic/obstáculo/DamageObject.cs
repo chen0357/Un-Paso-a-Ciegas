@@ -15,6 +15,10 @@ public class DamageObject : MonoBehaviour
         if (receiver == null) return;
 
         currentReceiver = receiver;
+
+        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
+            GameManager.Instance.RegisterCollision();
+
         TryApplyDamage();
     }
 
@@ -53,12 +57,5 @@ public class DamageObject : MonoBehaviour
         lastDamageTime = Time.time;
 
         currentReceiver.ReceiveDamage(damageAmount, gameObject.name);
-
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.RegisterCollision();
-        }
-
-        Debug.Log(gameObject.name + " ПлбЊ: " + damageAmount);
     }
 }

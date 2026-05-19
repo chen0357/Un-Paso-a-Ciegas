@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("Statistics")]
     public float startTime;
     public float finishTime;
+    /// <summary>Physical obstacle hits only (DamageObject). Danger zones do not increment this.</summary>
     public int collisionCount = 0;
     public int hintCount = 0;
 
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Result UI")]
     public ResultUIController resultUIController;
+
+    private string lastFailReason = "";
 
     private void Awake()
     {
@@ -93,12 +96,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>Call from physical obstacles (DamageObject) only — not from DangerZone.</summary>
     public void RegisterCollision()
     {
         if (IsGameOver()) return;
 
         collisionCount++;
-        Debug.Log("Collision Count: " + collisionCount);
     }
 
     public void RegisterHint()
@@ -116,19 +119,7 @@ public class GameManager : MonoBehaviour
         gameFinished = true;
         finishTime = Time.time - startTime;
 
-        Debug.Log("Game Completed! Time: " + finishTime);
-        if (hudPanel != null)
-        {
-            hudPanel.SetActive(false);
-        }
-        if (resultUIController != null)
-        {
-            resultUIController.ShowResult(true, finishTime, collisionCount, hintCount);
-        }
-        else
-        {
-            Debug.LogError("ResultUIController is not assigned in GameManager!");
-        }
+        PresentResult(true);
     }
 
     public void FailGame(string reason)
@@ -137,15 +128,39 @@ public class GameManager : MonoBehaviour
 
         gameFailed = true;
         finishTime = Time.time - startTime;
+        lastFailReason = reason;
 
-        UpdateStateUI("Failed");
+        PresentResult(false, lastFailReason);
+    }
 
-        Debug.Log("Game Failed: " + reason);
+    public void PresentResult(bool success, string failReason = "")
+    {
+        if (!success)
+            lastFailReason = failReason;
+
+        UIManager uiManager = FindFirstObjectByType<UIManager>();
+        if (uiManager != null)
+            uiManager.HideGameplayPanels();
+
+        if (hudPanel != null)
+            hudPanel.SetActive(false);
 
         if (resultUIController != null)
-        {
-            resultUIController.ShowResult(false, finishTime, collisionCount, hintCount, reason);
-        }
+            resultUIController.ShowResult(success, finishTime, collisionCount, hintCount, failReason);
+        else
+            Debug.LogError("ResultUIController is not assigned in GameManager!");
+
+        if (uiManager != null)
+            uiManager.currentState = UIManager.UIState.Result;
+
+        Time.timeScale = 0f;
+    }
+
+    public void RestoreResultScreen()
+    {
+        if (!IsGameOver()) return;
+
+        PresentResult(gameFinished, lastFailReason);
     }
 
     public void RestartScene()
@@ -156,8 +171,15 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        UIManager uiManager = FindFirstObjectByType<UIManager>();
+        if (uiManager != null)
+        {
+            uiManager.ReturnToMainMenuScene();
+            return;
+        }
+
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(UIManager.MainMenuSceneName);
     }
 
     public void LoadNextScene(string sceneName)

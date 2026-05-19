@@ -5,43 +5,38 @@ public class DangerZone : MonoBehaviour
     public int damage = 10;
     public float damageInterval = 1f;
 
-    private float timer = 0f;
-    private PlayerHealth playerInZone;
+    private float timer;
+    private PlayerDamageReceiver receiverInZone;
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerHealth player = other.GetComponentInParent<PlayerHealth>();
+        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
+        if (receiver == null) return;
 
-        if (player != null)
-        {
-            playerInZone = player;
-            timer = damageInterval;
-            Debug.Log("Player entered danger zone");
-        }
+        receiverInZone = receiver;
+        timer = damageInterval;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerHealth player = other.GetComponentInParent<PlayerHealth>();
+        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
+        if (receiver == null || receiver != receiverInZone) return;
 
-        if (player != null && player == playerInZone)
-        {
-            playerInZone = null;
-            timer = 0f;
-            Debug.Log("Player exited danger zone");
-        }
+        receiverInZone = null;
+        timer = 0f;
     }
 
     private void Update()
     {
-        if (playerInZone == null) return;
+        if (receiverInZone == null) return;
+
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver())
+            return;
 
         timer += Time.deltaTime;
+        if (timer < damageInterval) return;
 
-        if (timer >= damageInterval)
-        {
-            playerInZone.TakeDamage(damage);
-            timer = 0f;
-        }
+        timer = 0f;
+        receiverInZone.ReceiveDamage(damage, gameObject.name);
     }
 }
