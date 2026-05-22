@@ -19,7 +19,7 @@ public class CaneAudioSystem : MonoBehaviour
     public float minHitVolume = 0.2f;
     public float maxHitVolume = 1f;
 
-    public void PlaySurfaceSound(SurfaceType surfaceType, float intensity)
+    public void PlaySurfaceSound(SurfaceTag surfaceTag, float intensity)
     {
         if (audioSource == null)
         {
@@ -27,7 +27,7 @@ public class CaneAudioSystem : MonoBehaviour
             return;
         }
 
-        AudioClip clip = GetClipBySurface(surfaceType);
+        AudioClip clip = ResolveClip(surfaceTag);
         if (clip == null)
             return;
 
@@ -35,6 +35,17 @@ public class CaneAudioSystem : MonoBehaviour
         float finalVolume = baseVolume * hitVolume * GetSettingsVolumeMultiplier();
 
         audioSource.PlayOneShot(clip, finalVolume);
+    }
+
+    private AudioClip ResolveClip(SurfaceTag surfaceTag)
+    {
+        if (surfaceTag == null)
+            return defaultClip;
+
+        if (surfaceTag.customHitClip != null)
+            return surfaceTag.customHitClip;
+
+        return GetClipBySurface(surfaceTag.surfaceType);
     }
 
     private AudioClip GetClipBySurface(SurfaceType surfaceType)

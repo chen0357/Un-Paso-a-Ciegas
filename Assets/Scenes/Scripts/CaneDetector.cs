@@ -110,7 +110,8 @@ public class CaneDetector : MonoBehaviour
 
         if (caneAudioSystem != null)
         {
-            caneAudioSystem.PlaySurfaceSound(currentSurface, intensity);
+            SurfaceTag surfaceTag = other.GetComponent<SurfaceTag>();
+            caneAudioSystem.PlaySurfaceSound(surfaceTag, intensity);
         }
 
         if (caneHapticSystem != null)
