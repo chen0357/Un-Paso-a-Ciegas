@@ -10,9 +10,8 @@ public class DamageObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
-
-        if (receiver == null) return;
+        if (!PlayerDamageReceiver.TryGetFromPlayerBodyCollider(other, out PlayerDamageReceiver receiver))
+            return;
 
         currentReceiver = receiver;
 
@@ -24,9 +23,8 @@ public class DamageObject : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
-
-        if (receiver == null) return;
+        if (!PlayerDamageReceiver.TryGetFromPlayerBodyCollider(other, out PlayerDamageReceiver receiver))
+            return;
 
         currentReceiver = receiver;
         TryApplyDamage();
@@ -34,9 +32,8 @@ public class DamageObject : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
-
-        if (receiver == null) return;
+        if (!PlayerDamageReceiver.TryGetFromPlayerBodyCollider(other, out PlayerDamageReceiver receiver))
+            return;
 
         if (receiver == currentReceiver)
         {
@@ -56,6 +53,9 @@ public class DamageObject : MonoBehaviour
 
         lastDamageTime = Time.time;
 
-        currentReceiver.ReceiveDamage(damageAmount, gameObject.name);
+        string source = transform.parent != null
+            ? transform.parent.name + " / " + gameObject.name
+            : gameObject.name;
+        currentReceiver.ReceiveDamage(damageAmount, source);
     }
 }

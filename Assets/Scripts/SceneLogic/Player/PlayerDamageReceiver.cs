@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class PlayerDamageReceiver : MonoBehaviour
 {
+    /// <summary>
+    /// Only colliders on objects tagged "Player" count (e.g. PlayerTriggerDetector).
+    /// Ignores cane tip and other child triggers that share the XR Origin hierarchy.
+    /// </summary>
+    public static bool TryGetFromPlayerBodyCollider(Collider other, out PlayerDamageReceiver receiver)
+    {
+        receiver = null;
+        if (other == null || !other.CompareTag("Player"))
+            return false;
+
+        receiver = other.GetComponentInParent<PlayerDamageReceiver>();
+        return receiver != null;
+    }
+
     private PlayerHealth playerHealth;
 
     private void Awake()

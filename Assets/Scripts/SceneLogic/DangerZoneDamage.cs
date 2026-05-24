@@ -13,8 +13,8 @@ public class DangerZone : MonoBehaviour
         if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
 
-        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
-        if (receiver == null) return;
+        if (!PlayerDamageReceiver.TryGetFromPlayerBodyCollider(other, out PlayerDamageReceiver receiver))
+            return;
 
         receiverInZone = receiver;
         timer = damageInterval;
@@ -22,8 +22,10 @@ public class DangerZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerDamageReceiver receiver = other.GetComponentInParent<PlayerDamageReceiver>();
-        if (receiver == null || receiver != receiverInZone) return;
+        if (!PlayerDamageReceiver.TryGetFromPlayerBodyCollider(other, out PlayerDamageReceiver receiver))
+            return;
+
+        if (receiver != receiverInZone) return;
 
         receiverInZone = null;
         timer = 0f;
