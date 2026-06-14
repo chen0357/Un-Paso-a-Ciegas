@@ -201,17 +201,12 @@ public class SpatialAudioManager : MonoBehaviour
         else if (playerPos.z > bounds.max.z)
             dz = playerPos.z - bounds.max.z;
 
+        // Inside the zone horizontally: treat as distance 0 so alarm always plays.
+        if (dx == 0f && dz == 0f)
+            return 0f;
+
         if (dx > 0f && dz > 0f)
             return Mathf.Sqrt(dx * dx + dz * dz);
-
-        if (dx == 0f && dz == 0f)
-        {
-            return Mathf.Min(
-                playerPos.x - bounds.min.x,
-                bounds.max.x - playerPos.x,
-                playerPos.z - bounds.min.z,
-                bounds.max.z - playerPos.z);
-        }
 
         return Mathf.Max(dx, dz);
     }
