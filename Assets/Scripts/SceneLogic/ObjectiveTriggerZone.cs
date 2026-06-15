@@ -29,5 +29,9 @@ public class ObjectiveTriggerZone : MonoBehaviour
 
         if (!string.IsNullOrEmpty(hintMessage))
             Debug.Log(hintMessage);
+
+        ObjectiveZoneVisual visual = GetComponent<ObjectiveZoneVisual>();
+        if (visual != null)
+            visual.Hide();
     }
 }

@@ -1556,6 +1556,7 @@ GameObject:
   - component: {fileID: 233994239}
   - component: {fileID: 233994243}
   - component: {fileID: 233994244}
+  - component: {fileID: 233994245}
   m_Layer: 0
   m_Name: GoalZone
   m_TagString: Goal
@@ -1591,7 +1592,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233994238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1646,7 +1647,7 @@ Transform:
   m_GameObject: {fileID: 233994238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -95.7, y: 0.1, z: 12.4}
+  m_LocalPosition: {x: -95.7, y: 0.1, z: 15.2}
   m_LocalScale: {x: 2, y: 0.2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1764,6 +1765,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &233994245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233994238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f708192a3b4c5d6e7f8091021324354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pillarHeight: 12
+  pillarRadius: 0.22
+  groundRadius: 1.2
+  pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.75}
+  groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.55}
+  pulse: 1
+  pulseSpeed: 1.6
+  pulseAmount: 0.18
+  addPointLight: 1
+  lightRange: 4
+  lightIntensity: 1.4
+  hideWhenTaskCompleted: 1
 --- !u!1 &235268452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,8 +3009,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 130.09079, y: 23.56918, z: 24.442238}
-  m_Center: {x: 0, y: 0.000005722046, z: 10.978928}
+  m_Size: {x: 130.0908, y: 23.56918, z: 24.442234}
+  m_Center: {x: 0, y: 0.000005722046, z: 10.9789295}
 --- !u!114 &433741894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5869,6 +5894,7 @@ GameObject:
   - component: {fileID: 900000023}
   - component: {fileID: 900000024}
   - component: {fileID: 900000025}
+  - component: {fileID: 900000026}
   m_Layer: 0
   m_Name: TaskZone_02
   m_TagString: Hint
@@ -5885,7 +5911,7 @@ Transform:
   m_GameObject: {fileID: 900000020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.43, y: 0.31, z: 15.5}
+  m_LocalPosition: {x: 8.43, y: 0.02, z: 15.5}
   m_LocalScale: {x: 1, y: 0.2, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5919,7 +5945,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900000020}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5978,7 +6004,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskId: task_2
-  hintMessage: "\u5DF2\u5B8C\u6210\uFF1A\u7A7F\u8FC7\u8F66\u9053"
+  hintMessage: 'Completado: Cruzando el carril'
+--- !u!114 &900000026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900000020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f708192a3b4c5d6e7f8091021324354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pillarHeight: 5
+  pillarRadius: 1.5
+  groundRadius: 2
+  pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.75}
+  groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.55}
+  pulse: 1
+  pulseSpeed: 1.6
+  pulseAmount: 0.18
+  addPointLight: 1
+  lightRange: 4
+  lightIntensity: 1.4
+  hideWhenTaskCompleted: 1
 --- !u!1 &900171916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,6 +7022,7 @@ GameObject:
   - component: {fileID: 1139608442}
   - component: {fileID: 1139608441}
   - component: {fileID: 1139608445}
+  - component: {fileID: 1139608446}
   m_Layer: 0
   m_Name: TaskZone_01
   m_TagString: Hint
@@ -7007,7 +7058,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139608439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7062,7 +7113,7 @@ Transform:
   m_GameObject: {fileID: 1139608439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.52, y: 0.31, z: 15.71}
+  m_LocalPosition: {x: 74.52, y: 0.02, z: 15.71}
   m_LocalScale: {x: 0.5, y: 0.01, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7081,7 +7132,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskId: task_1
-  hintMessage: "\u5DF2\u5B8C\u6210\uFF1A\u7A7F\u8FC7\u4EBA\u884C\u9053"
+  hintMessage: 'Completado: Cruzar la pasarela peatonal'
+--- !u!114 &1139608446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139608439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f708192a3b4c5d6e7f8091021324354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pillarHeight: 5
+  pillarRadius: 1.5
+  groundRadius: 2
+  pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.39215687}
+  groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.3647059}
+  pulse: 1
+  pulseSpeed: 1.6
+  pulseAmount: 0.18
+  addPointLight: 1
+  lightRange: 4
+  lightIntensity: 1.4
+  hideWhenTaskCompleted: 1
 --- !u!1 &1142307159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,7 +7371,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9264,7 +9339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6055ffaf2a024c1479806c37ec13a246, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.9
+      value: 75.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6055ffaf2a024c1479806c37ec13a246, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9343,7 +9418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6be89d5f889b43749962faa149547b77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -60.2
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6be89d5f889b43749962faa149547b77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12074,7 +12149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 102.1
+      value: 87.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12086,11 +12161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12098,7 +12173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -12356,7 +12431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -60.7
+      value: -61.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12430,7 +12505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -61.7
+      value: -61.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
       propertyPath: m_LocalPosition.z

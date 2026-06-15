@@ -33,5 +33,9 @@ public class GoalTrigger : MonoBehaviour
 
         if (finishLevelOnTrigger && GameManager.Instance != null)
             GameManager.Instance.CompleteGame();
+
+        ObjectiveZoneVisual visual = GetComponent<ObjectiveZoneVisual>();
+        if (visual != null)
+            visual.Hide();
     }
 }
