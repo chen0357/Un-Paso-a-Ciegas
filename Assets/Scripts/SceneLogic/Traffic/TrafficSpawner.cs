@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TrafficFlowAxis
+{
+    NorthSouth,
+    EastWest
+}
+
 /// <summary>
 /// Spawns traffic on one or more parallel lanes. Each lane needs its own spawn/despawn
 /// transforms facing the driving direction.
@@ -24,7 +30,38 @@ public class TrafficSpawner : MonoBehaviour
     public Transform spawnPoint;
     public Transform despawnPoint;
 
+    [Header("Traffic Light Link")]
+    public TrafficFlowAxis flowAxis;
+
+    private bool crossingBlocked;
+    private Bounds stopBounds;
+    private readonly List<TrafficCar> activeCars = new List<TrafficCar>();
     private readonly List<LaneRuntime> runtimeLanes = new List<LaneRuntime>();
+
+    public bool IsCrossingBlocked => crossingBlocked;
+    public Bounds StopBounds => stopBounds;
+
+    public void SetCrossingBlocked(bool blocked, Bounds bounds)
+    {
+        crossingBlocked = blocked;
+        stopBounds = bounds;
+    }
+
+    internal void RegisterCar(TrafficCar car)
+    {
+        if (car == null || activeCars.Contains(car))
+            return;
+
+        activeCars.Add(car);
+    }
+
+    internal void UnregisterCar(TrafficCar car)
+    {
+        if (car == null)
+            return;
+
+        activeCars.Remove(car);
+    }
 
     private class LaneRuntime
     {
@@ -100,6 +137,9 @@ public class TrafficSpawner : MonoBehaviour
 
     private void UpdateLane(LaneRuntime lane, int laneIndex)
     {
+        if (crossingBlocked)
+            return;
+
         int laneLimit = ResolveMaxActiveCars(lane.config);
         if (lane.activeCars >= laneLimit)
             return;
@@ -127,16 +167,21 @@ public class TrafficSpawner : MonoBehaviour
         float baseSpeed = ResolveSpeed(lane.config);
         float carSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
         mover.Initialize(spawn, despawn, carSpeed);
+        mover.BindSpawner(this);
+        RegisterCar(mover);
 
         TrafficCarTracker tracker = car.GetComponent<TrafficCarTracker>();
         if (tracker == null)
             tracker = car.AddComponent<TrafficCarTracker>();
         tracker.spawner = this;
         tracker.laneIndex = laneIndex;
+        tracker.car = mover;
     }
 
-    public void NotifyCarDestroyed(int laneIndex)
+    public void NotifyCarDestroyed(int laneIndex, TrafficCar car)
     {
+        UnregisterCar(car);
+
         if (laneIndex < 0 || laneIndex >= runtimeLanes.Count)
             return;
 
@@ -182,11 +227,12 @@ public class TrafficSpawner : MonoBehaviour
 public class TrafficCarTracker : MonoBehaviour
 {
     [HideInInspector] public TrafficSpawner spawner;
+    [HideInInspector] public TrafficCar car;
     [HideInInspector] public int laneIndex = -1;
 
     private void OnDestroy()
     {
         if (spawner != null)
-            spawner.NotifyCarDestroyed(laneIndex);
+            spawner.NotifyCarDestroyed(laneIndex, car);
     }
 }

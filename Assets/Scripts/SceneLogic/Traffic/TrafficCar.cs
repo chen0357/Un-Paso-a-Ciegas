@@ -14,6 +14,8 @@ public enum TrafficModelForwardAxis
 /// </summary>
 public class TrafficCar : MonoBehaviour
 {
+    private const float StopLineTolerance = 0.05f;
+
     [Header("Movement")]
     public float speed = 8f;
 
@@ -27,6 +29,8 @@ public class TrafficCar : MonoBehaviour
     private Vector3 moveDirection;
     private float despawnDistance;
     private AudioSource engineAudio;
+    private TrafficSpawner owningSpawner;
+    private bool heldAtStopLine;
 
     private void Awake()
     {
@@ -51,6 +55,11 @@ public class TrafficCar : MonoBehaviour
         despawnDistance = Vector3.Distance(spawn.position, despawn.position) + 2f;
     }
 
+    public void BindSpawner(TrafficSpawner spawner)
+    {
+        owningSpawner = spawner;
+    }
+
     private Quaternion GetAlignedRotation(Quaternion spawnRotation)
     {
         Vector3 modelForward = AxisToVector(modelForwardAxis);
@@ -73,6 +82,22 @@ public class TrafficCar : MonoBehaviour
         }
     }
 
+    private void UpdateEngineAudioState()
+    {
+        if (engineAudio == null)
+            return;
+
+        if (heldAtStopLine)
+        {
+            if (engineAudio.isPlaying)
+                engineAudio.Pause();
+            return;
+        }
+
+        if (!engineAudio.isPlaying)
+            engineAudio.UnPause();
+    }
+
     private void Update()
     {
         if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
@@ -82,10 +107,23 @@ public class TrafficCar : MonoBehaviour
             return;
         }
 
-        if (engineAudio != null && !engineAudio.isPlaying)
-            engineAudio.UnPause();
+        Vector3 currentPosition = transform.position;
+        Vector3 nextPosition = currentPosition + moveDirection * (speed * Time.deltaTime);
 
-        transform.position += moveDirection * (speed * Time.deltaTime);
+        if (owningSpawner != null && owningSpawner.IsCrossingBlocked)
+            nextPosition = ApplyIntersectionStop(currentPosition, nextPosition, owningSpawner.StopBounds);
+
+        heldAtStopLine = (nextPosition - currentPosition).sqrMagnitude <= 0.000001f &&
+                         owningSpawner != null &&
+                         owningSpawner.IsCrossingBlocked;
+
+        UpdateEngineAudioState();
+
+        Vector3 movement = nextPosition - currentPosition;
+        if (movement.sqrMagnitude <= 0f)
+            return;
+
+        transform.position = nextPosition;
 
         if (despawnPoint != null &&
             Vector3.Distance(transform.position, despawnPoint.position) < 1.5f)
@@ -96,9 +134,65 @@ public class TrafficCar : MonoBehaviour
 
         if (despawnDistance > 0f)
         {
-            despawnDistance -= speed * Time.deltaTime;
+            despawnDistance -= movement.magnitude;
             if (despawnDistance <= 0f)
                 Destroy(gameObject);
         }
+    }
+
+    private Vector3 ApplyIntersectionStop(Vector3 current, Vector3 next, Bounds bounds)
+    {
+        if (Mathf.Abs(moveDirection.z) > Mathf.Abs(moveDirection.x))
+        {
+            if (moveDirection.z > 0f)
+            {
+                if (current.z > bounds.max.z)
+                    return next;
+
+                if (current.z > bounds.min.z + StopLineTolerance)
+                    return next;
+
+                if (next.z > bounds.min.z)
+                    return new Vector3(next.x, next.y, bounds.min.z);
+
+                return next;
+            }
+
+            if (current.z < bounds.min.z)
+                return next;
+
+            if (current.z < bounds.max.z - StopLineTolerance)
+                return next;
+
+            if (next.z < bounds.max.z)
+                return new Vector3(next.x, next.y, bounds.max.z);
+
+            return next;
+        }
+
+        if (moveDirection.x > 0f)
+        {
+            if (current.x > bounds.max.x)
+                return next;
+
+            if (current.x > bounds.min.x + StopLineTolerance)
+                return next;
+
+            if (next.x > bounds.min.x)
+                return new Vector3(bounds.min.x, next.y, next.z);
+
+            return next;
+        }
+
+        if (current.x < bounds.min.x)
+            return next;
+
+        if (current.x < bounds.max.x - StopLineTolerance)
+            return next;
+
+        if (next.x < bounds.max.x)
+            return new Vector3(bounds.max.x, next.y, next.z);
+
+        return next;
     }
 }
