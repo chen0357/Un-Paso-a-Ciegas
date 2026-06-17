@@ -33,18 +33,29 @@ public class TrafficSpawner : MonoBehaviour
     [Header("Traffic Light Link")]
     public TrafficFlowAxis flowAxis;
 
+    [Tooltip("Extra wait after the light turns green before queued cars start moving.")]
+    public float releaseDelay = 1f;
+
     private bool crossingBlocked;
     private Bounds stopBounds;
+    private float releaseHoldUntil;
     private readonly List<TrafficCar> activeCars = new List<TrafficCar>();
     private readonly List<LaneRuntime> runtimeLanes = new List<LaneRuntime>();
 
     public bool IsCrossingBlocked => crossingBlocked;
+    public bool IsReleaseHoldActive => !crossingBlocked && Time.time < releaseHoldUntil;
     public Bounds StopBounds => stopBounds;
 
     public void SetCrossingBlocked(bool blocked, Bounds bounds)
     {
+        bool wasBlocked = crossingBlocked;
         crossingBlocked = blocked;
         stopBounds = bounds;
+
+        if (wasBlocked && !blocked)
+            releaseHoldUntil = Time.time + releaseDelay;
+        else if (blocked)
+            releaseHoldUntil = 0f;
     }
 
     internal void RegisterCar(TrafficCar car)
@@ -62,6 +73,69 @@ public class TrafficSpawner : MonoBehaviour
 
         activeCars.Remove(car);
     }
+
+    public TrafficCar FindCarAhead(TrafficCar self, int laneIndex)
+    {
+        if (self == null)
+            return null;
+
+        PruneActiveCars();
+
+        TrafficCar closestAhead = null;
+        float closestGap = float.MaxValue;
+        float selfAxis = self.GetTravelAxis();
+
+        for (int i = 0; i < activeCars.Count; i++)
+        {
+            TrafficCar other = activeCars[i];
+            if (other == null || other == self || other.LaneIndex != laneIndex)
+                continue;
+
+            float gap = other.GetTravelAxis() - selfAxis;
+            if (gap <= StopLineTolerance || gap >= closestGap)
+                continue;
+
+            closestGap = gap;
+            closestAhead = other;
+        }
+
+        return closestAhead;
+    }
+
+    internal bool IsLaneSpawnBlocked(int laneIndex, Transform spawnPoint, float clearDistance)
+    {
+        if (spawnPoint == null)
+            return false;
+
+        PruneActiveCars();
+
+        Vector3 laneForward = spawnPoint.forward.normalized;
+        float spawnAxis = Vector3.Dot(spawnPoint.position, laneForward);
+
+        for (int i = 0; i < activeCars.Count; i++)
+        {
+            TrafficCar car = activeCars[i];
+            if (car == null || car.LaneIndex != laneIndex)
+                continue;
+
+            float gap = Vector3.Dot(car.transform.position, laneForward) - spawnAxis;
+            if (gap >= 0f && gap < clearDistance)
+                return true;
+        }
+
+        return false;
+    }
+
+    private void PruneActiveCars()
+    {
+        for (int i = activeCars.Count - 1; i >= 0; i--)
+        {
+            if (activeCars[i] == null)
+                activeCars.RemoveAt(i);
+        }
+    }
+
+    private const float StopLineTolerance = 0.05f;
 
     private class LaneRuntime
     {
@@ -137,11 +211,15 @@ public class TrafficSpawner : MonoBehaviour
 
     private void UpdateLane(LaneRuntime lane, int laneIndex)
     {
-        if (crossingBlocked)
+        if (crossingBlocked || IsReleaseHoldActive)
             return;
 
         int laneLimit = ResolveMaxActiveCars(lane.config);
         if (lane.activeCars >= laneLimit)
+            return;
+
+        float spawnClearDistance = ResolveSpawnClearDistance();
+        if (IsLaneSpawnBlocked(laneIndex, lane.config.spawnPoint, spawnClearDistance))
             return;
 
         lane.timer -= Time.deltaTime;
@@ -166,7 +244,7 @@ public class TrafficSpawner : MonoBehaviour
 
         float baseSpeed = ResolveSpeed(lane.config);
         float carSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
-        mover.Initialize(spawn, despawn, carSpeed);
+        mover.Initialize(spawn, despawn, carSpeed, laneIndex);
         mover.BindSpawner(this);
         RegisterCar(mover);
 
@@ -201,6 +279,15 @@ public class TrafficSpawner : MonoBehaviour
     private int ResolveMaxActiveCars(TrafficLaneConfig lane)
     {
         return lane.maxActiveCars > 0 ? lane.maxActiveCars : maxActiveCars;
+    }
+
+    private float ResolveSpawnClearDistance()
+    {
+        TrafficCar template = carPrefab != null ? carPrefab.GetComponent<TrafficCar>() : null;
+        if (template == null)
+            return 6f;
+
+        return template.followDistance * 1.5f;
     }
 
     private void OnDrawGizmosSelected()

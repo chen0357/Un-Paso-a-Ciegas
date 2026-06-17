@@ -152,7 +152,7 @@ PrefabInstance:
       addedObject: {fileID: 8472938472938472}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a50514a1d77b0c24889a5114831a7d47, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9584738291047583920}
+      addedObject: {fileID: 9223372036854775807}
   m_SourcePrefab: {fileID: 100100000, guid: a50514a1d77b0c24889a5114831a7d47, type: 3}
 --- !u!4 &4906802822184731664 stripped
 Transform:
@@ -199,7 +199,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surfaceType: 3
   customHitClip: {fileID: 8300000, guid: 5b0c3e3e0f662b548bf21814a4dd5fe1, type: 3}
---- !u!82 &9584738291047583920
+--- !u!114 &8472938472938472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5716096553639534250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5a0dccd4be524479ac7416249abf4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  followDistance: 6
+  slowdownDistance: 12
+  minFollowSpeed: 1.5
+  modelForwardAxis: 3
+  despawnPoint: {fileID: 0}
+--- !u!82 &9223372036854775807
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,8 +227,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b0c3e3e0f662b548bf21814a4dd5fe1, type: 3}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5b0c3e3e0f662b548bf21814a4dd5fe1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.65
   m_Pitch: 1
@@ -296,18 +314,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8472938472938472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5716096553639534250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5a0dccd4be524479ac7416249abf4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  modelForwardAxis: 3
-  despawnPoint: {fileID: 0}

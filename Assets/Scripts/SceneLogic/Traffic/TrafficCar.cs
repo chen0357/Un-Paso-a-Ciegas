@@ -19,6 +19,11 @@ public class TrafficCar : MonoBehaviour
     [Header("Movement")]
     public float speed = 8f;
 
+    [Header("Following")]
+    public float followDistance = 4.5f;
+    public float slowdownDistance = 12f;
+    public float minFollowSpeed = 1.5f;
+
     [Header("Model Alignment")]
     [Tooltip("Which local axis of the car model points to the front. Most imported FBX cars use PositiveX.")]
     public TrafficModelForwardAxis modelForwardAxis = TrafficModelForwardAxis.PositiveX;
@@ -30,7 +35,11 @@ public class TrafficCar : MonoBehaviour
     private float despawnDistance;
     private AudioSource engineAudio;
     private TrafficSpawner owningSpawner;
+    private int laneIndex = -1;
     private bool heldAtStopLine;
+
+    public int LaneIndex => laneIndex;
+    public Vector3 MoveDirection => moveDirection;
 
     private void Awake()
     {
@@ -43,21 +52,35 @@ public class TrafficCar : MonoBehaviour
             engineAudio.Play();
     }
 
-    public void Initialize(Transform spawn, Transform despawn, float moveSpeed)
+    public void Initialize(Transform spawn, Transform despawn, float moveSpeed, int lane)
     {
+        laneIndex = lane;
         speed = moveSpeed;
         despawnPoint = despawn;
 
         transform.position = spawn.position;
         transform.rotation = GetAlignedRotation(spawn.rotation);
 
-        moveDirection = spawn.forward;
+        moveDirection = spawn.forward.normalized;
         despawnDistance = Vector3.Distance(spawn.position, despawn.position) + 2f;
     }
 
     public void BindSpawner(TrafficSpawner spawner)
     {
         owningSpawner = spawner;
+    }
+
+    public float GetTravelAxis()
+    {
+        return Vector3.Dot(transform.position, moveDirection);
+    }
+
+    public float GetGapToCarAhead(TrafficCar ahead)
+    {
+        if (ahead == null)
+            return float.MaxValue;
+
+        return ahead.GetTravelAxis() - GetTravelAxis();
     }
 
     private Quaternion GetAlignedRotation(Quaternion spawnRotation)
@@ -108,14 +131,21 @@ public class TrafficCar : MonoBehaviour
         }
 
         Vector3 currentPosition = transform.position;
-        Vector3 nextPosition = currentPosition + moveDirection * (speed * Time.deltaTime);
+        TrafficCar carAhead = owningSpawner != null
+            ? owningSpawner.FindCarAhead(this, laneIndex)
+            : null;
 
-        if (owningSpawner != null && owningSpawner.IsCrossingBlocked)
+        float effectiveSpeed = ResolveFollowSpeed(carAhead);
+        Vector3 desiredNext = currentPosition + moveDirection * (effectiveSpeed * Time.deltaTime);
+        Vector3 nextPosition = ConstrainToCarAhead(currentPosition, desiredNext, carAhead);
+
+        if (ShouldApplyIntersectionHold(owningSpawner))
             nextPosition = ApplyIntersectionStop(currentPosition, nextPosition, owningSpawner.StopBounds);
 
         heldAtStopLine = (nextPosition - currentPosition).sqrMagnitude <= 0.000001f &&
-                         owningSpawner != null &&
-                         owningSpawner.IsCrossingBlocked;
+                         (effectiveSpeed <= 0.01f ||
+                          ShouldApplyIntersectionHold(owningSpawner) ||
+                          (carAhead != null && GetGapToCarAhead(carAhead) <= followDistance + 0.1f));
 
         UpdateEngineAudioState();
 
@@ -138,6 +168,66 @@ public class TrafficCar : MonoBehaviour
             if (despawnDistance <= 0f)
                 Destroy(gameObject);
         }
+    }
+
+    private float ResolveFollowSpeed(TrafficCar carAhead)
+    {
+        if (carAhead == null)
+            return speed;
+
+        float gap = GetGapToCarAhead(carAhead);
+        if (gap <= followDistance)
+            return 0f;
+
+        if (gap >= slowdownDistance)
+            return speed;
+
+        float t = Mathf.InverseLerp(followDistance, slowdownDistance, gap);
+        return Mathf.Lerp(minFollowSpeed, speed, t);
+    }
+
+    private Vector3 ConstrainToCarAhead(Vector3 current, Vector3 next, TrafficCar carAhead)
+    {
+        if (carAhead == null)
+            return next;
+
+        float maxAxis = carAhead.GetTravelAxis() - followDistance;
+        float nextAxis = Vector3.Dot(next, moveDirection);
+        if (nextAxis <= maxAxis)
+            return next;
+
+        float currentAxis = Vector3.Dot(current, moveDirection);
+        float clampedAxis = Mathf.Max(currentAxis, maxAxis);
+        return current + moveDirection * (clampedAxis - currentAxis);
+    }
+
+    private bool ShouldApplyIntersectionHold(TrafficSpawner spawner)
+    {
+        if (spawner == null)
+            return false;
+
+        if (spawner.IsCrossingBlocked)
+            return true;
+
+        return spawner.IsReleaseHoldActive && !HasClearedIntersectionStop(spawner.StopBounds);
+    }
+
+    private bool HasClearedIntersectionStop(Bounds bounds)
+    {
+        Vector3 current = transform.position;
+
+        if (Mathf.Abs(moveDirection.z) > Mathf.Abs(moveDirection.x))
+        {
+            if (moveDirection.z > 0f)
+                return current.z > bounds.max.z || current.z > bounds.min.z + StopLineTolerance;
+
+            return current.z < bounds.min.z || current.z < bounds.max.z - StopLineTolerance;
+        }
+
+        if (moveDirection.x > 0f)
+            return current.x > bounds.max.x || current.x > bounds.min.x + StopLineTolerance;
+
+        return current.x < bounds.min.x || current.x < bounds.max.x - StopLineTolerance;
     }
 
     private Vector3 ApplyIntersectionStop(Vector3 current, Vector3 next, Bounds bounds)

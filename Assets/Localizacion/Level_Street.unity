@@ -6805,7 +6805,7 @@ MonoBehaviour:
   initialDelay: 1
   speed: 12
   speedVariation: 2
-  maxActiveCars: 3
+  maxActiveCars: 6
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 1
