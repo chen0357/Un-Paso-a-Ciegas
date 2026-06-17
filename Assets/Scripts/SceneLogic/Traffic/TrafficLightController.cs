@@ -14,8 +14,11 @@ public class TrafficLightController : MonoBehaviour
     [Tooltip("Center of the intersection used for auto-grouping.")]
     public Vector3 intersectionCenter = new Vector3(-2.2f, 0f, -0.6f);
 
-    [Tooltip("World-space bounds where cars must stop before crossing pedestrians.")]
+    [Header("Intersection Stop Zone")]
+    [Tooltip("World-space corner where cars stop before entering the crossing (x, y, z).")]
     public Vector3 intersectionMin = new Vector3(-19f, 0f, -19f);
+
+    [Tooltip("World-space opposite corner of the crossing stop zone (x, y, z).")]
     public Vector3 intersectionMax = new Vector3(16f, 0f, 15f);
 
     [Header("Timing")]
@@ -29,10 +32,10 @@ public class TrafficLightController : MonoBehaviour
     public AudioClip ringClip;
 
     [Header("Traffic Link")]
-    [Tooltip("Cars moving north-south pause while group A (east-west crossing) is active.")]
+    [Tooltip("North-south traffic stops while group A rings, and stays held until group B rings.")]
     public TrafficSpawner northSouthSpawner;
 
-    [Tooltip("Cars moving east-west pause while group B (north-south crossing) is active.")]
+    [Tooltip("East-west traffic stops while group B rings, and stays held until group A rings.")]
     public TrafficSpawner eastWestSpawner;
 
     public bool autoFindSpawners = true;
@@ -44,6 +47,7 @@ public class TrafficLightController : MonoBehaviour
     private float phaseTimer;
     private float pauseTimer;
     private bool isPausedBetweenPhases;
+    private bool pauseFollowsGroupA;
 
     private void Start()
     {
@@ -190,6 +194,7 @@ public class TrafficLightController : MonoBehaviour
     private void SwitchToNextPhase()
     {
         StopAllSignals();
+        pauseFollowsGroupA = activeGroupIndex == 0;
         activeGroupIndex = activeGroupIndex == 0 ? 1 : 0;
         isPausedBetweenPhases = true;
         pauseTimer = switchPause;
@@ -203,11 +208,17 @@ public class TrafficLightController : MonoBehaviour
         bool groupBActive = gameplayActive && !isPausedBetweenPhases && activeGroupIndex == 1;
         Bounds stopBounds = BuildStopBounds();
 
+        bool blockNorthSouth = gameplayActive &&
+                               (groupAActive || (isPausedBetweenPhases && pauseFollowsGroupA));
+
+        bool blockEastWest = gameplayActive &&
+                             (groupBActive || (isPausedBetweenPhases && !pauseFollowsGroupA));
+
         if (northSouthSpawner != null)
-            northSouthSpawner.SetCrossingBlocked(groupAActive, stopBounds);
+            northSouthSpawner.SetCrossingBlocked(blockNorthSouth, stopBounds);
 
         if (eastWestSpawner != null)
-            eastWestSpawner.SetCrossingBlocked(groupBActive, stopBounds);
+            eastWestSpawner.SetCrossingBlocked(blockEastWest, stopBounds);
     }
 
     private Bounds BuildStopBounds()

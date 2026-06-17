@@ -205,6 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signals: []
   intersectionCenter: {x: -2.2, y: 0, z: -0.6}
+  intersectionMin: {x: -19, y: 0, z: -19}
+  intersectionMax: {x: 19, y: 0, z: 19}
   playbackDuration: 10
   switchPause: 10
   ringClip: {fileID: 8300000, guid: b421ff62da5dbbb4a80aa964bc3d9f2c, type: 3}
@@ -6638,7 +6640,7 @@ MonoBehaviour:
   initialDelay: 2
   speed: 10
   speedVariation: 2
-  maxActiveCars: 3
+  maxActiveCars: 5
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 0
