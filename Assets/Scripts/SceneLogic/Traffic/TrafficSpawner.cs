@@ -14,6 +14,10 @@ public enum TrafficFlowAxis
 public class TrafficSpawner : MonoBehaviour
 {
     [Header("Prefabs")]
+    [Tooltip("Randomly picks one prefab from this list on each spawn.")]
+    public List<GameObject> carPrefabs = new List<GameObject>();
+
+    [Tooltip("Used when Car Prefabs is empty.")]
     public GameObject carPrefab;
 
     [Header("Lanes")]
@@ -199,7 +203,7 @@ public class TrafficSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (carPrefab == null || runtimeLanes.Count == 0)
+        if (!HasAnyCarPrefab() || runtimeLanes.Count == 0)
             return;
 
         if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
@@ -232,10 +236,14 @@ public class TrafficSpawner : MonoBehaviour
 
     private void SpawnCar(LaneRuntime lane, int laneIndex)
     {
+        GameObject prefab = PickRandomCarPrefab();
+        if (prefab == null)
+            return;
+
         Transform spawn = lane.config.spawnPoint;
         Transform despawn = lane.config.despawnPoint;
 
-        GameObject car = Instantiate(carPrefab, spawn.position, spawn.rotation);
+        GameObject car = Instantiate(prefab, spawn.position, Quaternion.identity);
         lane.activeCars++;
 
         TrafficCar mover = car.GetComponent<TrafficCar>();
@@ -281,13 +289,57 @@ public class TrafficSpawner : MonoBehaviour
         return lane.maxActiveCars > 0 ? lane.maxActiveCars : maxActiveCars;
     }
 
+    private bool HasAnyCarPrefab()
+    {
+        return GetCarPrefabPool().Count > 0;
+    }
+
+    private List<GameObject> GetCarPrefabPool()
+    {
+        var pool = new List<GameObject>();
+
+        if (carPrefabs != null)
+        {
+            for (int i = 0; i < carPrefabs.Count; i++)
+            {
+                GameObject prefab = carPrefabs[i];
+                if (prefab != null && !pool.Contains(prefab))
+                    pool.Add(prefab);
+            }
+        }
+
+        if (pool.Count == 0 && carPrefab != null)
+            pool.Add(carPrefab);
+
+        return pool;
+    }
+
+    private GameObject PickRandomCarPrefab()
+    {
+        List<GameObject> pool = GetCarPrefabPool();
+        if (pool.Count == 0)
+            return null;
+
+        return pool[Random.Range(0, pool.Count)];
+    }
+
     private float ResolveSpawnClearDistance()
     {
-        TrafficCar template = carPrefab != null ? carPrefab.GetComponent<TrafficCar>() : null;
-        if (template == null)
+        List<GameObject> pool = GetCarPrefabPool();
+        if (pool.Count == 0)
             return 6f;
 
-        return template.followDistance * 1.5f;
+        float maxDistance = 0f;
+        for (int i = 0; i < pool.Count; i++)
+        {
+            TrafficCar template = pool[i].GetComponent<TrafficCar>();
+            if (template == null)
+                continue;
+
+            maxDistance = Mathf.Max(maxDistance, template.followDistance * 1.5f);
+        }
+
+        return maxDistance > 0f ? maxDistance : 6f;
     }
 
     private void OnDrawGizmosSelected()

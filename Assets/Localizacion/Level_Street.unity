@@ -6620,6 +6620,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf7e27668a68b49ab38105af4af606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 5716096553639534250, guid: 5e582f7c47f830d469f96dc3ae120e85, type: 3}
+  - {fileID: 7597598614716365689, guid: 867bc5afa4b36cc468a7996de682198c, type: 3}
+  - {fileID: 2172069839461563637, guid: 9a3dace43af97a144adfc349b6fd3091, type: 3}
   carPrefab: {fileID: 5716096553639534250, guid: 5e582f7c47f830d469f96dc3ae120e85, type: 3}
   lanes:
   - laneName: Northbound
@@ -6644,6 +6648,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 0
+  releaseDelay: 1
 --- !u!1 &910000020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +6790,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf7e27668a68b49ab38105af4af606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 5716096553639534250, guid: 5e582f7c47f830d469f96dc3ae120e85, type: 3}
+  - {fileID: 7597598614716365689, guid: 867bc5afa4b36cc468a7996de682198c, type: 3}
+  - {fileID: 2172069839461563637, guid: 9a3dace43af97a144adfc349b6fd3091, type: 3}
   carPrefab: {fileID: 5716096553639534250, guid: 5e582f7c47f830d469f96dc3ae120e85, type: 3}
   lanes:
   - laneName: Eastbound
@@ -6809,6 +6818,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 1
+  releaseDelay: 1
 --- !u!1 &910000030
 GameObject:
   m_ObjectHideFlags: 0

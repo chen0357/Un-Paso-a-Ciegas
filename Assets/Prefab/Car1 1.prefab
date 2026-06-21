@@ -212,10 +212,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  followDistance: 6
+  followDistance: 10
   slowdownDistance: 12
   minFollowSpeed: 1.5
   modelForwardAxis: 3
+  visualRotationOffset: {x: 0, y: 0, z: 0}
+  spawnOffset: {x: 0, y: 0, z: 0}
   despawnPoint: {fileID: 0}
 --- !u!82 &9223372036854775807
 AudioSource:

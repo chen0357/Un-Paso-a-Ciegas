@@ -28,6 +28,12 @@ public class TrafficCar : MonoBehaviour
     [Tooltip("Which local axis of the car model points to the front. Most imported FBX cars use PositiveX.")]
     public TrafficModelForwardAxis modelForwardAxis = TrafficModelForwardAxis.PositiveX;
 
+    [Tooltip("Extra pitch/roll baked into this prefab (e.g. X=-90 for FBX models imported on their side).")]
+    public Vector3 visualRotationOffset = Vector3.zero;
+
+    [Tooltip("Offset from spawn point in spawn local space. Y = height, Z = along road, X = across lane.")]
+    public Vector3 spawnOffset = Vector3.zero;
+
     [Header("Runtime (set by spawner)")]
     public Transform despawnPoint;
 
@@ -58,8 +64,8 @@ public class TrafficCar : MonoBehaviour
         speed = moveSpeed;
         despawnPoint = despawn;
 
-        transform.position = spawn.position;
-        transform.rotation = GetAlignedRotation(spawn.rotation);
+        transform.position = spawn.position + spawn.rotation * spawnOffset;
+        transform.rotation = GetAlignedRotation(spawn.rotation) * Quaternion.Euler(visualRotationOffset);
 
         moveDirection = spawn.forward.normalized;
         despawnDistance = Vector3.Distance(spawn.position, despawn.position) + 2f;
