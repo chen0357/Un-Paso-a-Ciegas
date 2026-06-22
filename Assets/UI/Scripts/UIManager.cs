@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
         None,
         MainMenu,
         Settings,
+        GameIntro,
         Pause,
         LevelSelect,
         Result
@@ -27,9 +28,13 @@ public class UIManager : MonoBehaviour
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject settingsPanel;
+    public GameObject gameIntroPanel;
     public GameObject pausePanel;
     public GameObject levelSelectPanel;
     public GameObject resultPanel;
+
+    [Header("Gameplay HUD")]
+    public GameObject gameplayUICanvas;
 
     [Header("Optional")]
     public string firstLevelSceneName = "Level_Street";
@@ -54,6 +59,7 @@ public class UIManager : MonoBehaviour
     {
         if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
         if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (gameIntroPanel != null) gameIntroPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
         if (resultPanel != null) resultPanel.SetActive(false);
@@ -62,6 +68,7 @@ public class UIManager : MonoBehaviour
     public void HideGameplayPanels()
     {
         if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (gameIntroPanel != null) gameIntroPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
     }
@@ -76,12 +83,22 @@ public class UIManager : MonoBehaviour
 
     public void ShowSettings()
     {
-        previousState = currentState; // ??????
+        previousState = currentState;
 
         HideAllPanels();
         if (settingsPanel != null) settingsPanel.SetActive(true);
 
         currentState = UIState.Settings;
+    }
+
+    public void ShowGameIntro()
+    {
+        previousState = currentState;
+
+        HideAllPanels();
+        if (gameIntroPanel != null) gameIntroPanel.SetActive(true);
+
+        currentState = UIState.GameIntro;
     }
 
     public void ShowPauseMenu()
@@ -94,6 +111,7 @@ public class UIManager : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(true);
 
+        HideGameplayHUD();
         Time.timeScale = 0f;
         currentState = UIState.Pause;
 
@@ -114,7 +132,20 @@ public class UIManager : MonoBehaviour
         HideAllPanels();
         if (resultPanel != null) resultPanel.SetActive(true);
 
+        HideGameplayHUD();
         currentState = UIState.Result;
+    }
+
+    public void HideGameplayHUD()
+    {
+        if (gameplayUICanvas != null)
+            gameplayUICanvas.SetActive(false);
+    }
+
+    public void ShowGameplayHUD()
+    {
+        if (gameplayUICanvas != null)
+            gameplayUICanvas.SetActive(true);
     }
 
     public void StartGame()
@@ -159,6 +190,10 @@ public class UIManager : MonoBehaviour
         {
             case UIState.MainMenu:
                 ShowMainMenu();
+                break;
+
+            case UIState.GameIntro:
+                ShowGameIntro();
                 break;
 
             case UIState.Pause:

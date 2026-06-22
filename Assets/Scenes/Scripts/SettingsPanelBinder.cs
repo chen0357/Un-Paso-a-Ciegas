@@ -11,7 +11,9 @@ public class SettingsPanelBinder : MonoBehaviour
     public Toggle hapticToggle;
     public Slider hapticStrengthSlider;
 
-    private void Start()
+    private bool eventsBound;
+
+    private void OnEnable()
     {
         if (SettingsManager.Instance == null)
         {
@@ -19,7 +21,6 @@ public class SettingsPanelBinder : MonoBehaviour
             return;
         }
 
-        // 绑定UI到SettingsManager
         SettingsManager.Instance.BindUI(
             visualModeDropdown,
             voiceHintToggle,
@@ -28,40 +29,44 @@ public class SettingsPanelBinder : MonoBehaviour
             hapticStrengthSlider
         );
 
-        // 绑定 UI 事件
-        BindEvents();
+        EnsureEventsBound();
     }
 
-    private void BindEvents()
+    private void EnsureEventsBound()
     {
+        if (eventsBound)
+            return;
+
         if (visualModeDropdown != null)
         {
-            visualModeDropdown.onValueChanged.RemoveAllListeners();
+            visualModeDropdown.onValueChanged.RemoveListener(SettingsManager.Instance.OnVisualModeChanged);
             visualModeDropdown.onValueChanged.AddListener(SettingsManager.Instance.OnVisualModeChanged);
         }
 
         if (voiceHintToggle != null)
         {
-            voiceHintToggle.onValueChanged.RemoveAllListeners();
+            voiceHintToggle.onValueChanged.RemoveListener(SettingsManager.Instance.OnVoiceHintChanged);
             voiceHintToggle.onValueChanged.AddListener(SettingsManager.Instance.OnVoiceHintChanged);
         }
 
         if (uiVolumeSlider != null)
         {
-            uiVolumeSlider.onValueChanged.RemoveAllListeners();
+            uiVolumeSlider.onValueChanged.RemoveListener(SettingsManager.Instance.OnUIVolumeChanged);
             uiVolumeSlider.onValueChanged.AddListener(SettingsManager.Instance.OnUIVolumeChanged);
         }
 
         if (hapticToggle != null)
         {
-            hapticToggle.onValueChanged.RemoveAllListeners();
+            hapticToggle.onValueChanged.RemoveListener(SettingsManager.Instance.OnHapticChanged);
             hapticToggle.onValueChanged.AddListener(SettingsManager.Instance.OnHapticChanged);
         }
 
         if (hapticStrengthSlider != null)
         {
-            hapticStrengthSlider.onValueChanged.RemoveAllListeners();
+            hapticStrengthSlider.onValueChanged.RemoveListener(SettingsManager.Instance.OnHapticStrengthChanged);
             hapticStrengthSlider.onValueChanged.AddListener(SettingsManager.Instance.OnHapticStrengthChanged);
         }
+
+        eventsBound = true;
     }
 }

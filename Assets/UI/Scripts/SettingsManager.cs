@@ -20,6 +20,9 @@ public class SettingsManager : MonoBehaviour
     [Header("Audio Mixer Parameter Names")]
     public string masterVolumeParameter = "Master";
 
+    private const string VisionModeKey = "VisionMode";
+    private const string LegacyVisualModeKey = "VisualMode";
+
     [Header("Current Settings")]
     public int visualMode;
     public bool voiceHintsEnabled;
@@ -60,8 +63,13 @@ public class SettingsManager : MonoBehaviour
 
     public void RefreshUI()
     {
+        visualMode = GetCurrentVisionMode();
+
         if (visualModeDropdown != null)
-            visualModeDropdown.value = visualMode;
+        {
+            visualModeDropdown.SetValueWithoutNotify(visualMode);
+            visualModeDropdown.RefreshShownValue();
+        }
 
         if (voiceHintToggle != null)
             voiceHintToggle.isOn = voiceHintsEnabled;
@@ -81,6 +89,42 @@ public class SettingsManager : MonoBehaviour
         visualMode = value;
         SaveSettings();
         ApplySettings();
+    }
+
+    private int GetCurrentVisionMode()
+    {
+        if (VisionModeManager.Instance != null)
+            return (int)VisionModeManager.Instance.currentMode;
+
+        return LoadVisionModePreference();
+    }
+
+    private int LoadVisionModePreference()
+    {
+        if (PlayerPrefs.HasKey(VisionModeKey))
+            return PlayerPrefs.GetInt(VisionModeKey, 0);
+
+        if (PlayerPrefs.HasKey(LegacyVisualModeKey))
+        {
+            int legacy = PlayerPrefs.GetInt(LegacyVisualModeKey, 0);
+            PlayerPrefs.SetInt(VisionModeKey, legacy);
+            PlayerPrefs.Save();
+            return legacy;
+        }
+
+        return 0;
+    }
+
+    private void SyncVisionModeManager()
+    {
+        if (VisionModeManager.Instance == null)
+            return;
+
+        var mode = (VisionModeManager.VisionMode)visualMode;
+        if (VisionModeManager.Instance.currentMode != mode)
+            VisionModeManager.Instance.SetVisionMode(mode);
+        else
+            VisionModeManager.Instance.ApplyVisionMode();
     }
 
     public void OnVoiceHintChanged(bool value)
@@ -110,7 +154,7 @@ public class SettingsManager : MonoBehaviour
 
     public void SaveSettings()
     {
-        PlayerPrefs.SetInt("VisualMode", visualMode);
+        PlayerPrefs.SetInt(VisionModeKey, visualMode);
         PlayerPrefs.SetInt("VoiceHintsEnabled", voiceHintsEnabled ? 1 : 0);
         PlayerPrefs.SetFloat("UIVolume", uiVolume);
         PlayerPrefs.SetInt("HapticsEnabled", hapticsEnabled ? 1 : 0);
@@ -120,7 +164,7 @@ public class SettingsManager : MonoBehaviour
 
     public void LoadSettings()
     {
-        visualMode = PlayerPrefs.GetInt("VisualMode", 0);
+        visualMode = LoadVisionModePreference();
         voiceHintsEnabled = PlayerPrefs.GetInt("VoiceHintsEnabled", 1) == 1;
         uiVolume = PlayerPrefs.GetFloat("UIVolume", 1f);
         hapticsEnabled = PlayerPrefs.GetInt("HapticsEnabled", 1) == 1;
@@ -130,6 +174,7 @@ public class SettingsManager : MonoBehaviour
     public void ApplySettings()
     {
         SetMixerVolume(masterVolumeParameter, uiVolume);
+        SyncVisionModeManager();
 
         Debug.Log($"Apply Settings | VisualMode={visualMode}, MasterVolume={uiVolume}, Haptics={hapticsEnabled}, HapticStrength={hapticStrength}");
     }

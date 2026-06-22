@@ -118,6 +118,7 @@ public class PauseMenuController : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.HideGameplayPanels();
+            uiManager.ShowGameplayHUD();
             uiManager.currentState = UIManager.UIState.None;
         }
 

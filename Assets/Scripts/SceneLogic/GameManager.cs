@@ -166,10 +166,14 @@ public class GameManager : MonoBehaviour
 
         UIManager uiManager = FindFirstObjectByType<UIManager>();
         if (uiManager != null)
+        {
             uiManager.HideGameplayPanels();
-
-        if (hudPanel != null)
+            uiManager.HideGameplayHUD();
+        }
+        else if (hudPanel != null)
+        {
             hudPanel.SetActive(false);
+        }
 
         if (resultUIController != null)
             resultUIController.ShowResult(success, finishTime, collisionCount, hintCount, failReason);
