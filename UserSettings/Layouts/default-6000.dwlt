@@ -44,7 +44,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6667
+    width: 1706.6666
     height: 976
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6667
+    width: 1706.6666
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 956
-    width: 1706.6667
+    width: 1706.6666
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 36
-    width: 1706.6667
+    width: 1706.6666
     height: 920
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -139,7 +139,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6667
+    width: 1706.6666
     height: 920
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -301,7 +301,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1284.6666
     y: 0
-    width: 422.00012
+    width: 422
     height: 920
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
@@ -2816,8 +2816,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 400.6667
-    y: 78.66667
+    x: 401.66666
+    y: 24
     width: 882
     height: 540.6667
   m_SerializedDataModeController:
@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 78.66667
+    y: 24
     width: 399.66666
     height: 540.6667
   m_SerializedDataModeController:
@@ -2935,23 +2935,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6e5bffff
-      m_LastClickedID: -42130
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: f45affff805bffffb85bffff5c83ffff4aa9ffffacbeffffd2c4ffff18fbffff9ebb0000babb0000a4de0000d2e00000e4e80000cee900001eeb00008a1001000e110100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Directional Light
-        m_OriginalName: Directional Light
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 48074
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 9}
@@ -3703,11 +3703,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.25782835, y: 0.4668847, z: -0.14445026, w: -0.8335385}
     speed: 2
-    m_Value: {x: -0.25781432, y: 0.46685928, z: -0.1444424, w: -0.83349305}
+    m_Value: {x: -0.25782835, y: 0.4668847, z: -0.14445028, w: -0.83353853}
   m_Size:
     m_Target: 59.73689
     speed: 2
-    m_Value: 57.164486
+    m_Value: 59.73689
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -4020,7 +4020,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 645.3334
+    y: 590.6667
     width: 1283.6666
     height: 327.3333
   m_SerializedDataModeController:
@@ -4064,7 +4064,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 34}
     m_SelectedIDs: a6cc0000
     m_LastClickedID: 52390
-    m_ExpandedIDs: 0000000014cc0000b8cc000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000014d20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4093,7 +4093,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000014cc0000
+    m_ExpandedIDs: 0000000014d20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4329,9 +4329,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1284.6667
-    y: 78.66667
-    width: 421.00012
+    x: 1285.6666
+    y: 24
+    width: 421
     height: 894
   m_SerializedDataModeController:
     m_DataMode: 0
