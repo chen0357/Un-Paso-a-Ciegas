@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SettingsManager : MonoBehaviour
@@ -36,12 +37,53 @@ public class SettingsManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            EnsureAudioMixerAssigned();
             LoadSettings();
             ApplySettings();
+            SceneManager.sceneLoaded += HandleSceneLoaded;
         }
-        else
+        else if (Instance != this)
         {
+            Instance.AdoptFromSceneInstance(this);
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            SceneManager.sceneLoaded -= HandleSceneLoaded;
+    }
+
+    private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ApplySettings();
+    }
+
+    public void AdoptFromSceneInstance(SettingsManager sceneInstance)
+    {
+        if (sceneInstance == null)
+            return;
+
+        if (mainAudioMixer == null && sceneInstance.mainAudioMixer != null)
+            mainAudioMixer = sceneInstance.mainAudioMixer;
+
+        ApplySettings();
+    }
+
+    private void EnsureAudioMixerAssigned()
+    {
+        if (mainAudioMixer != null)
+            return;
+
+        AudioMixer[] mixers = Resources.FindObjectsOfTypeAll<AudioMixer>();
+        for (int i = 0; i < mixers.Length; i++)
+        {
+            if (mixers[i] != null && mixers[i].name == "MainAudioMixer")
+            {
+                mainAudioMixer = mixers[i];
+                return;
+            }
         }
     }
 
@@ -173,6 +215,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ApplySettings()
     {
+        EnsureAudioMixerAssigned();
         SetMixerVolume(masterVolumeParameter, uiVolume);
         SyncVisionModeManager();
 

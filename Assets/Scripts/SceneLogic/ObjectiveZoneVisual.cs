@@ -120,6 +120,9 @@ public class ObjectiveZoneVisual : MonoBehaviour
         pillarMaterial = new Material(beaconShader);
         groundMaterial = new Material(beaconShader);
 
+        ConfigureTransparentMaterial(pillarMaterial);
+        ConfigureTransparentMaterial(groundMaterial);
+
         pillarBaseColor = pillarColor;
         groundBaseColor = groundColor;
         pillarMaterial.color = pillarBaseColor;
@@ -146,6 +149,7 @@ public class ObjectiveZoneVisual : MonoBehaviour
         pillarRenderer.sharedMaterial = pillarMaterial;
         pillarRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         pillarRenderer.receiveShadows = false;
+        pillarRenderer.allowOcclusionWhenDynamic = false;
 
         GameObject ground = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
         ground.name = "GroundGlow";
@@ -157,6 +161,7 @@ public class ObjectiveZoneVisual : MonoBehaviour
         groundRenderer.sharedMaterial = groundMaterial;
         groundRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         groundRenderer.receiveShadows = false;
+        groundRenderer.allowOcclusionWhenDynamic = false;
 
         if (addPointLight)
         {
@@ -177,5 +182,13 @@ public class ObjectiveZoneVisual : MonoBehaviour
         Collider collider = target.GetComponent<Collider>();
         if (collider != null)
             Destroy(collider);
+    }
+
+    private static void ConfigureTransparentMaterial(Material material)
+    {
+        if (material == null)
+            return;
+
+        material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
     }
 }

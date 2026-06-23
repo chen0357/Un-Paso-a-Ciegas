@@ -38,10 +38,22 @@ public class DangerZone : MonoBehaviour
         if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
 
+        if (IsPlayerOnSidewalk(receiverInZone))
+            return;
+
         timer += Time.deltaTime;
         if (timer < damageInterval) return;
 
         timer = 0f;
         receiverInZone.ReceiveDamage(damage, gameObject.name);
+    }
+
+    private static bool IsPlayerOnSidewalk(PlayerDamageReceiver receiver)
+    {
+        if (receiver == null)
+            return false;
+
+        PlayerSidewalkTracker tracker = receiver.GetComponent<PlayerSidewalkTracker>();
+        return tracker != null && tracker.IsOnSidewalk;
     }
 }

@@ -69,4 +69,9 @@ public class SettingsPanelBinder : MonoBehaviour
 
         eventsBound = true;
     }
+
+    private void OnDisable()
+    {
+        eventsBound = false;
+    }
 }

@@ -88,6 +88,9 @@ public class UIManager : MonoBehaviour
         HideAllPanels();
         if (settingsPanel != null) settingsPanel.SetActive(true);
 
+        if (SettingsManager.Instance != null)
+            SettingsManager.Instance.RefreshUI();
+
         currentState = UIState.Settings;
     }
 
@@ -110,6 +113,9 @@ public class UIManager : MonoBehaviour
 
         if (pausePanel != null)
             pausePanel.SetActive(true);
+
+        if (SettingsManager.Instance != null)
+            SettingsManager.Instance.RefreshUI();
 
         HideGameplayHUD();
         Time.timeScale = 0f;

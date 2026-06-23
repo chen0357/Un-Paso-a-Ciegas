@@ -89,6 +89,13 @@ public class SpatialAudioManager : MonoBehaviour
 
     private void UpdateDangerAudio()
     {
+        if (IsPlayerOnSidewalk())
+        {
+            StopDangerAudio();
+            dangerTimer = 0f;
+            return;
+        }
+
         DangerZone nearestZone = null;
         float distance = ResolveDangerBoundaryDistance(out nearestZone);
         activeDangerAudio = GetDangerAudioSource(nearestZone);
@@ -233,5 +240,14 @@ public class SpatialAudioManager : MonoBehaviour
             return;
 
         source.spatialBlend = 0f;
+    }
+
+    private bool IsPlayerOnSidewalk()
+    {
+        if (playerHead == null)
+            return false;
+
+        PlayerSidewalkTracker tracker = playerHead.GetComponentInParent<PlayerSidewalkTracker>();
+        return tracker != null && tracker.IsOnSidewalk;
     }
 }
