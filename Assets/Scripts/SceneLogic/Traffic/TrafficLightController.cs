@@ -8,7 +8,10 @@ using UnityEngine;
 public class TrafficLightController : MonoBehaviour
 {
     [Header("Signals")]
-    [Tooltip("Optional manual list. If empty, child objects named traffic_light* are discovered at runtime.")]
+    [Tooltip("Optional root that contains traffic_light_* instances. Auto-finds child Traffic_light if empty.")]
+    public Transform signalsRoot;
+
+    [Tooltip("Optional manual list. If empty, traffic_light_* objects are discovered under Signals Root.")]
     public List<TrafficLightSignal> signals = new List<TrafficLightSignal>();
 
     [Tooltip("Center of the intersection used for auto-grouping.")]
@@ -116,24 +119,56 @@ public class TrafficLightController : MonoBehaviour
         if (signals.Count > 0)
             return;
 
-        TrafficLightSignal[] found = GetComponentsInChildren<TrafficLightSignal>(true);
-        if (found.Length > 0)
+        Transform root = ResolveSignalsRoot();
+        TrafficLightSignal[] existing = root.GetComponentsInChildren<TrafficLightSignal>(true);
+        for (int i = 0; i < existing.Length; i++)
         {
-            signals.AddRange(found);
-            return;
+            TrafficLightSignal signal = existing[i];
+            if (signal != null && IsTrafficLightInstance(signal.gameObject.name))
+                signals.Add(signal);
         }
 
-        foreach (Transform child in transform)
+        if (signals.Count > 0)
+            return;
+
+        Transform[] transforms = root.GetComponentsInChildren<Transform>(true);
+        for (int i = 0; i < transforms.Length; i++)
         {
-            if (!child.name.StartsWith("traffic_light"))
+            Transform candidate = transforms[i];
+            if (candidate == root || !IsTrafficLightInstance(candidate.name))
                 continue;
 
-            TrafficLightSignal signal = child.GetComponent<TrafficLightSignal>();
+            TrafficLightSignal signal = candidate.GetComponent<TrafficLightSignal>();
             if (signal == null)
-                signal = child.gameObject.AddComponent<TrafficLightSignal>();
+                signal = candidate.gameObject.AddComponent<TrafficLightSignal>();
 
-            signals.Add(signal);
+            if (!signals.Contains(signal))
+                signals.Add(signal);
         }
+
+        if (signals.Count == 0)
+            Debug.LogWarning("TrafficLightController: No traffic_light_* objects found under " + root.name, this);
+    }
+
+    private Transform ResolveSignalsRoot()
+    {
+        if (signalsRoot != null)
+            return signalsRoot;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.name.Equals("Traffic_light", System.StringComparison.OrdinalIgnoreCase))
+                return child;
+        }
+
+        return transform;
+    }
+
+    private static bool IsTrafficLightInstance(string objectName)
+    {
+        return !string.IsNullOrEmpty(objectName) &&
+               objectName.StartsWith("traffic_light_", System.StringComparison.OrdinalIgnoreCase);
     }
 
     private void AssignGroups()

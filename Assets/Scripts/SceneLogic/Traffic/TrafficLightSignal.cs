@@ -26,12 +26,22 @@ public class TrafficLightSignal : MonoBehaviour
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        EnsureAudioSource();
         ConfigureAudioSource();
+    }
+
+    public void EnsureAudioSource()
+    {
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void ConfigureAudioSource()
     {
+        EnsureAudioSource();
         if (audioSource == null)
             return;
 
@@ -46,6 +56,7 @@ public class TrafficLightSignal : MonoBehaviour
 
     public void ApplyClip(AudioClip clip)
     {
+        EnsureAudioSource();
         if (audioSource == null || clip == null)
             return;
 
@@ -54,11 +65,13 @@ public class TrafficLightSignal : MonoBehaviour
 
     public void PlayLooping()
     {
+        EnsureAudioSource();
         if (audioSource == null || audioSource.clip == null)
             return;
 
         audioSource.loop = true;
-        audioSource.Play();
+        if (!audioSource.isPlaying)
+            audioSource.Play();
     }
 
     public void StopRing()
