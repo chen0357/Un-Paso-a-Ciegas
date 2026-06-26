@@ -148,16 +148,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2730296329273951185}
-  groundClip: {fileID: 0}
+  groundClip: {fileID: 8300000, guid: 56a13526d3f1484468a733035d6befa8, type: 3}
   wallClip: {fileID: 0}
   obstacleClip: {fileID: 0}
   woodClip: {fileID: 0}
   metalClip: {fileID: 0}
   tactilePavingClip: {fileID: 0}
   defaultClip: {fileID: 0}
+  slideClip: {fileID: 8300000, guid: 9d89fba0463112842900964f618c0690, type: 3}
+  slideAudioSource: {fileID: 0}
   baseVolume: 1
   minHitVolume: 0.2
   maxHitVolume: 1
+  minSlideVolume: 0.3
+  maxSlideVolume: 0.8
 --- !u!114 &2176399054703436980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +195,8 @@ MonoBehaviour:
   caneAudioSystem: {fileID: 5826068151323719254}
   caneHapticSystem: {fileID: 2176399054703436980}
   showDebugLog: 1
-  continuousHitCooldown: 0.2
+  slideContactDelay: 0.35
+  minSlideSpeed: 0.15
   minHitSpeed: 0.1
   maxHitSpeed: 2
 --- !u!54 &3910589555240635267

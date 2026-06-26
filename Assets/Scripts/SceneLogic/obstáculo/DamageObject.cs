@@ -10,6 +10,11 @@ public class DamageObject : MonoBehaviour
     public int damageAmount = 10;
     public float damageCooldown = 1f;
 
+    [Header("Hit Hint")]
+    [TextArea(1, 3)]
+
+    public string hitHintMessage;
+
     [SerializeField] private AudioClip hitClip;
     [SerializeField] private float hitVolume = 1f;
 
@@ -18,7 +23,7 @@ public class DamageObject : MonoBehaviour
 
     private static AudioClip s_defaultHitClip;
     private static AudioSource s_hitAudioSource;
-    private static float s_lastHitSoundTime = -999f;
+    private static float s_lastHitFeedbackTime = -999f;
 
     private void Awake()
     {
@@ -83,14 +88,41 @@ public class DamageObject : MonoBehaviour
             ? transform.parent.name + " / " + gameObject.name
             : gameObject.name;
         currentReceiver.ReceiveDamage(damageAmount, source);
+        PlayHitFeedback();
+    }
+
+    private void PlayHitFeedback()
+    {
+        if (Time.time - s_lastHitFeedbackTime < damageCooldown)
+            return;
+
+        s_lastHitFeedbackTime = Time.time;
         PlayHitSound();
+        ShowHitHint();
+    }
+
+    private string GetHitHintMessage()
+    {
+        if (!string.IsNullOrWhiteSpace(hitHintMessage))
+            return hitHintMessage.Trim();
+
+        Transform labelSource = transform.parent != null ? transform.parent : transform;
+        return labelSource.name;
+    }
+
+    private void ShowHitHint()
+    {
+        string message = GetHitHintMessage();
+        if (string.IsNullOrWhiteSpace(message))
+            return;
+
+        ObstacleHitHintUI ui = ObstacleHitHintUI.EnsureInstance();
+        if (ui != null)
+            ui.Show(message);
     }
 
     private void PlayHitSound()
     {
-        if (Time.time - s_lastHitSoundTime < damageCooldown)
-            return;
-
         AudioClip clip = hitClip != null ? hitClip : GetDefaultHitClip();
         if (clip == null)
             return;
@@ -103,7 +135,6 @@ public class DamageObject : MonoBehaviour
         if (SettingsManager.Instance != null)
             volume *= SettingsManager.Instance.uiVolume;
 
-        s_lastHitSoundTime = Time.time;
         source.PlayOneShot(clip, volume);
     }
 

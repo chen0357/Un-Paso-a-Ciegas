@@ -10,18 +10,22 @@ public class CaneDetector : MonoBehaviour
     [Header("Debug")]
     public bool showDebugLog = true;
 
-    [Header("Continuous Surface Cooldown")]
-    public float continuousHitCooldown = 0.2f;
+    [Header("Slide Detection")]
+    [Tooltip("Seconds in contact before switching from hit to slide audio.")]
+    public float slideContactDelay = 0.35f;
+    [Tooltip("Minimum cane speed to count as sliding on a surface.")]
+    public float minSlideSpeed = 0.15f;
 
     [Header("Hit Intensity")]
     public float minHitSpeed = 0.1f;
     public float maxHitSpeed = 2.0f;
 
-    private Dictionary<Collider, float> lastContinuousHitTime = new Dictionary<Collider, float>();
-    private HashSet<Collider> triggeredColliders = new HashSet<Collider>();
+    private readonly Dictionary<Collider, float> contactStartTime = new Dictionary<Collider, float>();
+    private readonly HashSet<Collider> triggeredColliders = new HashSet<Collider>();
 
     private Vector3 lastPosition;
-    private float currentHitIntensity = 0f;
+    private float currentHitIntensity;
+    private float currentMoveSpeed;
 
     private void Start()
     {
@@ -30,57 +34,85 @@ public class CaneDetector : MonoBehaviour
 
     private void Update()
     {
-        float speed = Vector3.Distance(transform.position, lastPosition) / Time.deltaTime;
-        currentHitIntensity = Mathf.InverseLerp(minHitSpeed, maxHitSpeed, speed);
-        currentHitIntensity = Mathf.Clamp01(currentHitIntensity);
-
+        currentMoveSpeed = Vector3.Distance(transform.position, lastPosition) / Time.deltaTime;
+        currentHitIntensity = Mathf.Clamp01(Mathf.InverseLerp(minHitSpeed, maxHitSpeed, currentMoveSpeed));
         lastPosition = transform.position;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         SurfaceType surfaceType = GetSurfaceType(other);
+        contactStartTime[other] = Time.time;
 
         if (IsContinuousSurface(surfaceType))
         {
-            DetectSurface(other, surfaceType, currentHitIntensity);
-            lastContinuousHitTime[other] = Time.time;
+            PlayHitFeedback(other, surfaceType, currentHitIntensity);
+            return;
         }
-        else
-        {
-            if (triggeredColliders.Contains(other))
-                return;
 
-            triggeredColliders.Add(other);
-            DetectSurface(other, surfaceType, currentHitIntensity);
-        }
+        if (triggeredColliders.Contains(other))
+            return;
+
+        triggeredColliders.Add(other);
+        PlayHitFeedback(other, surfaceType, currentHitIntensity);
     }
 
     private void OnTriggerStay(Collider other)
     {
         SurfaceType surfaceType = GetSurfaceType(other);
-
         if (!IsContinuousSurface(surfaceType))
             return;
 
-        if (!lastContinuousHitTime.ContainsKey(other))
-        {
-            lastContinuousHitTime[other] = Time.time;
-            DetectSurface(other, surfaceType, currentHitIntensity);
-            return;
-        }
+        if (!contactStartTime.ContainsKey(other))
+            contactStartTime[other] = Time.time;
 
-        if (Time.time - lastContinuousHitTime[other] >= continuousHitCooldown)
-        {
-            DetectSurface(other, surfaceType, currentHitIntensity);
-            lastContinuousHitTime[other] = Time.time;
-        }
+        UpdateSlideAudio();
     }
 
     private void OnTriggerExit(Collider other)
     {
         triggeredColliders.Remove(other);
-        lastContinuousHitTime.Remove(other);
+        contactStartTime.Remove(other);
+        UpdateSlideAudio();
+    }
+
+    private void UpdateSlideAudio()
+    {
+        if (caneAudioSystem == null)
+            return;
+
+        bool shouldSlide = false;
+        float slideIntensity = 0f;
+
+        foreach (KeyValuePair<Collider, float> contact in contactStartTime)
+        {
+            Collider collider = contact.Key;
+            if (collider == null)
+                continue;
+
+            SurfaceType surfaceType = GetSurfaceType(collider);
+            if (!IsContinuousSurface(surfaceType))
+                continue;
+
+            float contactDuration = Time.time - contact.Value;
+            if (contactDuration >= slideContactDelay && currentMoveSpeed >= minSlideSpeed)
+            {
+                shouldSlide = true;
+                slideIntensity = Mathf.Max(slideIntensity, currentHitIntensity);
+            }
+        }
+
+        if (shouldSlide)
+        {
+            if (showDebugLog && !caneAudioSystem.IsSlidePlaying())
+                Debug.Log($"Cane slide started | Speed: {currentMoveSpeed:F2}");
+
+            caneAudioSystem.StartOrUpdateSlideSound(slideIntensity);
+        }
+        else
+        {
+            caneAudioSystem.StopSlideSound();
+        }
     }
 
     private SurfaceType GetSurfaceType(Collider other)
@@ -101,7 +133,7 @@ public class CaneDetector : MonoBehaviour
         }
     }
 
-    private void DetectSurface(Collider other, SurfaceType currentSurface, float intensity)
+    private void PlayHitFeedback(Collider other, SurfaceType currentSurface, float intensity)
     {
         if (showDebugLog)
         {

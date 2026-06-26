@@ -329,6 +329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &27823843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -552,6 +555,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &36561310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -636,6 +642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &41939523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -736,6 +745,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &49430665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -927,6 +939,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &67461258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1135,6 +1150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &95909237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1282,6 +1300,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &101927950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1446,6 +1467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &143437350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1610,6 +1634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &189493783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1739,6 +1766,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &198660742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2134,6 +2164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &223571912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2478,6 +2511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &235268456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2562,6 +2598,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &250277842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2926,6 +2965,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &317790857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3381,6 +3423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &344450697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3450,6 +3495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &346055124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3547,6 +3595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &357636708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4370,6 +4421,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &433741893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4933,6 +4987,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &529035579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5235,6 +5292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &566542281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5430,6 +5490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &597546874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5560,6 +5623,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &625635401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5832,6 +5898,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &631796576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6436,6 +6505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &688786982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6880,6 +6952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &715457949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7850,6 +7925,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &810152151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8013,6 +8091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &821698858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8409,6 +8490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &867691797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9418,6 +9502,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &926518982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9672,6 +9759,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &970980375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9884,6 +9974,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1050688668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9981,6 +10074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1057631115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10143,6 +10239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1064824654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10290,6 +10389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1097189507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10622,6 +10724,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1119997062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11316,6 +11421,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1160621361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11450,6 +11558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1172557208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11663,6 +11774,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1213871988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11856,6 +11970,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1232998400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12356,6 +12473,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1306185559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12681,6 +12801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1308362047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12765,6 +12888,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1313118341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12847,6 +12973,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1334890706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14132,6 +14261,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1461169205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14547,6 +14679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1496031597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15125,6 +15260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1545310420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15765,6 +15903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1608404132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15847,6 +15988,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1626778228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15931,6 +16075,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1631884599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16206,6 +16353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1666348713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16938,6 +17088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1725010608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17156,6 +17309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1733954758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17240,6 +17396,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 8
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1750157679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17544,6 +17703,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1775017171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17645,6 +17807,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1816544549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17891,6 +18056,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1827729916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18284,6 +18452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &1853601895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19688,6 +19859,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1995712316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19859,6 +20033,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &2023430350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19941,6 +20118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &2024523637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20879,6 +21059,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &2126915008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20994,6 +21177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!65 &2143098333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21873,6 +22059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843212863243611588, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: hitHintMessage
+      value: pepsi
+      objectReference: {fileID: 0}
     - target: {fileID: 3524311028481530366, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.15

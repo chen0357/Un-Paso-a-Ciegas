@@ -14,10 +14,23 @@ public class CaneAudioSystem : MonoBehaviour
     public AudioClip tactilePavingClip;
     public AudioClip defaultClip;
 
+    [Header("Slide Clip")]
+    public AudioClip slideClip;
+    [SerializeField] private AudioSource slideAudioSource;
+
     [Header("Volume Settings")]
     public float baseVolume = 1f;
     public float minHitVolume = 0.2f;
     public float maxHitVolume = 1f;
+    public float minSlideVolume = 0.3f;
+    public float maxSlideVolume = 0.8f;
+
+    private bool isSlidePlaying;
+
+    private void Awake()
+    {
+        EnsureSlideAudioSource();
+    }
 
     public void PlaySurfaceSound(SurfaceTag surfaceTag, float intensity)
     {
@@ -35,6 +48,56 @@ public class CaneAudioSystem : MonoBehaviour
         float finalVolume = baseVolume * hitVolume * GetSettingsVolumeMultiplier();
 
         audioSource.PlayOneShot(clip, finalVolume);
+    }
+
+    public void StartOrUpdateSlideSound(float intensity)
+    {
+        if (slideClip == null)
+            return;
+
+        EnsureSlideAudioSource();
+        if (slideAudioSource == null)
+            return;
+
+        float slideVolume = Mathf.Lerp(minSlideVolume, maxSlideVolume, intensity);
+        float finalVolume = baseVolume * slideVolume * GetSettingsVolumeMultiplier();
+        slideAudioSource.volume = finalVolume;
+
+        if (!isSlidePlaying)
+        {
+            slideAudioSource.clip = slideClip;
+            slideAudioSource.loop = true;
+            slideAudioSource.Play();
+            isSlidePlaying = true;
+        }
+    }
+
+    public void StopSlideSound()
+    {
+        if (!isSlidePlaying || slideAudioSource == null)
+            return;
+
+        slideAudioSource.Stop();
+        slideAudioSource.clip = null;
+        isSlidePlaying = false;
+    }
+
+    public bool IsSlidePlaying()
+    {
+        return isSlidePlaying;
+    }
+
+    private void EnsureSlideAudioSource()
+    {
+        if (slideAudioSource != null || slideClip == null)
+            return;
+
+        slideAudioSource = gameObject.AddComponent<AudioSource>();
+        slideAudioSource.playOnAwake = false;
+        slideAudioSource.loop = true;
+        slideAudioSource.spatialBlend = audioSource != null ? audioSource.spatialBlend : 1f;
+        slideAudioSource.minDistance = audioSource != null ? audioSource.minDistance : 0.3f;
+        slideAudioSource.maxDistance = audioSource != null ? audioSource.maxDistance : 5f;
     }
 
     private AudioClip ResolveClip(SurfaceTag surfaceTag)
