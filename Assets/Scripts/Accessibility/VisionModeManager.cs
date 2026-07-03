@@ -6,15 +6,16 @@ public class VisionModeManager : MonoBehaviour
 
     public enum VisionMode
     {
-        Normal = 0,
+        NearlyBlind = 0,
         Blurry = 1,
-        Blind = 2
+        VisualDisability = 2
     }
 
-    public VisionMode currentMode = VisionMode.Normal;
+    public VisionMode currentMode = VisionMode.Blurry;
 
     private GameObject blurryOverlay;
-    private GameObject blindOverlay;
+    private GameObject nearlyBlindOverlay;
+    private GameObject visualDisabilityOverlay;
 
     private const string VisionModeKey = "VisionMode";
 
@@ -32,10 +33,11 @@ public class VisionModeManager : MonoBehaviour
         }
     }
 
-    public void RegisterSceneOverlays(GameObject blurry, GameObject blind)
+    public void RegisterSceneOverlays(GameObject blurry, GameObject nearlyBlind, GameObject visualDisability)
     {
         blurryOverlay = blurry;
-        blindOverlay = blind;
+        nearlyBlindOverlay = nearlyBlind;
+        visualDisabilityOverlay = visualDisability;
         ApplyVisionMode();
     }
 
@@ -54,7 +56,7 @@ public class VisionModeManager : MonoBehaviour
 
     private void LoadVisionMode()
     {
-        currentMode = (VisionMode)PlayerPrefs.GetInt(VisionModeKey, 0);
+        currentMode = (VisionMode)PlayerPrefs.GetInt(VisionModeKey, (int)VisionMode.Blurry);
     }
 
     public void ApplyVisionMode()
@@ -62,7 +64,10 @@ public class VisionModeManager : MonoBehaviour
         if (blurryOverlay != null)
             blurryOverlay.SetActive(currentMode == VisionMode.Blurry);
 
-        if (blindOverlay != null)
-            blindOverlay.SetActive(currentMode == VisionMode.Blind);
+        if (nearlyBlindOverlay != null)
+            nearlyBlindOverlay.SetActive(currentMode == VisionMode.NearlyBlind);
+
+        if (visualDisabilityOverlay != null)
+            visualDisabilityOverlay.SetActive(currentMode == VisionMode.VisualDisability);
     }
 }

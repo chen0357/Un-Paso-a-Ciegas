@@ -9,7 +9,7 @@ public class VisionModeSelectController : MonoBehaviour
         pendingSceneName = sceneName;
     }
 
-    public void ChooseNormal()
+    public void ChooseNearlyBlind()
     {
         ConfirmVisionMode(0);
     }
@@ -19,7 +19,7 @@ public class VisionModeSelectController : MonoBehaviour
         ConfirmVisionMode(1);
     }
 
-    public void ChooseBlind()
+    public void ChooseVisualDisability()
     {
         ConfirmVisionMode(2);
     }

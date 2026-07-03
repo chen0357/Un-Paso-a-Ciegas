@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Modo para baja visi\xF3n"
+  m_text: Button_Modo para baja visión
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -599,7 +599,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9911223344556677880}
         m_TargetAssemblyTypeName: VisionModeSelectController, Assembly-CSharp
-        m_MethodName: ChooseNormal
+        m_MethodName: ChooseNearlyBlind
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Modo normal
+  m_text: Button_Modo para ciegos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1133,7 +1133,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9911223344556677880}
         m_TargetAssemblyTypeName: VisionModeSelectController, Assembly-CSharp
-        m_MethodName: ChooseBlind
+        m_MethodName: ChooseVisualDisability
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Modo para ciegos
+  m_text: Button_Modo discapacidad visual
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

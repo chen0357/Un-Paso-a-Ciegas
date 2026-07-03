@@ -4,18 +4,27 @@ using UnityEngine.UI;
 public class VisionEffectCanvasRef : MonoBehaviour
 {
     public GameObject blurryOverlay;
-    public GameObject blindOverlay;
+    public GameObject nearlyBlindOverlay;
+    public GameObject visualDisabilityOverlay;
 
     private void Awake()
     {
         SetOverlayRaycastTarget(blurryOverlay, false);
-        SetOverlayRaycastTarget(blindOverlay, false);
+        SetOverlayRaycastTarget(nearlyBlindOverlay, false);
+        SetOverlayRaycastTarget(visualDisabilityOverlay, false);
+
+        if (blurryOverlay != null)
+            blurryOverlay.SetActive(false);
+        if (nearlyBlindOverlay != null)
+            nearlyBlindOverlay.SetActive(false);
+        if (visualDisabilityOverlay != null)
+            visualDisabilityOverlay.SetActive(false);
     }
 
     private void Start()
     {
         if (VisionModeManager.Instance != null)
-            VisionModeManager.Instance.RegisterSceneOverlays(blurryOverlay, blindOverlay);
+            VisionModeManager.Instance.RegisterSceneOverlays(blurryOverlay, nearlyBlindOverlay, visualDisabilityOverlay);
     }
 
     private static void SetOverlayRaycastTarget(GameObject overlay, bool raycastTarget)

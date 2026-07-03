@@ -49,9 +49,9 @@ public static class VisionModeSelectPanelCreator
 
             SetTitle(root, "Seleccionar modo visual");
 
-            ConfigureVisionButton(FindChild(root, "Button_Experiencia al cruzar la calle"), "Modo normal", nameof(VisionModeSelectController.ChooseNormal));
-            ConfigureVisionButton(FindChild(root, "Button_Experiencia en la parada de autobús"), "Modo para baja visión", nameof(VisionModeSelectController.ChooseBlurry));
-            ConfigureVisionButton(FindChild(root, "Button_Experiencia en interiores"), "Modo para ciegos", nameof(VisionModeSelectController.ChooseBlind));
+            ConfigureVisionButton(FindChild(root, "Button_Experiencia al cruzar la calle"), "Button_Modo para ciegos", nameof(VisionModeSelectController.ChooseNearlyBlind));
+            ConfigureVisionButton(FindChild(root, "Button_Experiencia en la parada de autobús"), "Button_Modo para baja visión", nameof(VisionModeSelectController.ChooseBlurry));
+            ConfigureVisionButton(FindChild(root, "Button_Experiencia en interiores"), "Button_Modo discapacidad visual", nameof(VisionModeSelectController.ChooseVisualDisability));
 
             ConfigureBackButton(FindChild(root, "Button"), controller);
 
@@ -111,14 +111,14 @@ public static class VisionModeSelectPanelCreator
 
             switch (methodName)
             {
-                case nameof(VisionModeSelectController.ChooseNormal):
-                    controller.ChooseNormal();
+                case nameof(VisionModeSelectController.ChooseNearlyBlind):
+                    controller.ChooseNearlyBlind();
                     break;
                 case nameof(VisionModeSelectController.ChooseBlurry):
                     controller.ChooseBlurry();
                     break;
-                case nameof(VisionModeSelectController.ChooseBlind):
-                    controller.ChooseBlind();
+                case nameof(VisionModeSelectController.ChooseVisualDisability):
+                    controller.ChooseVisualDisability();
                     break;
             }
         });
