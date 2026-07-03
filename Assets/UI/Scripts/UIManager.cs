@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
         GameIntro,
         Pause,
         LevelSelect,
+        VisionModeSelect,
         Result
     }
 
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameIntroPanel;
     public GameObject pausePanel;
     public GameObject levelSelectPanel;
+    public GameObject visionModeSelectPanel;
     public GameObject resultPanel;
 
     [Header("Gameplay HUD")]
@@ -38,7 +40,10 @@ public class UIManager : MonoBehaviour
 
     [Header("Optional")]
     public string firstLevelSceneName = "Level_Street";
+
     private UIState previousState;
+    private string pendingLevelSceneName;
+
     private void Start()
     {
         HideAllPanels();
@@ -50,7 +55,6 @@ public class UIManager : MonoBehaviour
                 break;
 
             case UIManagerMode.GameplayScene:
-                // ?????????????????????
                 break;
         }
     }
@@ -62,6 +66,7 @@ public class UIManager : MonoBehaviour
         if (gameIntroPanel != null) gameIntroPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
+        if (visionModeSelectPanel != null) visionModeSelectPanel.SetActive(false);
         if (resultPanel != null) resultPanel.SetActive(false);
     }
 
@@ -71,6 +76,7 @@ public class UIManager : MonoBehaviour
         if (gameIntroPanel != null) gameIntroPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
+        if (visionModeSelectPanel != null) visionModeSelectPanel.SetActive(false);
     }
 
     public void ShowMainMenu()
@@ -127,10 +133,73 @@ public class UIManager : MonoBehaviour
 
     public void ShowLevelSelect()
     {
+        pendingLevelSceneName = null;
         HideAllPanels();
-        if (levelSelectPanel != null) levelSelectPanel.SetActive(true);
+        if (levelSelectPanel != null)
+            levelSelectPanel.SetActive(true);
 
         currentState = UIState.LevelSelect;
+    }
+
+    public void ShowVisionModeSelect(string sceneName)
+    {
+        pendingLevelSceneName = sceneName;
+        HideAllPanels();
+
+        if (visionModeSelectPanel == null)
+            visionModeSelectPanel = FindInactiveVisionModeSelectPanel();
+
+        if (visionModeSelectPanel != null)
+        {
+            visionModeSelectPanel.SetActive(true);
+            var panelTransform = visionModeSelectPanel.transform as RectTransform;
+            if (panelTransform != null)
+                panelTransform.SetAsLastSibling();
+
+            var controller = visionModeSelectPanel.GetComponent<VisionModeSelectController>();
+            if (controller != null)
+                controller.BeginSelection(sceneName);
+            else
+                Debug.LogError("VisionModeSelectPanel is missing VisionModeSelectController.");
+        }
+        else
+        {
+            Debug.LogError("VisionModeSelectPanel reference is missing, cannot continue to gameplay without choosing a vision mode.");
+            ShowLevelSelect();
+            return;
+        }
+
+        currentState = UIState.VisionModeSelect;
+    }
+
+    private GameObject FindInactiveVisionModeSelectPanel()
+    {
+        VisionModeSelectController[] controllers = Resources.FindObjectsOfTypeAll<VisionModeSelectController>();
+        for (int i = 0; i < controllers.Length; i++)
+        {
+            VisionModeSelectController controller = controllers[i];
+            if (controller == null)
+                continue;
+
+            GameObject panel = controller.gameObject;
+            if (panel == null || !panel.scene.IsValid() || !panel.scene.isLoaded)
+                continue;
+
+            if (panel.name == "VisionModeSelectPanel")
+                return panel;
+        }
+
+        return null;
+    }
+
+    public void SelectLevel(string sceneName)
+    {
+        ShowVisionModeSelect(sceneName);
+    }
+
+    public void BackFromVisionModeSelect()
+    {
+        ShowLevelSelect();
     }
 
     public void ShowResult()
@@ -156,13 +225,13 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(firstLevelSceneName);
+        SelectLevel(firstLevelSceneName);
     }
 
     public void LoadLevel(string sceneName)
     {
         Time.timeScale = 1f;
+        pendingLevelSceneName = null;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -185,8 +254,6 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-    
-
     public void BackFromSettings()
     {
         if (settingsPanel != null)
@@ -207,6 +274,10 @@ public class UIManager : MonoBehaviour
                 break;
 
             case UIState.LevelSelect:
+                ShowLevelSelect();
+                break;
+
+            case UIState.VisionModeSelect:
                 ShowLevelSelect();
                 break;
 

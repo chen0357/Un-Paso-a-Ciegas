@@ -88,13 +88,11 @@ public class SettingsManager : MonoBehaviour
     }
 
     public void BindUI(
-        TMP_Dropdown visualDropdown,
         Toggle voiceToggle,
         Slider volumeSlider,
         Toggle hapticToggleUI,
         Slider hapticSlider)
     {
-        visualModeDropdown = visualDropdown;
         voiceHintToggle = voiceToggle;
         uiVolumeSlider = volumeSlider;
         hapticToggle = hapticToggleUI;
@@ -105,14 +103,6 @@ public class SettingsManager : MonoBehaviour
 
     public void RefreshUI()
     {
-        visualMode = GetCurrentVisionMode();
-
-        if (visualModeDropdown != null)
-        {
-            visualModeDropdown.SetValueWithoutNotify(visualMode);
-            visualModeDropdown.RefreshShownValue();
-        }
-
         if (voiceHintToggle != null)
             voiceHintToggle.isOn = voiceHintsEnabled;
 
@@ -124,13 +114,6 @@ public class SettingsManager : MonoBehaviour
 
         if (hapticStrengthSlider != null)
             hapticStrengthSlider.value = hapticStrength;
-    }
-
-    public void OnVisualModeChanged(int value)
-    {
-        visualMode = value;
-        SaveSettings();
-        ApplySettings();
     }
 
     private int GetCurrentVisionMode()
@@ -196,7 +179,6 @@ public class SettingsManager : MonoBehaviour
 
     public void SaveSettings()
     {
-        PlayerPrefs.SetInt(VisionModeKey, visualMode);
         PlayerPrefs.SetInt("VoiceHintsEnabled", voiceHintsEnabled ? 1 : 0);
         PlayerPrefs.SetFloat("UIVolume", uiVolume);
         PlayerPrefs.SetInt("HapticsEnabled", hapticsEnabled ? 1 : 0);

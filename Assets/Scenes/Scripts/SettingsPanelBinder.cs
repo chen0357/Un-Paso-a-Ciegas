@@ -5,6 +5,7 @@ using TMPro;
 public class SettingsPanelBinder : MonoBehaviour
 {
     [Header("UI References")]
+    public GameObject visualModeSection;
     public TMP_Dropdown visualModeDropdown;
     public Toggle voiceHintToggle;
     public Slider uiVolumeSlider;
@@ -12,6 +13,19 @@ public class SettingsPanelBinder : MonoBehaviour
     public Slider hapticStrengthSlider;
 
     private bool eventsBound;
+
+    private void Awake()
+    {
+        if (visualModeSection == null)
+        {
+            var sectionTransform = transform.Find("Configuración de simulación visual");
+            if (sectionTransform != null)
+                visualModeSection = sectionTransform.gameObject;
+        }
+
+        if (visualModeSection != null)
+            visualModeSection.SetActive(false);
+    }
 
     private void OnEnable()
     {
@@ -22,7 +36,6 @@ public class SettingsPanelBinder : MonoBehaviour
         }
 
         SettingsManager.Instance.BindUI(
-            visualModeDropdown,
             voiceHintToggle,
             uiVolumeSlider,
             hapticToggle,
@@ -36,12 +49,6 @@ public class SettingsPanelBinder : MonoBehaviour
     {
         if (eventsBound)
             return;
-
-        if (visualModeDropdown != null)
-        {
-            visualModeDropdown.onValueChanged.RemoveListener(SettingsManager.Instance.OnVisualModeChanged);
-            visualModeDropdown.onValueChanged.AddListener(SettingsManager.Instance.OnVisualModeChanged);
-        }
 
         if (voiceHintToggle != null)
         {
