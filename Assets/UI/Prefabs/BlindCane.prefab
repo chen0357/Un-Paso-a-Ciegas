@@ -195,8 +195,8 @@ MonoBehaviour:
   caneAudioSystem: {fileID: 5826068151323719254}
   caneHapticSystem: {fileID: 2176399054703436980}
   showDebugLog: 1
-  slideContactDelay: 0.35
-  minSlideSpeed: 0.15
+  slideContactDelay: 0.1
+  minSlideSpeed: 0.1
   minHitSpeed: 0.1
   maxHitSpeed: 2
 --- !u!54 &3910589555240635267
