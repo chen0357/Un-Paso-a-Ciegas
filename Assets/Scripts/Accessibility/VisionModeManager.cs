@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VisionModeManager : MonoBehaviour
 {
@@ -33,6 +34,21 @@ public class VisionModeManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        DisableAllOverlays();
+    }
+
     public void RegisterSceneOverlays(GameObject blurry, GameObject nearlyBlind, GameObject visualDisability)
     {
         blurryOverlay = blurry;
@@ -61,6 +77,12 @@ public class VisionModeManager : MonoBehaviour
 
     public void ApplyVisionMode()
     {
+        if (IsMenuScene(SceneManager.GetActiveScene().name))
+        {
+            DisableAllOverlays();
+            return;
+        }
+
         if (blurryOverlay != null)
             blurryOverlay.SetActive(currentMode == VisionMode.Blurry);
 
@@ -69,5 +91,22 @@ public class VisionModeManager : MonoBehaviour
 
         if (visualDisabilityOverlay != null)
             visualDisabilityOverlay.SetActive(currentMode == VisionMode.VisualDisability);
+    }
+
+    public void DisableAllOverlays()
+    {
+        if (blurryOverlay != null)
+            blurryOverlay.SetActive(false);
+
+        if (nearlyBlindOverlay != null)
+            nearlyBlindOverlay.SetActive(false);
+
+        if (visualDisabilityOverlay != null)
+            visualDisabilityOverlay.SetActive(false);
+    }
+
+    private static bool IsMenuScene(string sceneName)
+    {
+        return sceneName == UIManager.MainMenuSceneName;
     }
 }
