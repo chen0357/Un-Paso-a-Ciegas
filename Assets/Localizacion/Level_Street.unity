@@ -16448,7 +16448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.82
+      value: 13.53
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17004,11 +17004,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tasks:
   - id: task_1
-    description: Cruzando la acera
+    description: Cruzar la acera
   - id: task_2
-    description: Cruzando el carril
+    description: Cruzar el cruce
   - id: task_3
-    description: Encuentra la entrada del metro
+    description: Encontrar la entrada al metro
 --- !u!1001 &1443669191
 PrefabInstance:
   m_ObjectHideFlags: 0
