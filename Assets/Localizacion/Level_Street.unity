@@ -222,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: hamberger (1)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.y
-      value: 0.019800348
+      value: 0.019800358
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.z
@@ -238,11 +238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.x
-      value: 0.00009574462
+      value: 0.00009576231
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.y
-      value: 0.0002847938
+      value: 0.00028479844
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.z
@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (16)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -684,11 +684,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: pepsi (2)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
-      value: 0.0039986274
+      value: 0.0039986954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.004017224
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.z
@@ -696,7 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Center.x
-      value: -0.000034393626
+      value: -0.00003439479
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.000026772614
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -906,6 +914,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 575349901}
     m_Modifications:
+    - target: {fileID: 681907493844439539, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 3675476767757963889, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
       propertyPath: m_Name
       value: bin_green
@@ -1121,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: trashbag (1)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -1461,7 +1473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (5)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1770,7 +1782,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.x
-      value: 0.6706426
+      value: 0.6706445
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.y
@@ -1782,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.x
-      value: 1.1699877
+      value: 1.1699905
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.y
@@ -1834,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: trashbag (3)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -2113,6 +2125,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 913503411}
     m_Modifications:
+    - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.31690764
+      objectReference: {fileID: 0}
+    - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
+      propertyPath: m_Center.x
+      value: -1.7829857
+      objectReference: {fileID: 0}
+    - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
+      propertyPath: m_Center.z
+      value: 0.6246128
+      objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 102.340004
@@ -2155,7 +2179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: poder (3)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2282,7 +2306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &189493783
@@ -2566,7 +2590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (20)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3525,7 +3549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: small box (1)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3787,7 +3811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (3)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4261,27 +4285,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: pepsi (1)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
-      value: 0.0039986274
+      value: 0.003998591
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.y
-      value: 0.004017219
+      value: 0.0040172166
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.z
-      value: 0.0057551516
+      value: 0.0057551228
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Center.x
-      value: -0.000034393626
+      value: -0.00003437535
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Center.y
-      value: 0.000026771799
+      value: 0.000026773312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.z
+      value: 0.00008711615
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4688,7 +4716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (14)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5183,7 +5211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Edificio
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &433741893
@@ -5206,7 +5234,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 130.0908, y: 23.56918, z: 24.442234}
-  m_Center: {x: 0, y: 0.000005722046, z: 10.9789295}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &433741894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5230,6 +5258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798905336}
     m_Modifications:
+    - target: {fileID: 681907493844439539, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 3675476767757963889, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
       propertyPath: m_Name
       value: bin_green
@@ -5297,6 +5329,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 62756654}
     m_Modifications:
+    - target: {fileID: 3664913216969294042, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 4670204333500144493, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.1
@@ -5870,15 +5906,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: hamberger (4)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
-      value: 0.019313946
+      value: 0.019313984
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.y
-      value: 0.019800348
+      value: 0.01980031
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.z
@@ -5886,11 +5922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.x
-      value: 0.00009574462
+      value: 0.000095763244
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.y
-      value: 0.0002847938
+      value: 0.00028481334
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.z
@@ -6110,7 +6146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (5)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6216,7 +6252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (13)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7525,6 +7561,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1196282982}
     m_Modifications:
+    - target: {fileID: 3664913216969294042, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 4670204333500144493, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.1
@@ -7641,7 +7681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (11)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8434,7 +8474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (2)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9080,7 +9120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Farola
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &810152151
@@ -9246,7 +9286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &821698858
@@ -9696,7 +9736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.x
-      value: 1.1699877
+      value: 1.1699886
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.y
@@ -9748,7 +9788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: trashbag (2)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -10037,7 +10077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: big box (3)
+      value: Cajita de madera
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -10081,11 +10121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.x
-      value: 0.00555635
+      value: 0.0055563604
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.y
-      value: 0.0064101107
+      value: 0.00641013
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.z
@@ -10093,11 +10133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.x
-      value: 0.000016851118
+      value: 0.000016851583
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.y
-      value: -0.000004591653
+      value: -0.000004593283
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.z
@@ -11007,7 +11047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Farola
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &926518982
@@ -11031,6 +11071,93 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44129056, y: 0.44129065, z: 4.010001}
   m_Center: {x: 0, y: 0, z: 2.0000005}
+--- !u!1 &927370549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927370550}
+  - component: {fileID: 927370553}
+  - component: {fileID: 927370552}
+  - component: {fileID: 927370551}
+  m_Layer: 0
+  m_Name: Trigger Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927370550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927370549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1940531764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927370551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927370549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &927370552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927370549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &927370553
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927370549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 130.0908, y: 23.56918, z: 24.442234}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &942583280
 GameObject:
   m_ObjectHideFlags: 0
@@ -11190,7 +11317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11264,7 +11391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &970980375
@@ -11310,7 +11437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.x
-      value: -2.0398197
+      value: -2.0398216
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.y
@@ -11402,7 +11529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: poder2 (2)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11424,7 +11551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.x
-      value: 0.020300116
+      value: 0.020300223
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.y
@@ -11436,7 +11563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.x
-      value: -0.0000048773363
+      value: -0.000004931353
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.y
@@ -11448,7 +11575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: pizza (2)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -11780,6 +11907,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 913503411}
     m_Modifications:
+    - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.31690764
+      objectReference: {fileID: 0}
+    - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
+      propertyPath: m_Center.x
+      value: -1.7829857
+      objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 67.0199
@@ -11822,7 +11957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: poder (2)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12323,15 +12458,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: hamberger (2)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
-      value: 0.019313946
+      value: 0.019313984
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.y
-      value: 0.019800348
+      value: 0.01980031
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.z
@@ -12339,11 +12474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.x
-      value: 0.00009574462
+      value: 0.000095763244
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.y
-      value: 0.0002847938
+      value: 0.00028481334
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.z
@@ -12548,7 +12683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (21)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12796,7 +12931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (18)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12945,6 +13080,93 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22997798, y: 0.21888466, z: 0.33891243}
   m_Center: {x: -0.08035202, y: -0.07899222, z: 0.00018781424}
+--- !u!1 &1123496854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123496855}
+  - component: {fileID: 1123496858}
+  - component: {fileID: 1123496857}
+  - component: {fileID: 1123496856}
+  m_Layer: 0
+  m_Name: Trigger Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123496855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123496854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1889257798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123496856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123496854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &1123496857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123496854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &1123496858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123496854}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 130.0908, y: 23.56918, z: 24.442234}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1139608439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13489,15 +13711,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: hamberger (3)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
-      value: 0.019313946
+      value: 0.019314142
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.y
-      value: 0.019800348
+      value: 0.019800462
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.z
@@ -13505,11 +13727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.x
-      value: 0.00009574462
+      value: 0.000095743686
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.y
-      value: 0.0002847938
+      value: 0.0002847826
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Center.z
@@ -14002,7 +14224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: small box (3)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14205,7 +14427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.x
-      value: 0.6706426
+      value: 0.6706445
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.y
@@ -14217,7 +14439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.x
-      value: 1.1699877
+      value: 1.1699905
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.y
@@ -14269,7 +14491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: trashbag (4)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -14468,7 +14690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (10)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14600,7 +14822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: small box (2)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14682,6 +14904,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1689113427}
     m_Modifications:
+    - target: {fileID: 2271358134184903650, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 6283143680635355979, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84.88
@@ -14837,19 +15063,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: pepsi (4)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
-      value: 0.0039986274
+      value: 0.003998628
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.z
-      value: 0.0057551516
+      value: 0.0057551702
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Center.x
-      value: -0.000034393626
+      value: -0.00003438734
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.000026773312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.z
+      value: 0.000087130116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14900,6 +15134,93 @@ Transform:
   - {fileID: 64987301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1279412681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279412682}
+  - component: {fileID: 1279412685}
+  - component: {fileID: 1279412684}
+  - component: {fileID: 1279412683}
+  m_Layer: 0
+  m_Name: Trigger Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1279412682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279412681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526169798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1279412683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279412681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &1279412684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279412681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &1279412685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279412681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 101.90867, y: 61.861, z: 101.00991}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1300948072
 GameObject:
   m_ObjectHideFlags: 0
@@ -15686,19 +16007,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: pepsi (3)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
-      value: 0.0039986274
+      value: 0.00399871
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.0040172255
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.z
-      value: 0.0057551516
+      value: 0.0057551702
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Center.x
       value: -0.000034393626
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.000026771915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
+      propertyPath: m_Center.z
+      value: 0.000087130116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15857,7 +16190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (3)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15981,7 +16314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16118,7 +16451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (17)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16853,7 +17186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.x
-      value: -2.0398216
+      value: -2.0398197
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.y
@@ -16945,7 +17278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: poder2 (1)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17285,7 +17618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (2)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17618,7 +17951,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6be89d5f889b43749962faa149547b77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1743631147}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6be89d5f889b43749962faa149547b77, type: 3}
 --- !u!4 &1505507313 stripped
@@ -17676,7 +18012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (4)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17774,7 +18110,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdce3fbf9c66c7c43b54d0a6f0e41207, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1279412682}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdce3fbf9c66c7c43b54d0a6f0e41207, type: 3}
 --- !u!4 &1526169798 stripped
@@ -17907,7 +18246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (6)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17969,6 +18308,93 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3996760141626369306, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
+--- !u!1 &1541784631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541784632}
+  - component: {fileID: 1541784635}
+  - component: {fileID: 1541784634}
+  - component: {fileID: 1541784633}
+  m_Layer: 0
+  m_Name: Trigger Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1541784632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541784631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2017384098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541784633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541784631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &1541784634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541784631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &1541784635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541784631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.971962, y: 21.7459, z: 11.348174}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1545293074
 GameObject:
   m_ObjectHideFlags: 0
@@ -18150,7 +18576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (1)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18797,7 +19223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1626778228
@@ -19248,7 +19674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (12)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19522,7 +19948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (22)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19646,7 +20072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (23)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20121,7 +20547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1733954758
@@ -20145,6 +20571,93 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0052668, y: 0.6794358, z: 4.0021014}
   m_Center: {x: 0.038296133, y: -0.20121172, z: 1.9960506}
+--- !u!1 &1743631146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743631147}
+  - component: {fileID: 1743631150}
+  - component: {fileID: 1743631149}
+  - component: {fileID: 1743631148}
+  m_Layer: 0
+  m_Name: Trigger Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743631147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743631146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1505507313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1743631148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743631146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &1743631149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743631146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &1743631150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743631146}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 23.72689, y: 51.70591, z: 61.47831}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1750157675
 GameObject:
   m_ObjectHideFlags: 0
@@ -20404,7 +20917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1775017171
@@ -20468,6 +20981,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1689113427}
     m_Modifications:
+    - target: {fileID: 2271358134184903650, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 6283143680635355979, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.839998
@@ -20820,7 +21337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (19)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20892,11 +21409,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.x
-      value: 0.020300116
+      value: 0.020300223
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.y
-      value: 0.020470109
+      value: 0.020470178
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.z
@@ -20904,11 +21421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.x
-      value: -0.0000048773363
+      value: -0.000004931353
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.y
-      value: 0.000030670315
+      value: 0.000030671246
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.z
@@ -20916,7 +21433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: pizza (3)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -21182,11 +21699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Size.z
-      value: 0.33775878
+      value: 0.33775687
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.x
-      value: -2.0398197
+      value: -2.0398178
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.y
@@ -21194,7 +21711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.z
-      value: 0.72899437
+      value: 0.7289934
       objectReference: {fileID: 0}
     - target: {fileID: 6450879730187361489, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalScale.x
@@ -21278,7 +21795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: poder2 (3)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21754,7 +22271,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdce3fbf9c66c7c43b54d0a6f0e41207, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1123496855}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdce3fbf9c66c7c43b54d0a6f0e41207, type: 3}
 --- !u!4 &1889257798 stripped
@@ -21812,7 +22332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: poder (4)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22205,7 +22725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (1)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22303,7 +22823,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 927370550}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f442ef2c2db32f9419a10cbde3b60372, type: 3}
 --- !u!4 &1940531764 stripped
@@ -22433,7 +22956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 454497685412679503, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Center.x
-      value: -1.7829838
+      value: -1.7829857
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22477,7 +23000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: poder (1)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22602,7 +23125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (6)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22749,7 +23272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (15)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22877,7 +23400,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067390790}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
 --- !u!4 &1995571102 stripped
@@ -22951,7 +23477,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1541784632}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e198d9d64ac9f2c47a3e30488c3acc01, type: 3}
 --- !u!4 &2017384098 stripped
@@ -23107,7 +23636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &2024523637
@@ -23216,7 +23745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.x
-      value: -2.0398197
+      value: -2.0398178
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.y
@@ -23308,7 +23837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: poder2 (4)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23414,7 +23943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (7)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23476,6 +24005,93 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3996760141626369306, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
+--- !u!1 &2067390789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067390790}
+  - component: {fileID: 2067390793}
+  - component: {fileID: 2067390792}
+  - component: {fileID: 2067390791}
+  m_Layer: 0
+  m_Name: 'Trigger Collider '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067390790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067390789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995571102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067390791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067390789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce03cd59f5478478bc061120d6f0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSize: 0.001
+  includeChildMeshes: 1
+  includeMeshColliders: 1
+--- !u!114 &2067390792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067390789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b0d7d0d0d71f947b729747878c21b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  damageCooldown: 1
+  hitHintMessage: Edificio
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
+--- !u!65 &2067390793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067390789}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.971966, y: 21.745895, z: 11.348174}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2070798436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23486,7 +24102,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.x
-      value: 0.020300116
+      value: 0.02030006
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.y
@@ -23498,7 +24114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.x
-      value: -0.0000048773363
+      value: -0.000004905276
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.y
@@ -23510,7 +24126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: pizza (1)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -23665,7 +24281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.y
-      value: 0.020470109
+      value: 0.020470142
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.z
@@ -23677,7 +24293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.y
-      value: 0.000030670315
+      value: 0.00003065355
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.z
@@ -23685,7 +24301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: pizza (4)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -23843,7 +24459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (9)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23955,7 +24571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7f121c9fa48ebe4cbdcefc3cbfae90f, type: 3}
       propertyPath: m_Name
-      value: pillar_2 (7)
+      value: Pilar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24061,7 +24677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (4)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24185,7 +24801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 324f8ed2a9d328849b70e62217674228, type: 3}
       propertyPath: m_Name
-      value: tree_1 (8)
+      value: Arbol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24439,7 +25055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: "Sem\xE1foro"
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &2126915008
@@ -25208,7 +25824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.x
-      value: -2.0398216
+      value: -2.0398197
       objectReference: {fileID: 0}
     - target: {fileID: 5496195943117876257, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Center.y
@@ -25300,7 +25916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: poder2
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25357,7 +25973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: big box
+      value: Cajita de madera
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -25401,11 +26017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.x
-      value: 0.0055563524
+      value: 0.0055563464
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.y
-      value: 0.0064101107
+      value: 0.006410115
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Size.z
@@ -25413,11 +26029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.x
-      value: 0.00001684972
+      value: 0.000016852748
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.y
-      value: -0.000004591653
+      value: -0.0000045937486
       objectReference: {fileID: 0}
     - target: {fileID: 2849492818279856667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Center.z
@@ -25497,7 +26113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: pepsi
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -25586,7 +26202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: small box
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25644,6 +26260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1777696871}
     m_Modifications:
+    - target: {fileID: 681907493844439539, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 3675476767757963889, guid: 010571c0ac002b542b9dc1123e3f07a4, type: 3}
       propertyPath: m_Name
       value: bin_green
@@ -25743,7 +26363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: poder
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25760,7 +26380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.x
-      value: 0.6706407
+      value: 0.6706426
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Size.y
@@ -25772,7 +26392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.x
-      value: 1.1699886
+      value: 1.1699877
       objectReference: {fileID: 0}
     - target: {fileID: 2748468036266252086, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Center.y
@@ -25824,7 +26444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: trashbag
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -25921,7 +26541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: hamberger
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -26000,6 +26620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545293075}
     m_Modifications:
+    - target: {fileID: 3664913216969294042, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 4670204333500144493, guid: df9c4f6ca8c6d4e458765f264e319313, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.1
@@ -26265,7 +26889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.y
-      value: 0.020470178
+      value: 0.020470109
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Size.z
@@ -26277,7 +26901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.y
-      value: 0.000030671246
+      value: 0.000030670315
       objectReference: {fileID: 0}
     - target: {fileID: 1894466037251540762, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Center.z
@@ -26285,7 +26909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: pizza
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -26384,6 +27008,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1689113427}
     m_Modifications:
+    - target: {fileID: 2271358134184903650, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
+      propertyPath: hitHintMessage
+      value: Cubo de basura
+      objectReference: {fileID: 0}
     - target: {fileID: 6283143680635355979, guid: 0c71f66833d720f4eabc3a28314b0bbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.06

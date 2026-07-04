@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3728454304051381048}
   - component: {fileID: -8258987932064999110}
   m_Layer: 0
-  m_Name: small box
+  m_Name: Cajita de madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

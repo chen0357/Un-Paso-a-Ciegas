@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2351990515622077073}
   - component: {fileID: 5999640623032648026}
   m_Layer: 0
-  m_Name: pepsi
+  m_Name: Pepsi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1724028752964733763}
   - component: {fileID: 2306382640802587169}
   m_Layer: 0
-  m_Name: hamberger
+  m_Name: Caja de hamburguesa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
