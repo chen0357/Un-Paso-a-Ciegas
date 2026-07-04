@@ -3002,6 +3002,10 @@ MonoBehaviour:
   pillarHeight: 5
   pillarRadius: 1.5
   groundRadius: 2
+  fitTriggerToBeacon: 1
+  triggerRadiusPadding: 0.35
+  triggerHeight: 2
+  triggerBaseOffset: 0
   pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.75}
   groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.55}
   pulse: 1
@@ -9970,6 +9974,10 @@ MonoBehaviour:
   pillarHeight: 5
   pillarRadius: 1.5
   groundRadius: 2
+  fitTriggerToBeacon: 1
+  triggerRadiusPadding: 0.35
+  triggerHeight: 2
+  triggerBaseOffset: 0
   pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.75}
   groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.55}
   pulse: 1
@@ -11742,10 +11750,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskListRoot: {fileID: 900000011}
   rowTemplate: {fileID: 0}
+  title: OBJETIVOS
   pendingMarker: "\u25CB"
   completedMarker: "\u2713"
-  pendingColor: {r: 1, g: 1, b: 1, a: 1}
-  completedColor: {r: 0.55, g: 1, b: 0.55, a: 1}
+  lockedMarker: "\xB7"
+  pendingColor: {r: 0.86, g: 0.86, b: 0.86, a: 1}
+  completedColor: {r: 0.68, g: 0.68, b: 0.68, a: 1}
+  lockedColor: {r: 0.45, g: 0.45, b: 0.45, a: 0.95}
+  completedStrikeColor: {r: 0.85, g: 0.2, b: 0.2, a: 0.95}
+  panelColor: {r: 0.04, g: 0.04, b: 0.04, a: 0.58}
+  borderColor: {r: 0.42, g: 0.42, b: 0.42, a: 0.9}
+  titleColor: {r: 0.94, g: 0.94, b: 0.94, a: 1}
+  titleBarColor: {r: 0.14, g: 0.14, b: 0.14, a: 0.86}
+  rowColor: {r: 0.11, g: 0.11, b: 0.11, a: 0.34}
+  completedRowColor: {r: 0.19, g: 0.19, b: 0.19, a: 0.5}
+  lockedRowColor: {r: 0.08, g: 0.08, b: 0.08, a: 0.24}
+  panelSize: {x: 290, y: 0}
+  topRightMargin: {x: 18, y: 14}
+  panelPadding: {x: 12, y: 10}
+  titleHeight: 24
+  rowHeight: 24
+  rowSpacing: 5
+  titleBottomSpacing: 7
 --- !u!1001 &1033494408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13058,6 +13084,10 @@ MonoBehaviour:
   pillarHeight: 5
   pillarRadius: 1.5
   groundRadius: 2
+  fitTriggerToBeacon: 1
+  triggerRadiusPadding: 0.35
+  triggerHeight: 2
+  triggerBaseOffset: 0
   pillarColor: {r: 0.25, g: 1, b: 0.35, a: 0.39215687}
   groundColor: {r: 0.35, g: 1, b: 0.45, a: 0.3647059}
   pulse: 1
@@ -16440,7 +16470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.29
+      value: 31.6
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16540,7 +16570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 0}
   m_TransformationPriority: 0
-  m_MoveSpeed: 3
+  m_MoveSpeed: 1.8
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1

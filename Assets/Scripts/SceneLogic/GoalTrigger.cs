@@ -13,12 +13,23 @@ public class GoalTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (triggered) return;
+        TryCompleteGoal(other);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        TryCompleteGoal(other);
+    }
+
+    private void TryCompleteGoal(Collider other)
+    {
+        if (triggered)
+            return;
 
         if (GameManager.Instance != null && !GameManager.Instance.CanProcessGameplay())
             return;
 
-        if (!other.CompareTag("Player"))
+        if (!IsPlayerCollider(other))
             return;
 
         if (requireAllTasksCompleted &&
@@ -26,10 +37,14 @@ public class GoalTrigger : MonoBehaviour
             !TaskManager.Instance.AreAllTasksCompleted())
             return;
 
-        triggered = true;
-
+        bool completedTask = true;
         if (TaskManager.Instance != null && !string.IsNullOrEmpty(completeTaskId))
-            TaskManager.Instance.CompleteTask(completeTaskId);
+            completedTask = TaskManager.Instance.CompleteTask(completeTaskId);
+
+        if (!completedTask)
+            return;
+
+        triggered = true;
 
         if (finishLevelOnTrigger && GameManager.Instance != null)
             GameManager.Instance.CompleteGame();
@@ -37,5 +52,20 @@ public class GoalTrigger : MonoBehaviour
         ObjectiveZoneVisual visual = GetComponent<ObjectiveZoneVisual>();
         if (visual != null)
             visual.Hide();
+    }
+
+    private static bool IsPlayerCollider(Collider other)
+    {
+        if (other == null)
+            return false;
+
+        if (other.CompareTag("Player"))
+            return true;
+
+        if (other.attachedRigidbody != null && other.attachedRigidbody.CompareTag("Player"))
+            return true;
+
+        Transform parent = other.transform.parent;
+        return parent != null && parent.CompareTag("Player");
     }
 }

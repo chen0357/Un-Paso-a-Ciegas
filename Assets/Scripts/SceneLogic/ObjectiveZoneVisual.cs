@@ -8,6 +8,12 @@ public class ObjectiveZoneVisual : MonoBehaviour
     public float pillarRadius = 0.22f;
     public float groundRadius = 1.1f;
 
+    [Header("Trigger Area")]
+    public bool fitTriggerToBeacon = true;
+    public float triggerRadiusPadding = 0.35f;
+    public float triggerHeight = 2f;
+    public float triggerBaseOffset = 0f;
+
     [Header("Color")]
     public Color pillarColor = new Color(0.25f, 1f, 0.35f, 0.75f);
     public Color groundColor = new Color(0.35f, 1f, 0.45f, 0.55f);
@@ -34,27 +40,38 @@ public class ObjectiveZoneVisual : MonoBehaviour
     private Color pillarBaseColor;
     private Color groundBaseColor;
     private bool hidden;
+    private bool subscribedToTaskManager;
 
     private void Awake()
     {
         DisableLegacyCubeVisual();
         BuildVisual();
+        ConfigureTriggerCollider();
     }
 
     private void OnEnable()
     {
-        if (TaskManager.Instance != null)
-            TaskManager.Instance.OnTaskCompleted += HandleTaskCompleted;
+        TrySubscribeToTaskManager();
+        UpdateVisibility();
+    }
+
+    private void Start()
+    {
+        TrySubscribeToTaskManager();
+        ConfigureTriggerCollider();
+        UpdateVisibility();
     }
 
     private void OnDisable()
     {
-        if (TaskManager.Instance != null)
-            TaskManager.Instance.OnTaskCompleted -= HandleTaskCompleted;
+        UnsubscribeFromTaskManager();
     }
 
     private void Update()
     {
+        TrySubscribeToTaskManager();
+        UpdateVisibility();
+
         if (!pulse || hidden || pillarMaterial == null)
             return;
 
@@ -99,6 +116,37 @@ public class ObjectiveZoneVisual : MonoBehaviour
         ObjectiveTriggerZone trigger = GetComponent<ObjectiveTriggerZone>();
         if (trigger != null && trigger.taskId == completedTaskId)
             Hide();
+
+        GoalTrigger goalTrigger = GetComponent<GoalTrigger>();
+        if (goalTrigger != null && goalTrigger.completeTaskId == completedTaskId)
+            Hide();
+    }
+
+    private void HandleTasksChanged()
+    {
+        UpdateVisibility();
+    }
+
+    private void UpdateVisibility()
+    {
+        if (visualRoot == null)
+            return;
+
+        if (hidden)
+        {
+            visualRoot.gameObject.SetActive(false);
+            return;
+        }
+
+        string relatedTaskId = GetRelatedTaskId();
+        if (TaskManager.Instance == null || string.IsNullOrEmpty(relatedTaskId))
+        {
+            visualRoot.gameObject.SetActive(true);
+            return;
+        }
+
+        bool shouldShow = TaskManager.Instance.IsTaskCurrent(relatedTaskId);
+        visualRoot.gameObject.SetActive(shouldShow);
     }
 
     private void DisableLegacyCubeVisual()
@@ -175,6 +223,32 @@ public class ObjectiveZoneVisual : MonoBehaviour
             pointLight.intensity = lightIntensity;
             pointLight.shadows = LightShadows.None;
         }
+
+        UpdateVisibility();
+    }
+
+    private void ConfigureTriggerCollider()
+    {
+        if (!fitTriggerToBeacon)
+            return;
+
+        BoxCollider triggerCollider = GetComponent<BoxCollider>();
+        if (triggerCollider == null)
+            return;
+
+        float worldDiameter = Mathf.Max(pillarRadius * 2f, groundRadius * 2f) + triggerRadiusPadding * 2f;
+        float worldCenterY = triggerBaseOffset + triggerHeight * 0.5f;
+
+        Vector3 lossyScale = transform.lossyScale;
+        triggerCollider.isTrigger = true;
+        triggerCollider.center = new Vector3(
+            0f,
+            WorldToLocalLength(worldCenterY, lossyScale.y),
+            0f);
+        triggerCollider.size = new Vector3(
+            WorldToLocalLength(worldDiameter, lossyScale.x),
+            WorldToLocalLength(triggerHeight, lossyScale.y),
+            WorldToLocalLength(worldDiameter, lossyScale.z));
     }
 
     private static void DestroyCollider(GameObject target)
@@ -190,5 +264,47 @@ public class ObjectiveZoneVisual : MonoBehaviour
             return;
 
         material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+    }
+
+    private void TrySubscribeToTaskManager()
+    {
+        if (subscribedToTaskManager || TaskManager.Instance == null)
+            return;
+
+        TaskManager.Instance.OnTaskCompleted += HandleTaskCompleted;
+        TaskManager.Instance.OnTasksChanged += HandleTasksChanged;
+        subscribedToTaskManager = true;
+    }
+
+    private void UnsubscribeFromTaskManager()
+    {
+        if (!subscribedToTaskManager || TaskManager.Instance == null)
+            return;
+
+        TaskManager.Instance.OnTaskCompleted -= HandleTaskCompleted;
+        TaskManager.Instance.OnTasksChanged -= HandleTasksChanged;
+        subscribedToTaskManager = false;
+    }
+
+    private string GetRelatedTaskId()
+    {
+        ObjectiveTriggerZone objectiveTrigger = GetComponent<ObjectiveTriggerZone>();
+        if (objectiveTrigger != null && !string.IsNullOrEmpty(objectiveTrigger.taskId))
+            return objectiveTrigger.taskId;
+
+        GoalTrigger goalTrigger = GetComponent<GoalTrigger>();
+        if (goalTrigger != null && !string.IsNullOrEmpty(goalTrigger.completeTaskId))
+            return goalTrigger.completeTaskId;
+
+        return string.Empty;
+    }
+
+    private static float WorldToLocalLength(float worldLength, float lossyScaleAxis)
+    {
+        float scale = Mathf.Abs(lossyScaleAxis);
+        if (scale < 0.0001f)
+            return worldLength;
+
+        return worldLength / scale;
     }
 }
