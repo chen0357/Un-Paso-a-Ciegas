@@ -56,7 +56,7 @@ public class ObstacleHitHintUI : MonoBehaviour
             hintPanel.SetActive(false);
     }
 
-    public void Show(string message)
+    public void Show(string message, string prefixOverride = null)
     {
         if (string.IsNullOrWhiteSpace(message))
             return;
@@ -68,9 +68,10 @@ public class ObstacleHitHintUI : MonoBehaviour
         if (hintText == null)
             return;
 
-        hintText.text = string.IsNullOrEmpty(messagePrefix)
+        string effectivePrefix = prefixOverride ?? messagePrefix;
+        hintText.text = string.IsNullOrEmpty(effectivePrefix)
             ? message
-            : messagePrefix + message;
+            : effectivePrefix + message;
 
         if (hintPanel != null)
             hintPanel.SetActive(true);

@@ -5,6 +5,10 @@ public class DangerZone : MonoBehaviour
     public int damage = 10;
     public float damageInterval = 1f;
 
+    [Header("Danger Hint")]
+    [TextArea(1, 3)]
+    public string dangerHintMessage = "Estas en una zona peligrosa";
+
     private float timer;
     private PlayerDamageReceiver receiverInZone;
 
@@ -46,6 +50,7 @@ public class DangerZone : MonoBehaviour
 
         timer = 0f;
         receiverInZone.ReceiveDamage(damage, gameObject.name);
+        ShowDangerHint();
     }
 
     private static bool IsPlayerOnSidewalk(PlayerDamageReceiver receiver)
@@ -55,5 +60,16 @@ public class DangerZone : MonoBehaviour
 
         PlayerSidewalkTracker tracker = receiver.GetComponent<PlayerSidewalkTracker>();
         return tracker != null && tracker.IsOnSidewalk;
+    }
+
+    private void ShowDangerHint()
+    {
+        string message = string.IsNullOrWhiteSpace(dangerHintMessage)
+            ? "Estas en una zona peligrosa"
+            : dangerHintMessage.Trim();
+
+        ObstacleHitHintUI ui = ObstacleHitHintUI.EnsureInstance();
+        if (ui != null)
+            ui.Show(message, "");
     }
 }
