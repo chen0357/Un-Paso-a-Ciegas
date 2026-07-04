@@ -60,9 +60,7 @@ public class GameManager : MonoBehaviour
         float currentTime = Time.time - startTime;
 
         if (timeText != null)
-        {
-            timeText.text = "Time: " + currentTime.ToString("F1") + "s";
-        }
+            timeText.text = FormatHudTime(currentTime);
     }
 
     public bool IsPaused()
@@ -108,17 +106,21 @@ public class GameManager : MonoBehaviour
     public void UpdateHealthUI(int currentHealth, int maxHealth)
     {
         if (healthText != null)
-        {
-            healthText.text = "Health: " + currentHealth + " / " + maxHealth;
-        }
+            healthText.text = "HP  " + currentHealth;
     }
 
     public void UpdateStateUI(string state)
     {
         if (stateText != null)
-        {
-            stateText.text = "State: " + state;
-        }
+            stateText.text = state.ToUpperInvariant();
+    }
+
+    private static string FormatHudTime(float seconds)
+    {
+        int totalSeconds = Mathf.Max(0, Mathf.FloorToInt(seconds));
+        int minutes = totalSeconds / 60;
+        int remainingSeconds = totalSeconds % 60;
+        return $"{minutes:00}:{remainingSeconds:00}";
     }
 
     /// <summary>Call from physical obstacles (DamageObject) only — not from DangerZone.</summary>
