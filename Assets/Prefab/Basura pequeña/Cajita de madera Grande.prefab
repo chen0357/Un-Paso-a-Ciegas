@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0055563324, y: 0.006410114, z: 0.005428643}
-  m_Center: {x: 0.000016851816, y: -0.0000045935158, z: -0.00045812596}
+  m_Size: {x: 0.0056513115, y: 0.006414312, z: 0.005495841}
+  m_Center: {x: 0.000016849488, y: -0.0000045979396, z: -0.00045812572}
 --- !u!114 &4561913044991527717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &8247142032612249484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +116,8 @@ Transform:
   m_GameObject: {fileID: 632167150212757948}
   serializedVersion: 2
   m_LocalRotation: {x: -0.65908045, y: -0.25615025, z: -0.25615022, w: 0.6590805}
-  m_LocalPosition: {x: 50.84, y: 0.5538514, z: 18.66}
-  m_LocalScale: {x: 173.00562, y: 173.00562, z: 173.00562}
+  m_LocalPosition: {x: 50.84, y: 0, z: 18.66}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1665171356066656667}

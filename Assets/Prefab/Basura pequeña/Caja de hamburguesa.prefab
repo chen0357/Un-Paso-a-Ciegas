@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 931127417985723030}
   serializedVersion: 2
   m_LocalRotation: {x: -0.6565915, y: 0.26246452, z: 0.26246452, w: 0.65659153}
-  m_LocalPosition: {x: 47.59207, y: 0.14292297, z: 13.850732}
-  m_LocalScale: {x: 17.390663, y: 17.390663, z: 17.390663}
+  m_LocalPosition: {x: 47.59207, y: 0, z: 13.850732}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4653885533846021477}
@@ -163,8 +163,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019313946, y: 0.019800348, z: 0.016525147}
-  m_Center: {x: 0.00009574462, y: 0.0002847938, z: 0.00033169612}
+  m_Size: {x: 0.019328956, y: 0.02040116, z: 0.016950127}
+  m_Center: {x: 0.00009574648, y: 0.0002848301, z: 0.00033169566}
 --- !u!114 &6699220707516673226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1957437090557453986
 MonoBehaviour:
   m_ObjectHideFlags: 0

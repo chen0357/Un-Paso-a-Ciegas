@@ -1,0 +1,23 @@
+---
+description: EPSG TFG thesis writing and submission requirements
+alwaysApply: true
+---
+
+# EPSG TFG Thesis Requirements
+
+When helping write or revise the user's TFG thesis, keep these EPSG requirements in mind.
+
+- Treat the work as an EPSG TFG unless the user says it is a TFM or integrated double-degree TFG.
+- Final memory file for EBRON must be a PDF named `Memoria`; do not include a cover page because EBRON generates it automatically, except mobility work defended at the destination university.
+- EPSG TFG length: 40-50 pages, minimum 20,000 words. Bibliography, annexes, acronym lists, table lists, and figure lists are excluded from the page count. The presentation rule also says TFG memory must not exceed 50 pages.
+- Main text format: Times New Roman or equivalent, minimum 11 pt, single spacing. Figure/table captions and footnotes may be minimum 9 pt. Paragraphs should be justified with at least 6 pt spacing between paragraphs. Chapters must be numbered and start on a new page.
+- The memory may be written in Spanish, Valencian, or English.
+- Include summaries/abstracts and keywords. The presentation PDF says page 2 must include a summary in the writing language and English, max 200 words, plus max 5 keywords in each language. The template says Spanish, Valencian, and English abstracts of 250-830 words. Flag this conflict and prefer confirming with tutor/secretariat before final submission.
+- Required structure normally includes: abstract/resumen, keywords, indexes, introduction, methodology, development and results, conclusions and future work, bibliography, and annexes.
+- Include automatic general index, and figure/table indexes when applicable. Number figures and tables independently; cite them in text in numerical order; captions go below; cite the source for non-original figures.
+- Bibliography must use APA style consistently, and every bibliography entry should be cited in the text.
+- Text/image annexes go after the bibliography. Additional code, apps, multimedia, or multiple annex files should be uploaded to EBRON as additional material, zipped if there are several files.
+- The last page of the memory must be the ODS/SDG relationship annex, with the table of Sustainable Development Goals and justification for the highest relationship levels.
+- For defense request in EBRON, upload an anti-plagiarism report with plagiarism below 15% and justify the reported percentage.
+- Declare AI tool use or non-use, specifying the sections where AI was used. Different detected use can be treated as academic fraud.
+- Defense is normally in person at EPSG. Total session maximum is 45 minutes: student presentation 10-15 minutes, tribunal questions up to 15 minutes, then deliberation/admin up to 15 minutes.

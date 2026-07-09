@@ -225,8 +225,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33775878, y: 0.2839771, z: 0.33775878}
-  m_Center: {x: -2.0398216, y: 0.22452052, z: 0.72899437}
+  m_Size: {x: 0.34442532, y: 0.29064375, z: 0.34442544}
+  m_Center: {x: -2.0398202, y: 0.22452053, z: 0.72899497}
 --- !u!114 &9012326526124363550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
+  hitHintMessage: 
+  hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
+  hitVolume: 1
 --- !u!114 &1912002856787390947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +286,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.63155, y: 0.009999752, z: 16.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7508731642411298608}
