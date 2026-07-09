@@ -1676,7 +1676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1227811700283796774, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_Name
-      value: "Button_Modo para baja visi\xF3n"
+      value: Button_Modo de enfermedades visuales
       objectReference: {fileID: 0}
     - target: {fileID: 2015437206509293199, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1700,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2217cf62070c70c4fbcb357caeeda9f2, type: 3}
     - target: {fileID: 5312950737482688600, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_Name
-      value: Button_Modo para ciegos
+      value: "Button_Modo para baja visi\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 5853243684516792717, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_Name
@@ -1710,9 +1710,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6648385171531974216, guid: aabbccdd112233445566778899aabbcc, type: 3}
+      propertyPath: m_text
+      value: "Modo para baja visi\xF3n"
+      objectReference: {fileID: 0}
     - target: {fileID: 7120700467985107332, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_Name
       value: Button_Modo discapacidad visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170517709067423274, guid: aabbccdd112233445566778899aabbcc, type: 3}
+      propertyPath: m_text
+      value: Modo de enfermedades visuales
       objectReference: {fileID: 0}
     - target: {fileID: 7427804168954510810, guid: aabbccdd112233445566778899aabbcc, type: 3}
       propertyPath: m_Pivot.x
