@@ -43,6 +43,15 @@ public class TrafficLightController : MonoBehaviour
 
     public bool autoFindSpawners = true;
 
+    [Header("Pedestrian Link")]
+    [Tooltip("North-south sidewalk pedestrians. They cross when group B is active (east-west traffic stopped).")]
+    public PedestrianSpawner northSouthPedSpawner;
+
+    [Tooltip("East-west sidewalk pedestrians. They cross when group A is active (north-south traffic stopped).")]
+    public PedestrianSpawner eastWestPedSpawner;
+
+    public bool autoFindPedSpawners = true;
+
     private readonly List<TrafficLightSignal> groupA = new List<TrafficLightSignal>();
     private readonly List<TrafficLightSignal> groupB = new List<TrafficLightSignal>();
 
@@ -56,6 +65,9 @@ public class TrafficLightController : MonoBehaviour
     {
         if (autoFindSpawners)
             ResolveSpawners();
+
+        if (autoFindPedSpawners)
+            ResolvePedSpawners();
 
         DiscoverSignals();
         AssignGroups();
@@ -111,6 +123,22 @@ public class TrafficLightController : MonoBehaviour
                 northSouthSpawner = spawner;
             else if (eastWestSpawner == null && spawner.flowAxis == TrafficFlowAxis.EastWest)
                 eastWestSpawner = spawner;
+        }
+    }
+
+    private void ResolvePedSpawners()
+    {
+        PedestrianSpawner[] spawners = FindObjectsByType<PedestrianSpawner>(FindObjectsSortMode.None);
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            PedestrianSpawner spawner = spawners[i];
+            if (spawner == null)
+                continue;
+
+            if (northSouthPedSpawner == null && spawner.flowAxis == TrafficFlowAxis.NorthSouth)
+                northSouthPedSpawner = spawner;
+            else if (eastWestPedSpawner == null && spawner.flowAxis == TrafficFlowAxis.EastWest)
+                eastWestPedSpawner = spawner;
         }
     }
 
@@ -254,6 +282,18 @@ public class TrafficLightController : MonoBehaviour
 
         if (eastWestSpawner != null)
             eastWestSpawner.SetCrossingBlocked(blockEastWest, stopBounds);
+
+        bool blockNorthSouthPed = gameplayActive &&
+                                  (isPausedBetweenPhases || !groupBActive);
+
+        bool blockEastWestPed = gameplayActive &&
+                                (isPausedBetweenPhases || !groupAActive);
+
+        if (northSouthPedSpawner != null)
+            northSouthPedSpawner.SetCrossingBlocked(blockNorthSouthPed, stopBounds);
+
+        if (eastWestPedSpawner != null)
+            eastWestPedSpawner.SetCrossingBlocked(blockEastWestPed, stopBounds);
     }
 
     private Bounds BuildStopBounds()
@@ -289,5 +329,11 @@ public class TrafficLightController : MonoBehaviour
 
         if (eastWestSpawner != null)
             eastWestSpawner.SetCrossingBlocked(false, BuildStopBounds());
+
+        if (northSouthPedSpawner != null)
+            northSouthPedSpawner.SetCrossingBlocked(false, BuildStopBounds());
+
+        if (eastWestPedSpawner != null)
+            eastWestPedSpawner.SetCrossingBlocked(false, BuildStopBounds());
     }
 }
