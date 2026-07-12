@@ -166,8 +166,12 @@ MonoBehaviour:
   intersectionCenter: {x: -2.2, y: 0, z: -0.6}
   intersectionMin: {x: -19, y: 0, z: -19}
   intersectionMax: {x: 19, y: 0, z: 19}
+  useSeparatePedestrianStopZone: 1
+  pedestrianIntersectionMin: {x: -10, y: 0, z: -10}
+  pedestrianIntersectionMax: {x: 10, y: 0, z: 10}
+  pedestrianCrossingLeadTime: 0
   playbackDuration: 10
-  switchPause: 10
+  switchPause: 15
   ringClip: {fileID: 8300000, guid: b421ff62da5dbbb4a80aa964bc3d9f2c, type: 3}
   northSouthSpawner: {fileID: 910000011}
   eastWestSpawner: {fileID: 910000028}
@@ -11264,7 +11268,7 @@ MonoBehaviour:
   minSpeed: 1
   maxSpeed: 3.2
   maxActivePedestrians: 5
-  lateralOffsetRange: 2
+  lateralOffsetRange: 3
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 0
@@ -11453,7 +11457,7 @@ MonoBehaviour:
   minSpeed: 1
   maxSpeed: 3.2
   maxActivePedestrians: 5
-  lateralOffsetRange: 0.75
+  lateralOffsetRange: 3
   spawnPoint: {fileID: 0}
   despawnPoint: {fileID: 0}
   flowAxis: 1

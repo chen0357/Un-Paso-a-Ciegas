@@ -139,7 +139,13 @@ public class PedestrianWalker : MonoBehaviour
         if (spawner.IsCrossingBlocked)
             return true;
 
-        return spawner.IsReleaseHoldActive && !HasClearedIntersectionStop(spawner.StopBounds);
+        Bounds bounds = spawner.StopBounds;
+        bool beforeCrossing = !HasClearedIntersectionStop(bounds);
+
+        if (spawner.IsCrossingClosingSoon && beforeCrossing)
+            return true;
+
+        return spawner.IsReleaseHoldActive && beforeCrossing;
     }
 
     private bool HasClearedIntersectionStop(Bounds bounds)

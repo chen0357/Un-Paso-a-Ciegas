@@ -24,12 +24,25 @@ public class TrafficLightController : MonoBehaviour
     [Tooltip("World-space opposite corner of the crossing stop zone (x, y, z).")]
     public Vector3 intersectionMax = new Vector3(16f, 0f, 15f);
 
+    [Header("Pedestrian Stop Zone")]
+    [Tooltip("When enabled, pedestrians wait at Pedestrian Intersection Min/Max instead of the vehicle stop zone.")]
+    public bool useSeparatePedestrianStopZone = true;
+
+    [Tooltip("World-space corner where pedestrians wait before crossing.")]
+    public Vector3 pedestrianIntersectionMin = new Vector3(-19f, 0f, -19f);
+
+    [Tooltip("World-space opposite corner of the pedestrian wait zone.")]
+    public Vector3 pedestrianIntersectionMax = new Vector3(19f, 0f, 19f);
+
+    [Tooltip("Optional. Seconds before a signal ends when waiting pedestrians stop entering. Use 0 to rely on Switch Pause instead.")]
+    public float pedestrianCrossingLeadTime = 0f;
+
     [Header("Timing")]
-    [Tooltip("How long the active group loops the clip before switching to the other crossing.")]
+    [Tooltip("How long each crossing signal rings before the other direction starts.")]
     public float playbackDuration = 18f;
 
-    [Tooltip("Silence between the two crossing directions.")]
-    public float switchPause = 0.8f;
+    [Tooltip("Gap after ringing stops before the next direction rings. Perpendicular traffic stays held so pedestrians can finish crossing.")]
+    public float switchPause = 8f;
 
     [Header("Audio")]
     public AudioClip ringClip;
@@ -269,7 +282,8 @@ public class TrafficLightController : MonoBehaviour
         bool gameplayActive = CanRun();
         bool groupAActive = gameplayActive && !isPausedBetweenPhases && activeGroupIndex == 0;
         bool groupBActive = gameplayActive && !isPausedBetweenPhases && activeGroupIndex == 1;
-        Bounds stopBounds = BuildStopBounds();
+        Bounds vehicleStopBounds = BuildStopBounds();
+        Bounds pedestrianStopBounds = BuildPedestrianStopBounds();
 
         bool blockNorthSouth = gameplayActive &&
                                (groupAActive || (isPausedBetweenPhases && pauseFollowsGroupA));
@@ -278,10 +292,10 @@ public class TrafficLightController : MonoBehaviour
                              (groupBActive || (isPausedBetweenPhases && !pauseFollowsGroupA));
 
         if (northSouthSpawner != null)
-            northSouthSpawner.SetCrossingBlocked(blockNorthSouth, stopBounds);
+            northSouthSpawner.SetCrossingBlocked(blockNorthSouth, vehicleStopBounds);
 
         if (eastWestSpawner != null)
-            eastWestSpawner.SetCrossingBlocked(blockEastWest, stopBounds);
+            eastWestSpawner.SetCrossingBlocked(blockEastWest, vehicleStopBounds);
 
         bool blockNorthSouthPed = gameplayActive &&
                                   (isPausedBetweenPhases || !groupBActive);
@@ -289,19 +303,57 @@ public class TrafficLightController : MonoBehaviour
         bool blockEastWestPed = gameplayActive &&
                                 (isPausedBetweenPhases || !groupAActive);
 
+        bool northSouthPedClosingSoon = gameplayActive &&
+                                        groupBActive &&
+                                        phaseTimer < pedestrianCrossingLeadTime;
+
+        bool eastWestPedClosingSoon = gameplayActive &&
+                                      groupAActive &&
+                                      phaseTimer < pedestrianCrossingLeadTime;
+
         if (northSouthPedSpawner != null)
-            northSouthPedSpawner.SetCrossingBlocked(blockNorthSouthPed, stopBounds);
+            northSouthPedSpawner.SetCrossingState(blockNorthSouthPed, northSouthPedClosingSoon, pedestrianStopBounds);
 
         if (eastWestPedSpawner != null)
-            eastWestPedSpawner.SetCrossingBlocked(blockEastWestPed, stopBounds);
+            eastWestPedSpawner.SetCrossingState(blockEastWestPed, eastWestPedClosingSoon, pedestrianStopBounds);
     }
 
     private Bounds BuildStopBounds()
     {
-        Vector3 center = (intersectionMin + intersectionMax) * 0.5f;
-        Vector3 size = intersectionMax - intersectionMin;
+        return BuildBoundsFromCorners(intersectionMin, intersectionMax);
+    }
+
+    private Bounds BuildPedestrianStopBounds()
+    {
+        if (!useSeparatePedestrianStopZone)
+            return BuildStopBounds();
+
+        return BuildBoundsFromCorners(pedestrianIntersectionMin, pedestrianIntersectionMax);
+    }
+
+    private static Bounds BuildBoundsFromCorners(Vector3 minCorner, Vector3 maxCorner)
+    {
+        Vector3 center = (minCorner + maxCorner) * 0.5f;
+        Vector3 size = maxCorner - minCorner;
         size.y = Mathf.Max(size.y, 1f);
         return new Bounds(center, size);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1f, 0.35f, 0.1f, 0.35f);
+        DrawBoundsWire(BuildStopBounds());
+
+        if (useSeparatePedestrianStopZone)
+        {
+            Gizmos.color = new Color(0.2f, 0.85f, 0.35f, 0.85f);
+            DrawBoundsWire(BuildPedestrianStopBounds());
+        }
+    }
+
+    private static void DrawBoundsWire(Bounds bounds)
+    {
+        Gizmos.DrawWireCube(bounds.center, bounds.size);
     }
 
     private void PlayActiveGroup()
@@ -324,16 +376,19 @@ public class TrafficLightController : MonoBehaviour
     {
         StopAllSignals();
 
+        Bounds vehicleStopBounds = BuildStopBounds();
+        Bounds pedestrianStopBounds = BuildPedestrianStopBounds();
+
         if (northSouthSpawner != null)
-            northSouthSpawner.SetCrossingBlocked(false, BuildStopBounds());
+            northSouthSpawner.SetCrossingBlocked(false, vehicleStopBounds);
 
         if (eastWestSpawner != null)
-            eastWestSpawner.SetCrossingBlocked(false, BuildStopBounds());
+            eastWestSpawner.SetCrossingBlocked(false, vehicleStopBounds);
 
         if (northSouthPedSpawner != null)
-            northSouthPedSpawner.SetCrossingBlocked(false, BuildStopBounds());
+            northSouthPedSpawner.SetCrossingBlocked(false, pedestrianStopBounds);
 
         if (eastWestPedSpawner != null)
-            eastWestPedSpawner.SetCrossingBlocked(false, BuildStopBounds());
+            eastWestPedSpawner.SetCrossingBlocked(false, pedestrianStopBounds);
     }
 }

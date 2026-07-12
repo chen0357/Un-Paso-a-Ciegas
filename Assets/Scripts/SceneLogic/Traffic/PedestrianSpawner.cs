@@ -46,13 +46,20 @@ public class PedestrianSpawner : MonoBehaviour
     private readonly List<LaneRuntime> runtimeLanes = new List<LaneRuntime>();
 
     public bool IsCrossingBlocked => crossingBlocked;
+    public bool IsCrossingClosingSoon => crossingClosingSoon;
     public bool IsReleaseHoldActive => !crossingBlocked && Time.time < releaseHoldUntil;
     public Bounds StopBounds => stopBounds;
 
     public void SetCrossingBlocked(bool blocked, Bounds bounds)
     {
+        SetCrossingState(blocked, false, bounds);
+    }
+
+    public void SetCrossingState(bool blocked, bool closingSoon, Bounds bounds)
+    {
         bool wasBlocked = crossingBlocked;
         crossingBlocked = blocked;
+        crossingClosingSoon = closingSoon;
         stopBounds = bounds;
 
         if (wasBlocked && !blocked)
@@ -60,6 +67,8 @@ public class PedestrianSpawner : MonoBehaviour
         else if (blocked)
             releaseHoldUntil = 0f;
     }
+
+    private bool crossingClosingSoon;
 
     internal void RegisterWalker(PedestrianWalker walker)
     {
