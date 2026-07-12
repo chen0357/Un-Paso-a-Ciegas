@@ -11008,7 +11008,7 @@ Transform:
   m_GameObject: {fileID: 913503410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 74.1, y: 0, z: 74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11232,8 +11232,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestrianPrefabs:
   - {fileID: 920200000, guid: b1c2d3e4f5a6789012345678abcdef01, type: 3}
+  - {fileID: 920200000, guid: b8a8f704451649447b27187956700229, type: 3}
+  - {fileID: 920200000, guid: fa89ceee02b827a469b7e1d97b01c495, type: 3}
+  - {fileID: 920200000, guid: 189db8fbee2da334488f75123a638279, type: 3}
+  - {fileID: 920200000, guid: 1d325a34249577142bb21ec386b638df, type: 3}
+  - {fileID: 920200000, guid: e4115c231eb1c8948a1b1eb1a7aa1ad4, type: 3}
+  - {fileID: 920200000, guid: ca09a18dd2b36e74bb212848909e42e1, type: 3}
+  - {fileID: 920200000, guid: bfbbb65322d0e50429e52999c821e4ef, type: 3}
+  - {fileID: 920200000, guid: ed2cec9c751846f448c7af73ed95bdbf, type: 3}
   - {fileID: 920200100, guid: c2d3e4f5a6b6789012345678abcdef02, type: 3}
-  - {fileID: 920200200, guid: d3e4f5a6b7c6789012345678abcdef03, type: 3}
+  - {fileID: 920200000, guid: 13ec1b2494c93064080a380c81a03cba, type: 3}
+  - {fileID: 920200000, guid: 9d33939493771074facafa0b93b5c9ea, type: 3}
+  - {fileID: 920200000, guid: 9bf385833e00193469c675cf9303776f, type: 3}
+  - {fileID: 920200000, guid: eb2ee5ddf3fe0144eb99b55e3034e676, type: 3}
+  - {fileID: 920200000, guid: d811f76ccebe4c1448e8e86a3f040384, type: 3}
+  - {fileID: 920200000, guid: 05feb4569ad2797489ec45ea3f2626d0, type: 3}
+  - {fileID: 920200000, guid: 2d60702d1ceb07a479a2102fb594bf71, type: 3}
+  - {fileID: 920200000, guid: 78fe1dc35dad9a047995ee83124de1db, type: 3}
   pedestrianPrefab: {fileID: 920200200, guid: d3e4f5a6b7c6789012345678abcdef03, type: 3}
   lanes:
   - laneName: West Sidewalk Northbound
@@ -11421,9 +11436,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestrianPrefabs:
   - {fileID: 920200000, guid: b1c2d3e4f5a6789012345678abcdef01, type: 3}
+  - {fileID: 920200000, guid: b8a8f704451649447b27187956700229, type: 3}
+  - {fileID: 920200000, guid: fa89ceee02b827a469b7e1d97b01c495, type: 3}
+  - {fileID: 920200000, guid: 6e2a2b6ec6e5b534e9964771e5531d2a, type: 3}
+  - {fileID: 920200000, guid: 189db8fbee2da334488f75123a638279, type: 3}
+  - {fileID: 920200000, guid: 1d325a34249577142bb21ec386b638df, type: 3}
+  - {fileID: 920200000, guid: e4115c231eb1c8948a1b1eb1a7aa1ad4, type: 3}
+  - {fileID: 920200000, guid: ca09a18dd2b36e74bb212848909e42e1, type: 3}
+  - {fileID: 920200000, guid: bfbbb65322d0e50429e52999c821e4ef, type: 3}
+  - {fileID: 920200000, guid: ed2cec9c751846f448c7af73ed95bdbf, type: 3}
   - {fileID: 920200100, guid: c2d3e4f5a6b6789012345678abcdef02, type: 3}
-  - {fileID: 920200200, guid: d3e4f5a6b7c6789012345678abcdef03, type: 3}
-  pedestrianPrefab: {fileID: 920200000, guid: b1c2d3e4f5a6789012345678abcdef01, type: 3}
+  - {fileID: 920200000, guid: 13ec1b2494c93064080a380c81a03cba, type: 3}
+  - {fileID: 920200000, guid: 9d33939493771074facafa0b93b5c9ea, type: 3}
+  - {fileID: 920200000, guid: 9bf385833e00193469c675cf9303776f, type: 3}
+  - {fileID: 920200000, guid: eb2ee5ddf3fe0144eb99b55e3034e676, type: 3}
+  - {fileID: 920200000, guid: d811f76ccebe4c1448e8e86a3f040384, type: 3}
+  - {fileID: 920200000, guid: 05feb4569ad2797489ec45ea3f2626d0, type: 3}
+  - {fileID: 920200000, guid: 2d60702d1ceb07a479a2102fb594bf71, type: 3}
+  - {fileID: 920200000, guid: 78fe1dc35dad9a047995ee83124de1db, type: 3}
+  pedestrianPrefab: {fileID: 0}
   lanes:
   - laneName: North Sidewalk Eastbound
     spawnPoint: {fileID: 920000023}
