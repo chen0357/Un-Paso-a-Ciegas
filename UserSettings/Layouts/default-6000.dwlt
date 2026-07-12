@@ -2917,8 +2917,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 7.3333335
-    y: 86
+    x: 0
+    y: 24
     width: 287
     height: 768.6667
   m_SerializedDataModeController:
@@ -2934,24 +2934,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 2228.3333}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 3497ffff3697ffff3a97ffff3c97ffff4097ffff4497ffff4697ffff4a97ffff4c97ffff5097ffff94f2ffff04f3ffff1af3ffff3ef3ffff68f3ffff4cf4ffff72f4ffff6cf5ffff84f5ffffccf7ffff98f8ffffaaf8ffff12f9ffff58f9ffff80f9ffffb6f9ffffcef9fffffaf9ffff96faffffdefaffff18fbffff5cbc0000aebc0000b4bc0000c2bc000020bd000056bd000082bd000086bd0000f2bd000038be000084be0000ccbe0000d8be0000debe000020bf000066c000001ac100004cc1000054c10000d0c10000e0c100007ac20000d4c20000fcc200006ac3000072c300007cc30000a4c30000aec30000dac30000fec300001ac400004cc400006ac40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Trigger Collider
-        m_OriginalName: Trigger Collider
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 48154
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 9}
@@ -2983,8 +2983,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 295.33334
-    y: 86
+    x: 289
+    y: 24
     width: 1038
     height: 768.6667
   m_SerializedDataModeController:
@@ -3677,7 +3677,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -3693,7 +3693,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -3703,11 +3703,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.5105018, y: 0.4893001, z: -0.5098899, w: -0.4898913}
     speed: 2
-    m_Value: {x: -0.5099896, y: 0.48978782, z: -0.51039815, w: -0.4893998}
+    m_Value: {x: -0.5105018, y: 0.4893001, z: -0.5098899, w: -0.48989132}
   m_Size:
     m_Target: 162.34845
     speed: 2
-    m_Value: 155.35736
+    m_Value: 162.34845
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -4019,8 +4019,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 7.3333335
-    y: 880.6667
+    x: 0
+    y: 818.6667
     width: 1327
     height: 84.666626
   m_SerializedDataModeController:
@@ -4064,7 +4064,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 4eb10100
     m_LastClickedID: 110926
-    m_ExpandedIDs: 000000004eb1010000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000004b40100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4093,7 +4093,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004eb10100
+    m_ExpandedIDs: 0000000004b40100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4378,8 +4378,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Lighting\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1335.3334
-    y: 86
+    x: 1329
+    y: 24
     width: 363
     height: 879.3333
   m_SerializedDataModeController:
