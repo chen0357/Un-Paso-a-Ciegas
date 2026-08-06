@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" agent="Cursor">
+  <diagram id="riesgo-cruce" name="Figura - Riesgo y cruce">
+    <mxGraphModel dx="1201" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titleA" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=16;" value="A) Riesgo y salud" vertex="1">
+          <mxGeometry height="30" width="360" x="80" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="titleB" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=16;" value="B) Cruce de calzada (task_2)" vertex="1">
+          <mxGeometry height="30" width="400" x="560" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=16;" value="Durante el recorrido" vertex="1">
+          <mxGeometry height="40" width="220" x="150" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=16;" value="¿Colisión (obstáculo, peatón,&lt;br&gt;vehículo) o DangerZone?" vertex="1">
+          <mxGeometry height="100" width="250" x="135" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;" value="Bajar salud (+ aviso si aplica)&lt;br&gt;Registrar colisión*" vertex="1">
+          <mxGeometry height="55" width="205" x="157.5" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="a_note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=16;fontColor=#666666;" value="comparte lógica&lt;br&gt;de daño" vertex="1">
+          <mxGeometry height="62.5" width="95" x="385" y="287.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=16;" value="¿Salud ≤ 0?" vertex="1">
+          <mxGeometry height="80" width="180" x="170" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Seguir jugando" vertex="1">
+          <mxGeometry height="50" width="110" x="275" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ae1" edge="1" parent="1" source="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae2" edge="1" parent="1" source="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="a3" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae3" edge="1" parent="1" source="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="a1" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="190" />
+              <mxPoint x="430" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ae4" edge="1" parent="1" source="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="a4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae5" edge="1" parent="1" source="a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qBuh_z5bE-wyjfN-2YxL-7" value="Sí">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="460" />
+              <mxPoint x="190" y="460" />
+            </Array>
+            <mxPoint x="245" y="560" as="sourcePoint" />
+            <mxPoint x="120" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ae6" edge="1" parent="1" source="a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a5" value="No">
+          <mxGeometry relative="1" x="0.0374" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="260" y="460" />
+              <mxPoint x="330" y="460" />
+            </Array>
+            <mxPoint x="230" y="500" as="sourcePoint" />
+            <mxPoint x="330.98" y="588.2500000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ae_note" edge="1" parent="1" source="a3" style="endArrow=none;html=1;strokeColor=#6c8ebf;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=16;" target="a_note">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=16;" value="Borde de calzada +&lt;br&gt;audio del semáforo" vertex="1">
+          <mxGeometry height="50" width="240" x="630" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=16;" value="¿El jugador decide cruzar&lt;br&gt;en ese momento?" vertex="1">
+          <mxGeometry height="100" width="260" x="620" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Atravesar paso peatonal" vertex="1">
+          <mxGeometry height="40" width="220" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Entrar en volumen task_2&lt;br&gt;→ completar" vertex="1">
+          <mxGeometry height="50" width="220" x="640" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;" value="Si entra/permanece en DangerZone:&lt;br&gt;daño (columna A) + audio de peligro" vertex="1">
+          <mxGeometry height="55" width="270" x="615" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="be1" edge="1" parent="1" source="b1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be2" edge="1" parent="1" source="b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="b3" value="sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be3" edge="1" parent="1" source="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="b4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be4" edge="1" parent="1" source="b4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;" target="b5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be_riesgo" edge="1" parent="1" source="b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#333333;fontSize=16;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="b5" value="Riesgo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="205" />
+              <mxPoint x="950" y="508" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qBuh_z5bE-wyjfN-2YxL-5" edge="1" parent="1" source="a5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.015;entryY=0.506;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=16;" target="a1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="515" />
+              <mxPoint x="510" y="90.17" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qBuh_z5bE-wyjfN-2YxL-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;" value="Resultados (fracaso)" vertex="1">
+          <mxGeometry height="55" width="110" x="135" y="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

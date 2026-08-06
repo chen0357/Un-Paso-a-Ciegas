@@ -1,0 +1,195 @@
+2|TXT|Desarrollado en Unity, el prototipo presenta un entorno urbano en el que el usuario debe completar varias tareas: avanzar por la acera, evit
+20|TXT|HYPERLINK \l "_Toc234946548" 1.2 Objetivos PAGEREF _Toc234946548 \h 2
+26|TXT|HYPERLINK \l "_Toc234946554" 1.4.4. Pruebas PAGEREF _Toc234946554 \h 5
+53|TXT|HYPERLINK \l "_Toc234946581" 6 Pruebas PAGEREF _Toc234946581 \h 38
+54|TXT|HYPERLINK \l "_Toc234946582" 6.1 Plan de pruebas PAGEREF _Toc234946582 \h 38
+55|TXT|HYPERLINK \l "_Toc234946583" 6.2 Pruebas funcionales PAGEREF _Toc234946583 \h 39
+56|TXT|HYPERLINK \l "_Toc234946584" 6.3 Pruebas de rendimiento PAGEREF _Toc234946584 \h 42
+57|TXT|HYPERLINK \l "_Toc234946585" 6.4 Validación de los escenarios PAGEREF _Toc234946585 \h 43
+58|TXT|HYPERLINK \l "_Toc234946586" 7 Resultados PAGEREF _Toc234946586 \h 45
+59|TXT|HYPERLINK \l "_Toc234946587" 7.1 Cumplimiento de los objetivos PAGEREF _Toc234946587 \h 45
+60|TXT|HYPERLINK \l "_Toc234946588" 7.2 Resultados de las pruebas con usuarios PAGEREF _Toc234946588 \h 46
+61|TXT|HYPERLINK \l "_Toc234946589" 7.3 Comparación con soluciones de referencia PAGEREF _Toc234946589 \h 47
+62|TXT|HYPERLINK \l "_Toc234946590" 7.4 Entregables y estado final del prototipo PAGEREF _Toc234946590 \h 48
+63|TXT|HYPERLINK \l "_Toc234946591" 8 Conclusiones PAGEREF _Toc234946591 \h 50
+73|TXT|Este capítulo presenta el contexto, los objetivos y el proceso de desarrollo del presente TFG.
+81|TXT|Este Trabajo Fin de Grado parte de ese hueco. VLVS: Un Paso a Ciegas propone un recorrido urbano breve y reconocible en el que el usuario de
+82|TXT|Objetivos
+83|TXT|El objetivo general de este Trabajo Fin de Grado es diseñar y desarrollar un prototipo de Realidad Virtual destinado a sensibilizar al públi
+87|TXT|Diseñar e implementar distintos modos de visión reducida. Los modos modifican la percepción de la escena de diferentes formas, con el fin de
+91|TXT|Evaluar el prototipo desde los puntos de vista técnico y de experiencia de usuario. Las pruebas técnicas comprobarán el rendimiento, la esta
+92|TXT|Los resultados de la evaluación se utilizarán para corregir errores, ajustar la dificultad, mejorar la interfaz y valorar el cumplimiento de
+94|TXT|El proyecto se desarrolló mediante una metodología iterativa e incremental. En lugar de construir la experiencia completa en una única fase,
+96|TXT|La planificación se organizó en ciclos de aproximadamente dos semanas, distribuidos entre documentación, diseño, implementación y pruebas. D
+98|TXT|La validación se mantendrá durante todo el desarrollo mediante pruebas funcionales y sesiones breves con usuarios. Sus resultados permitirán
+100|TXT|El desarrollo del prototipo se dividió en cuatro etapas, realizadas entre marzo y agosto. Cada fase incluyó objetivos concretos, entregables
+102|TXT|La primera etapa, desarrollada principalmente entre marzo y abril, establece las bases teóricas y prácticas del proyecto. Se revisarán artíc
+104|TXT|Una vez completada la investigación, se organiza el trabajo restante teniendo en cuenta el calendario académico y las revisiones periódicas 
+106|TXT|Con el planteamiento definido, se especificará la arquitectura del prototipo mediante scripts independientes en C# cada uno con una función 
+107|TXT|Pruebas
+108|TXT|Por último, el prototipo se someterá a un ciclo de pruebas continuas que incluirán mediciones de rendimiento con el Profiler de Unity, valid
+111|TXT|En primer lugar, se presenta la introducción del Trabajo Fin de Grado, organizada en cinco subsecciones. Se sitúa el proyecto dentro de la d
+114|TXT|El cuarto capítulo describe el diseño del prototipo: requisitos, experiencia de usuario, escenario urbano, simulación de la visión reducida 
+115|TXT|El quinto capítulo expone la implementación en Unity, la organización de escenas y scripts, la integración de modelos tridimensionales, la l
+116|TXT|El sexto capítulo documenta las pruebas funcionales en editor, simulador XR y visor, las comprobaciones de rendimiento y las sesiones con us
+118|TXT|El octavo capítulo resume las aportaciones del trabajo y valora en qué medida se han cumplido los objetivos planteados al inicio del proyect
+119|TXT|El noveno capítulo propone posibles líneas de evolución, como la ampliación del escenario, nuevos modos visuales, mejoras en audio y háptico
+121|TXT|Por último, el undécimo capítulo recoge los materiales complementarios del proyecto: el documento de relación con los Objetivos de Desarroll
+129|TXT|Los estudios recientes confirman que la movilidad no es homogénea dentro del colectivo. Pigeon et al. (2025) analizaron los hábitos de despl
+148|TXT|BlindSimulator (Funnybon, s. f.) es la referencia más cercana al planteamiento de este TFG. La experiencia limita gran parte del campo visua
+150|TXT|Las soluciones revisadas presentan tres tendencias principales: predominio de la simulación de síntomas visuales, integración limitada de ap
+165|TXT|VLVS: Un Paso a Ciegas representa estas dificultades funcionales mediante un recorrido urbano breve que exige interpretar señales, evitar ob
+173|TXT|Las experiencias revisadas muestran la utilidad de la RV en talleres y contextos formativos, pero también evidencian limitaciones recurrente
+177|TXT|El audio y la retroalimentación háptica complementan la información visual durante el recorrido. El sonido permite localizar objetivos y rec
+184|TXT|Se utilizó la versión de Unity 6000.0.58f2 como el entorno principal de desarrollo. En él se construyeron las escenas, se configuraron la fí
+197|TXT|XR Interaction Toolkit se utilizó para configurar la locomoción, la interacción con los controladores y los impulsos. Sus componentes base p
+201|TXT|Universal Render Pipeline se configuró para renderizar la escena con un coste gráfico compatible con la Realidad Virtual. El ajuste priorizó
+206|TXT|Meta Quest 2 fue el dispositivo utilizado para validar la experiencia inmersiva. El seguimiento de seis grados de libertad, los controladore
+209|TXT|Este capítulo describe los requisitos, el flujo de usuario, la organización del escenario, los modos visuales y los sistemas de interacción.
+211|TXT|Requisitos del sistemaLos requisitos se definieron progresivamente a partir de los objetivos del proyecto, el análisis del problema y las pr
+218|TXT|El sistema debe permitir al usuario seleccionar un modo de representación visual antes de iniciar el recorrido.
+220|TXT|El sistema debe conservar el modo visual seleccionado durante toda la sesión de juego.
+246|TXT|El sistema debe mostrar, al finalizar el recorrido, una pantalla de resultados que incluya el tiempo empleado, el número de colisiones y las
+272|TXT|Los modos visuales deben utilizarse exclusivamente como recursos pedagógicos para mostrar distintas dificultades visuales y no deben present
+280|TXT|Al iniciar la experiencia, el usuario accede a un menú principal con cuatro opciones: Iniciar juego, Cómo jugar, Configuración y Salir del j
+282|TXT|Figura 1. Esquema del menú principal (wireframe de diseño). Elaboración propia.
+283|TXT|Al seleccionar Iniciar juego, el usuario accede al panel de selección de nivel; en la versión actual solo está habilitado Level_Street, aunq
+284|TXT|Una vez cargada Level_Street, el sistema muestra un con HUD con salud y tiempo restante para completar la misión. El usuario aparece en un p
+285|TXT|Antes de completar cualquier tarea, el jugador abandona la zona inicial de juego y recorre un paso angosto entre edificios donde el espacio 
+287|TXT|La tercera tarea lleva al usuario hacia la entrada del metro. Aquí el audio espacial del objetivo cobra más importancia, porque el destino q
+288|TXT|Al completar las tres tareas y alcanzar la meta, la experiencia finaliza y muestra una pantalla de resultados. Las Figuras 2 y 3 presentan e
+290|TXT|Figura 2. Esquema de la pantalla de resultados (éxito). Elaboración propia.
+292|TXT|Figura 3. Esquema de la pantalla de resultados (fracaso). Elaboración propia.
+293|TXT|El bucle principal sigue esta secuencia: menú, selección de nivel, selección del modo visual, introducción, recorrido urbano, tres tareas co
+295|TXT|Figura 4. Esquema del bucle principal de la experiencia. Elaboración propia.
+299|TXT|Las acciones se agrupan en desplazamiento y exploración, orientación hacia los objetivos, gestión de la sesión y consulta del estado de part
+302|TXT|El tiempo no provoca el fin de la partida, pero se registra como indicador de la duración del recorrido. El sistema contabiliza las pistas a
+307|TXT|El diseño contempla dos espacios: un hub de menú, orientado a la preparación de la sesión, y un recorrido urbano jugable. El hub no simula l
+310|TXT|Antes de llegar al cruce, el recorrido arranca en una zona entre bloques de viviendas de distintos tamaños. Deliberadamente se diseñan espec
+314|TXT|Por lo que respecta a los cruces y la señalización, se colocan semáforos en las cuatro esquinas con sus señales roja, ámbar y verde, pasos d
+320|TXT|Se eligió un fragmento corto a propósito para mantener la atención del usuario sin requerir un tutorial extenso. La escena prioriza la legib
+325|TXT|Se definieron tres modos de visión seleccionables antes de cargar el nivel. Cada modo es una capa de interfaz sobre la cámara del jugador.. 
+326|TXT|Modo para baja visión
+327|TXT|El modo para baja visión reduce el campo visible a un óvalo central y oscurece casi por completo la periferia. La idea es que dentro de esa 
+328|TXT|En el diseño de esta capa se priorizaron dos restricciones: que el HUD y el panel OBJETIVOS permanecieran dentro de la zona visible, y que e
+330|TXT|Figura 8. (Captura final del modo para baja visión: ver capítulo de resultados).
+331|TXT|Modo discapacidad visual
+332|TXT|El modo discapacidad visual aplica un desenfoque general sobre la imagen y es el que se dejó como predeterminado porque, en las pruebas inic
+333|TXT|Aquí el reto de diseño fue distinto al del modo anterior: no se trata de eliminar periferia, sino de retardar la lectura del espacio. El usu
+335|TXT|Figura 9. (Captura final del modo discapacidad visual: ver capítulo de resultados).
+336|TXT|Modo de enfermedades visuales
+337|TXT|El modo de enfermedades visuales reduce de forma más agresiva el contraste y la luminosidad mediante un velo amarillento que envuelve toda l
+338|TXT|Este modo penaliza sobre todo la separación figura-fondo a distancia media y larga. Por eso el marcador verde del objetivo y las franjas del
+339|TXT|En conjunto, los tres modos no representan una escala clínica, sino tres perfiles de dificultad perceptiva dentro del mismo layout. Esa deci
+341|TXT|Figura 10. (Captura final del modo de enfermedades visuales: ver capítulo de resultados).
+351|TXT|Los obstáculos restan salud, incrementan el contador de colisiones y muestran un mensaje breve. Las zonas de peligro aplican daño periódico 
+352|TXT|En la Figura 11 se resume en planta la disposición de zonas seguras de acera, zonas de peligro en la calzada, los tres puntos de tarea y el 
+353|IMG|
+354|TXT|Figura 11. Esquema en planta del cruce, las zonas de riesgo y los objetivos. Elaboración propia.
+357|TXT|A continuación se describen los pasos seguidos para desarrollar el prototipo, desde la configuración inicial en Unity hasta la integración d
+358|TXT|La implementación se organizó de lo general a lo particular: primero un entorno ejecutable con locomoción RV estable, después los apoyos de 
+359|TXT|En la práctica, el desarrollo se dividió entre tres tipos de trabajo que se solaparon en distintas fases. El primero fue de configuración: v
+367|TXT|Se empleó TextMesh Pro para los menús, el HUD, la lista de tareas y la pantalla de resultados. Para la escena urbana se combinaron recursos 
+370|TXT|El desarrollo y las pruebas principales se realizaron en un PC con Windows 11, equipado con un procesador AMD Ryzen 9 8945HX with Radeon Gra
+371|TXT|La elección de la plataforma PCVR cableada respondió al contexto del TFG. En el laboratorio era más sencillo repetir sesiones con distintos 
+376|TXT|El GameManager, en Assets/Scripts/SceneLogic/GameManager.cs, controla el ciclo de partida: inicio, pausa, victoria y derrota. Al cargar el n
+377|TXT|El TaskManager mantiene tres tareas en orden estricto y solo permite completar la pendiente: task_1 «Cruzando la acera», task_2 «Cruzando el
+378|IMG|
+379|TXT|Figura 12a. Componente GameManager en el Inspector de Unity. Elaboración propia.
+380|IMG|
+381|TXT|Figura 12b. Componente TaskManager y definición de tareas en el Inspector de Unity. Elaboración propia.
+382|TXT|Modos de visión y bastón
+383|TXT|El VisionModeManager persiste entre la escena del menú y Level_Street gracias a DontDestroyOnLoad, guarda el modo seleccionado en PlayerPref
+390|TXT|El SpatialAudioManager , mediante audio 3d, proporciona orientación hacia la posición del objetivo activo y advierte con pulsos de peligro c
+391|TXT|En la Figura 13 se muestra el HUD activo durante una partida, con salud, tiempo, estado PLAYING y la lista de objetivos con la primera tarea
+392|IMG|
+393|TXT|Figura 13. HUD durante una partida en Level_Street. Elaboración propia.
+394|TXT|En conjunto, la implementación siguió una lógica modular: cada script tiene una responsabilidad clara, pero el comportamiento final emerge d
+396|TXT|Pruebas
+397|TXT|Antes de dar por cerrado el prototipo se sometió la experiencia a un ciclo de pruebas continuas: módulos aislados, integración en escena, se
+398|TXT|El objetivo era comprobar que el flujo descrito funcionaba de extremo a extremo y que un usuario, sin conocimiento previo del proyecto, podí
+399|TXT|Tampoco se trataron las pruebas como una fase final aislada. Cada vez que se integró un sistema nuevo se repitió al menos una pasada por los
+400|TXT|Plan de pruebas
+401|TXT|Se organizó el trabajo de prueba en cuatro fases que se solaparon en el tiempo. La primera validó el bastón y las superficies en BaseSystemT
+402|TXT|La fase 1 se centró en BaseSystemTest.unity, se colocaron planos con distintos SurfaceTag —acera, pared, pavimento táctil, obstáculo— y se c
+403|TXT|En la fase 2 se probó la lógica de partida sin depender del hardware XR. Se comprobó que se iniciara el temporizador, que se rechazaran tare
+404|TXT|La fase 3 fue la más representativa del uso previsto. Se conectó Meta Quest 2 por cable al PC, se activaron los tres modos de visión y se re
+405|TXT|La fase 4 incorporó observación externa. Tres usuarios —sin experiencia previa con el proyecto ni con discapacidad visual— completaron una s
+406|TXT|Como criterios de aceptación se definieron cuatro umbrales. Funcionalidad: completar task_1, task_2 y task_3 en orden y alcanzar GoalZone si
+407|TXT|Pruebas funcionales
+408|TXT|Se comprobó de forma repetida que la selección de modo visual persiste tras cerrar la aplicación, que no se puede completar una tarea fuera 
+409|TXT|Persistencia y flujo de tareas
+410|TXT|Se verificó que el sistema guarda el modo en PlayerPrefs y lo reaplica al cargar Level_Street. Tras cerrar la aplicación y volver a iniciar,
+411|TXT|Bastón, acera y zonas de peligro
+412|TXT|En las pruebas del bastón se golpeaba la acera, una pared, un contenedor y el pavimento táctil. El cambio de clip y la intensidad háptica fu
+413|TXT|Se prestó especial atención al tramo estrecho situado entre los edificios.Se prestó especial atención al tramo de nacimiento entre edificios
+414|TXT|Tráfico, semáforos y pausa
+415|TXT|Los semáforos alternaron cada dieciocho segundos acompañados de un tono audible. El tráfico del eje correspondiente se detuvo de forma coher
+416|TXT|Evidencia visual del recorrido
+417|TXT|En las Figuras 14, 15 y 16 se puede ver el panel OBJETIVOS en cada una de las tres fases del recorrido. La Figura 14 corresponde a task_1 en
+418|IMG|
+419|TXT|Figura 14. Panel OBJETIVOS durante task_1 en la pasarela peatonal de la acera principal. Elaboración propia.
+420|IMG|
+421|TXT|Figura 15. Panel OBJETIVOS durante task_2 en el borde del cruce. Elaboración propia.
+422|IMG|
+423|TXT|Figura 16. Panel OBJETIVOS durante task_3 con la entrada del metro como destino final. Elaboración propia.
+424|TXT|En la Figura 17 aparece el mensaje de ayuda contextual tras golpear un contenedor, con la salud reducida a noventa y seis puntos. La prueba 
+425|IMG|
+426|TXT|Figura 17. Aviso de colisión con un obstáculo. Elaboración propia.
+427|TXT|Pruebas de rendimiento
+428|TXT|Además de la corrección funcional, se comprobó que la experiencia se mantuviera fluida con todos los sistemas activos. El objetivo no era op
+429|TXT|En la Figura 18 aparece una captura representativa de esa monitorización. La mayor parte del tiempo el framerate se mantuvo por encima del u
+430|TXT|También se revisó el coste relativo de los subsistemas visibles en el Profiler. El renderizado URP y los postprocesados asociados a los modo
+431|IMG|
+432|TXT|Figura 18. Profiler de Unity durante una sesión de prueba. Elaboración propia.
+433|TXT|Validación de los escenarios
+434|TXT|Para validar los escenarios se verificó el cumplimiento de las tareas y se midieron tiempos durante la ejecución del sistema por parte de 3 
+435|TXT|Menú e introducción
+436|TXT|En la escena inicial ninguno de los tres participantes necesitó instrucciones externas para iniciar partida, abrir la selección de modo visu
+437|TXT|Tiempos, errores y comentarios
+438|TXT|Los tiempos de recorrido completado oscilaron entre tres minutos veinte segundos y cinco minutos diez segundos en modo discapacidad visual. 
+439|TXT|Orientación hacia el metro y lectura del entorno
+440|TXT|Tras ajustar el volumen del objetivo, los tres participantes localizaron la entrada del metro en la segunda ronda sin depender del marcador 
+441|TXT|Conviene matizar el alcance de estas pruebas. La validación se realizó con tres personas sin discapacidad visual y sin cuestionario formal; 
+443|TXT|Resultados
+444|TXT|Tras el desarrollo y las pruebas descritas en el capítulo anterior, en este apartado se presentan los resultados alcanzados por VLVS: Un Pas
+445|TXT|Capturas del sistema desarrollado
+446|TXT|A continuación, se presentan capturas correspondientes a diferentes etapas de funcionamiento del sistema, con el objetivo de ilustrar el com
+447|TXT|Resultados de las pruebas con usuarios
+448|TXT|Las sesiones con usuarios fueron breves y orientadas a detectar problemas de claridad. Se invitó a tres compañeros del grado y se completaro
+449|TXT|Las pruebas externas se realizaron en un único entorno controlado, con una sesión principal por participante y, en dos casos, una segunda ro
+450|TXT|En cuanto a tiempos, el rango observado —entre tres minutos veinte segundos y algo más de seis minutos— respondió más a la cautela individua
+451|TXT|Respecto a colisiones y errores, la media de unas dos colisiones físicas por partida se explica sobre todo por impactos con contenedores y m
+452|TXT|Los comentarios posteriores convergieron en tres puntos. Primero, el cruce fue la fase más tensa y el audio del semáforo resultó útil, aunqu
+453|TXT|Estos resultados deben leerse con cautela. Tres participantes sin discapacidad visual y sin un instrumento de evaluación estandarizado no pe
+454|TXT|Comparación con soluciones de referencia
+455|TXT|Respecto a las soluciones analizadas en el apartado 2.4, VLVS ofrece menor fidelidad clínica que las herramientas centradas en síntomas ocul
+456|TXT|Frente a See What I See (NEI, 2024) y XREye (s. f.), VLVS renuncia a la precisión centrada en patologías oculares concretas para concentrars
+457|TXT|Frente a Tengo Baja Visión VR (Retina Gipuzkoa Begisare, s. f.), que también se orienta a la sensibilización social, VLVS comparte el interé
+458|TXT|La comparación más directa es con BlindSimulator (Funnybon, s. f.), por su proximidad a la movilidad inmersiva y a la reducción del campo vi
+459|TXT|La aportación del prototipo se concreta en la integración de tres modos visuales seleccionables, tres tareas secuenciales de movilidad urban
+460|TXT|Entregables y estado final del prototipo
+461|TXT|Como resultado tangible del TFG se entrega un prototipo jugable en plataforma PCVR, un repositorio Git del proyecto completo de Unity, con s
+462|TXT|Los entregables documentales son esta memoria, con la descripción del diseño, la implementación, las pruebas y los resultados, junto con las
+463|TXT|En cuanto al estado funcional, la versión entregada permite iniciar sesión, elegir modo visual, completar las tres tareas en Level_Street, r
+464|TXT|Por tanto, el estado final es el de un prototipo académico demostrable: útil para talleres de sensibilización, presentación ante tribunal y 
+466|TXT|Conclusiones y trabajos futuros
+467|TXT|El desarrollo de VLVS: Un Paso a Ciegas ha permitido construir, documentar y probar un prototipo de Realidad Virtual orientado a la movilida
+468|TXT|A lo largo del TFG se constató que un simulador de este tipo no se define solo por el efecto visual aplicado sobre la cámara, sino por la re
+469|TXT|A nivel técnico, la integración de locomoción, overlays, audio espacial y lógica de partida en un único nivel fue más costosa de lo previsto
+470|TXT|En relación con la motivación inicial del trabajo, el prototipo se alinea con la necesidad de sensibilización que describen OMS (2024) y Rea
+471|TXT|Al revisar el prototipo final frente a los objetivos planteados, el trabajo ha conseguido traducir la revisión bibliográfica en una experien
+472|TXT|En cuanto al objetivo general —diseñar y desarrollar un prototipo de RV para sensibilizar sobre la movilidad urbana con visión reducida—, el
+473|TXT|Los objetivos específicos también encuentran respuesta en el producto final. La revisión bibliográfica y la fundamentación orientaron las de
+474|TXT|La experiencia inmersiva urbana quedó materializada en dos escenas donde el avance se orienta mediante la lista de tareas, el audio espacial
+475|TXT|Los modos de visión reducida también fueron implementaron, cada modo modificó de forma perceptible la lectura del entorno.
+476|TXT|El sistema de interacción accesible integró señales visuales limitadas —HUD, marcador de tarea activa— con audio espacial de meta y peligro,
+477|TXT|La estructura por tareas progresivas quedó resuelta de forma que el usuario no puede saltar fases ni completar el recorrido sin pasar por ac
+478|TXT|Por último, en la evaluación técnica y de experiencia se comprobó la persistencia de ajustes, el orden de las tareas, el comportamiento del 
+479|TXT|En resumen, se valora positivamente el resultado final porque existe un producto demostrable, coherente con la bibliografía revisada y sufic
+482|TXT|La primera línea consiste en ampliar el contenido jugable. Se podría introducir un segundo tramo urbano —con obras, transporte público, semá
+483|TXT|En segundo lugar, convendría incorporar más granularidad en los modos visuales sin perder el aviso pedagógico de que se trata de una simulac
+485|TXT|Por último, la mejora más relevante desde el punto de vista formativo y social sería realizar un estudio con más participantes y, de ser pos
+506|TXT|Grado de relación del trabajo con los Objetivos de Desarrollo Sostenible (ODS).
+507|TXT|Objetivos de Desarrollo Sostenibles
+610|TXT|Alianzas para lograr objetivos.
