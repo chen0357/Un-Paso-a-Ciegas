@@ -31,6 +31,10 @@ public class ObjectiveZoneVisual : MonoBehaviour
     [Header("Lifecycle")]
     public bool hideWhenTaskCompleted = true;
 
+    [Header("Build Safety")]
+    [Tooltip("Optional direct shader reference. If empty, loads Resources/ObjectiveBeacon.")]
+    public Shader beaconShader;
+
     private Transform visualRoot;
     private Renderer pillarRenderer;
     private Renderer groundRenderer;
@@ -161,12 +165,15 @@ public class ObjectiveZoneVisual : MonoBehaviour
         if (visualRoot != null)
             return;
 
-        Shader beaconShader = Shader.Find("Custom/ObjectiveBeacon");
-        if (beaconShader == null)
-            beaconShader = Shader.Find("Universal Render Pipeline/Unlit");
+        Material template = ResolveBeaconMaterial();
+        if (template == null)
+        {
+            Debug.LogError("ObjectiveZoneVisual: beacon material/shader missing. Pillars will not render in builds.", this);
+            return;
+        }
 
-        pillarMaterial = new Material(beaconShader);
-        groundMaterial = new Material(beaconShader);
+        pillarMaterial = new Material(template);
+        groundMaterial = new Material(template);
 
         ConfigureTransparentMaterial(pillarMaterial);
         ConfigureTransparentMaterial(groundMaterial);
@@ -256,6 +263,23 @@ public class ObjectiveZoneVisual : MonoBehaviour
         Collider collider = target.GetComponent<Collider>();
         if (collider != null)
             Destroy(collider);
+    }
+
+    private Material ResolveBeaconMaterial()
+    {
+        Material resourceMaterial = Resources.Load<Material>("ObjectiveBeacon");
+        if (resourceMaterial != null)
+            return resourceMaterial;
+
+        Shader shader = beaconShader;
+        if (shader == null)
+            shader = Shader.Find("Custom/ObjectiveBeacon");
+        if (shader == null)
+            shader = Shader.Find("Universal Render Pipeline/Unlit");
+        if (shader == null)
+            return null;
+
+        return new Material(shader);
     }
 
     private static void ConfigureTransparentMaterial(Material material)

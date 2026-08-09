@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (8)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &2479103
@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (9)
+      value: 'Cajita de madera Grande '
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -625,7 +625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.403
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1575,7 +1575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -0.0619
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1611,7 +1611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (5)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2262,7 +2262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.237
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2298,7 +2298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (7)
+      value: 'Cajita de madera '
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2826,7 +2826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -0.0546
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2862,7 +2862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (7)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2987,7 +2987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (17)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -3207,7 +3207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (17)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -3477,7 +3477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (3)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -3706,7 +3706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (5)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -3827,8 +3827,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 31.64743, y: 16.131813, z: 12.601791}
-  m_Center: {x: 0.000015258789, y: -0.0000047683716, z: 6.6901407}
+  m_Size: {x: 31.64743, y: 16.131813, z: 12.60179}
+  m_Center: {x: 0.000015258789, y: -0.0000047683716, z: 6.6901402}
 --- !u!1001 &210331220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3945,7 +3945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (6)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -4179,7 +4179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (6)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -4195,7 +4195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4445,7 +4445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.062
+      value: -0.0503
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4481,7 +4481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (17)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4865,7 +4865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (11)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.x
@@ -4885,7 +4885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.012
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5984,7 +5984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (1)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -6000,7 +6000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.064
+      value: 0.011
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6651,7 +6651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6687,7 +6687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (2)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6901,7 +6901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -0.0552
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6937,7 +6937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (1)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7387,7 +7387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.241
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7423,7 +7423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (2)
+      value: Cajita de madera
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7752,7 +7752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (1)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -8330,7 +8330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (2)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -8432,7 +8432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (22)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -8487,7 +8487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebb32e9f3e9b1a94ba8d84b0ef27054e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63.1
+      value: -63.72
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebb32e9f3e9b1a94ba8d84b0ef27054e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9019,7 +9019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (10)
+      value: 'Cajita de madera Grande '
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9027,7 +9027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: -1.416
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9156,7 +9156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &523604489
@@ -9250,7 +9250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (1)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9258,7 +9258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.402
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9643,7 +9643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.237
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9679,7 +9679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (3)
+      value: Cajita de madera
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -9930,7 +9930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (7)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -10206,7 +10206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0656
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10242,7 +10242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (12)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -10514,7 +10514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &615419270
@@ -10596,7 +10596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (1)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11178,7 +11178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (7)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -11194,7 +11194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.058
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12355,7 +12355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (4)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -12520,7 +12520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 499819a822da82d4993dbe2606f8b3de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -64.4
+      value: -64.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 499819a822da82d4993dbe2606f8b3de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13333,7 +13333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (4)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -13483,7 +13483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (2)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -13569,7 +13569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (2)
+      value: Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -13585,7 +13585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.064
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14019,7 +14019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (15)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -15031,7 +15031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (4)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -16274,7 +16274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.059
+      value: 0.0704
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16310,7 +16310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (19)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -17786,7 +17786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.0526
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17822,7 +17822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (6)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17884,7 +17884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (5)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -17974,7 +17974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0.085
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18010,7 +18010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (18)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -18431,7 +18431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (1)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -18620,7 +18620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (3)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -18773,7 +18773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (8)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -18985,7 +18985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.088
+      value: -0.0513
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19220,7 +19220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1057631115
@@ -19546,7 +19546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (6)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -19661,7 +19661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1081002920
@@ -19751,7 +19751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (1)
+      value: Pepsi
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -19801,7 +19801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.059
+      value: 0.0731
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20158,7 +20158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (3)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -20174,7 +20174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.064
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20690,7 +20690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0741
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20726,7 +20726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (20)
+      value: Caja de hamburguesa
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -20836,7 +20836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (13)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -20852,7 +20852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.058
+      value: 0.023
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21695,7 +21695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (2)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -21945,7 +21945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.0569
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21981,7 +21981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (4)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22106,7 +22106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1172557208
@@ -22375,7 +22375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.403
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22623,7 +22623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1220753206
@@ -22851,7 +22851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.106
+      value: -0.0562
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22887,7 +22887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (16)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23138,7 +23138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.0526
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23174,7 +23174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (4)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23456,7 +23456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1269062793
@@ -23804,7 +23804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (3)
+      value: Bolsa de basura
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -24069,7 +24069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (19)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -24737,7 +24737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (5)
+      value: 'Cajita de madera Grande '
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24745,7 +24745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.411
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24956,7 +24956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (5)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25570,7 +25570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1405731490
@@ -25858,7 +25858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524311028481530366, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.053
       objectReference: {fileID: 0}
     - target: {fileID: 3524311028481530366, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25894,7 +25894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (20)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -26145,7 +26145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425676903}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7c3e91f4b2d8e5a6c0f1d3b7e9a2c4f, type: 3}
   m_Name: 
@@ -26374,67 +26374,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.72}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1001 &1438520845
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_Name
-      value: XR Device Simulator
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
 --- !u!1001 &1439002227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26513,7 +26452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.0573
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26897,7 +26836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (4)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26905,7 +26844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.402
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27493,7 +27432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (16)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -27713,7 +27652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.242
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27749,7 +27688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (5)
+      value: 'Cajita de madera '
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -28045,7 +27984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (8)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -28221,7 +28160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.0517
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28257,7 +28196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (8)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28364,7 +28303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.088
+      value: -0.0557
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28400,7 +28339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (16)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28623,7 +28562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.0547
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28659,7 +28598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (17)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29035,7 +28974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (12)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -29051,7 +28990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29276,7 +29215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (3)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30303,7 +30242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (3)
+      value: 'Cajita de madera Grande '
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30311,7 +30250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.407
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30443,7 +30382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.062
+      value: -0.0504
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30479,7 +30418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (11)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30803,7 +30742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1669731845
@@ -31027,7 +30966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0472
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31063,7 +31002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (15)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31339,7 +31278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.088
+      value: -0.0531
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31375,7 +31314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (10)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31909,7 +31848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (7)
+      value: Lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32406,7 +32345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (7)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -32521,7 +32460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1771263920
@@ -32851,7 +32790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.0572
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32887,7 +32826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (8)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33043,7 +32982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (5)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -33125,7 +33064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.0567
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33161,7 +33100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7732893051173702289, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_Name
-      value: Lata (2)
+      value: 'Lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33187,7 +33126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33223,7 +33162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (1)
+      value: Cajita de madera
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -33425,7 +33364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797479866305892643, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_Name
-      value: Pizza (4)
+      value: 'Pizza '
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalScale.y
@@ -33441,7 +33380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.064
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33616,7 +33555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1823690657
@@ -34146,7 +34085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1853601895
@@ -34399,7 +34338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390803553650920792, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_Name
-      value: Bolsa de basura (17)
+      value: 'Bolsa de basura '
       objectReference: {fileID: 0}
     - target: {fileID: 7381852384570627879, guid: abdbf5a50a2a5f842b1811d44ffc4557, type: 3}
       propertyPath: m_LocalScale.x
@@ -34664,7 +34603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebb32e9f3e9b1a94ba8d84b0ef27054e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63.1
+      value: -63.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebb32e9f3e9b1a94ba8d84b0ef27054e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35074,7 +35013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.243
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35110,7 +35049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632167150212757948, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera (4)
+      value: 'Cajita de madera '
       objectReference: {fileID: 0}
     - target: {fileID: 1665171356066656667, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -35274,7 +35213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297294522554139460, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Name
-      value: Pepsi (6)
+      value: 'Pepsi '
       objectReference: {fileID: 0}
     - target: {fileID: 6115333825573712384, guid: 3fc4402e401df59429797e9a48128aec, type: 3}
       propertyPath: m_Size.x
@@ -35373,7 +35312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1917878279
@@ -35730,7 +35669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1945684584
@@ -35925,7 +35864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1971674795
@@ -35975,7 +35914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.062
+      value: -0.0527
       objectReference: {fileID: 0}
     - target: {fileID: 6925148570005524523, guid: 3793dd1108eb0be42b9a37d205dafac6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36284,7 +36223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &1989981462
@@ -36623,7 +36562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (3)
+      value: Conservas en lata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36962,7 +36901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -0.0541
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36998,7 +36937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (15)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37024,7 +36963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ae8b8ac9ee64884abb355d7ec6be26b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -67.1
+      value: -68.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ae8b8ac9ee64884abb355d7ec6be26b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37151,7 +37090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.0589
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37269,7 +37208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334001446708294560, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_Name
-      value: Cajita de madera Grande (2)
+      value: Cajita de madera Grande
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37277,7 +37216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.404
       objectReference: {fileID: 0}
     - target: {fileID: 7965825240579172634, guid: 536e3458b0a377840abe3efe6bc4faa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37613,7 +37552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161876633474728556, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_Name
-      value: Conservas en lata (6)
+      value: 'Conservas en lata '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37726,7 +37665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.143
+      value: 0.072
       objectReference: {fileID: 0}
     - target: {fileID: 551646804624158764, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37762,7 +37701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931127417985723030, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Name
-      value: Caja de hamburguesa (7)
+      value: 'Caja de hamburguesa '
       objectReference: {fileID: 0}
     - target: {fileID: 3813455255574906849, guid: bee41f52aa8736542b41241482823d37, type: 3}
       propertyPath: m_Size.x
@@ -37933,7 +37872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.065
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5323186768792521625, guid: 92ec38545f02ab1479a555cdd699e0cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38294,7 +38233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &2103277851
@@ -38510,7 +38449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 2
   damageCooldown: 1
-  hitHintMessage: 
+  hitHintMessage: Arbol
   hitClip: {fileID: 8300000, guid: 9e7e527deea5fe84a854328f3b262128, type: 3}
   hitVolume: 1
 --- !u!65 &2118575721
@@ -39546,7 +39485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -0.0603
       objectReference: {fileID: 0}
     - target: {fileID: 8389738732760520918, guid: 58de81776ce33b547be32c9ed313a51d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39603,7 +39542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.243
       objectReference: {fileID: 0}
     - target: {fileID: 256203805243892486, guid: 6748d5b3eb53d1f41bc7a29ed1ba8a0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -40763,7 +40702,6 @@ SceneRoots:
   - {fileID: 1462469997}
   - {fileID: 1307863435}
   - {fileID: 1442716832}
-  - {fileID: 1438520845}
   - {fileID: 233994242}
   - {fileID: 1648705772}
   - {fileID: 1139608444}
