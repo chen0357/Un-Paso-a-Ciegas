@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StreetCitySkybox
-  m_Shader: {fileID: 4800000, guid: d4e6f8a0b2c14e3f9a7b5c3d1e0f2a4b, type: 3}
+  m_Name: CityPanoramaCube
+  m_Shader: {fileID: 4800000, guid: e8f0a2b4c6d84e1f9a3b5c7d9e1f3a5b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
